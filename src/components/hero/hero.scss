@@ -1,0 +1,7 @@
+.backgroundShadow {
+    position: absolute;
+    width: 100vw;
+    height: 75vw;
+    background: linear-gradient(37deg, transparent 50%, theme('colors.vividOrange'));
+    z-index: -50;
+}

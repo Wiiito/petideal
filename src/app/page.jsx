@@ -1,13 +1,12 @@
-import getOrg from '@/actions/org/get'
-import Header from '@/components/header'
+import Hero from '@/components/hero/hero'
 
-export default async function Home() {
-	let org = await getOrg(99999999999999)
+import './home.scss'
 
+export default function Home() {
 	return (
-		<main>
-			<Header />
-			{JSON.stringify(org)}
-		</main>
+		<>
+			<Hero />
+			Alala
+		</>
 	)
 }
