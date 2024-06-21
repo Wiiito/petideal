@@ -1,9 +1,10 @@
+'use server'
 import dbConnect from '@/lib/dbConnect'
 import UserModel from '@/models/user'
 
 export default async function createUser(user) {
-	const { name, email, hashPassword, perfil } = user
-	if ( !name || !email || !hashPassword || !perfil)
+	const { name, email, password, perfil } = user
+	if (!name || !email || !password || !perfil)
 		return {
 			success: false,
 		}
@@ -13,7 +14,7 @@ export default async function createUser(user) {
 	const _user = new UserModel({
 		name: name,
 		email: email,
-		hashPassword: hashPassword,
+		password: password,
 		perfil: perfil,
 	})
 

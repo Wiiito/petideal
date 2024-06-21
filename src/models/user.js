@@ -18,11 +18,11 @@ const UserSchema = mongoose.Schema({
 	perfil: [Number], // Tabela perfil de usuario é substituida por um array
 })
 
-userSchema.virtual('password').set(function (password) {
+UserSchema.virtual('password').set(function (password) {
 	this.hashPassword = bcrypt.hashSync(password, 10)
 })
 
-userSchema.methods = {
+UserSchema.methods = {
 	authenticate: async function (password) {
 		return await bcrypt.compareSync(password, this.hashPassword)
 	},
