@@ -7,12 +7,14 @@ module.exports = {
 	],
 	theme: {
 		colors: {
+			black: '#191A15',
 			white: '#F2F2F2',
-			yellow: '#FFD703',
-			pastelOrange: '#FF9748',
-			orange: '#FF7A00',
-			vividOrange: '#FE7106',
-			pastelRed: '#F63F26',
+			primary: '#CF82B7',
+			darker: '#CF94C6',
+			light: '#DB9BC7',
+			reallyLight: '#FFAFCC',
+			pastel: '#CDB4DB',
+			lightPastel: '#FFC8DD',
 		},
 		extend: {
 			backgroundImage: {

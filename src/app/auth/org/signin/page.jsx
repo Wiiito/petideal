@@ -7,6 +7,7 @@ const Page = () => {
 		await signIn('credentials', {
 			email: document.getElementsByName('email')[0].value,
 			password: document.getElementsByName('password')[0].value,
+			type: 'org',
 			redirect: true,
 			callbackUrl: '/',
 		})

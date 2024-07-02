@@ -21,6 +21,7 @@ const Form = () => {
 			signIn('credentials', {
 				email: state.user.email,
 				password: state.user.password,
+				type: 'user',
 				redirect: true,
 				callbackUrl: '/',
 			})

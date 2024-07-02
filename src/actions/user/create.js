@@ -19,5 +19,6 @@ export default async function createUser(user) {
 	})
 
 	_user.save()
+
 	return _user
 }
