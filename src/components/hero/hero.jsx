@@ -5,34 +5,39 @@ import './hero.scss'
 const Hero = () => {
 	return (
 		<div className='relative overflow-hidden h-screen w-screen'>
-			<div className='backgroundShadow'></div>
-			<div className='w-[49.5vw] mt-24 ml-24'>
-				<div className=' text-7xl font-bold leading-[5.625rem]'>
-					Descubra seu companheiro <span className='uppercase'>ideal</span> de quatro patas!
+			<div className='w-[49.5vw] mt-8 lg:ml-24 md:ml-16 ml-10'>
+				<div className='lg:text-7xl lg:leading-[5.625rem] md:text-5xl md:leading-[4rem] text-4xl font-bold'>
+					Descubra seu companheiro <span className='uppercase text-darker'>ideal</span> de quatro
+					patas!
 				</div>
-				<div className='w-2/3 text-lg mt-9'>
+				<div className='w-2/3 lg:text-lg md:text-base text-sm mt-9'>
 					Adotar um animal é mais do que dar um lar; é oferecer amor incondicional e transformar
 					vidas para sempre.
 				</div>
-				<button className='uppercase buttonGradient font-bold text-white mt-16 w-80 h-20 text-3xl rounded-full'>
+				<button className='uppercase buttonGradient font-bold text-white mt-16 lg:w-80 lg:h-20 lg:text-3xl md:w-56 md:h-14 md:text-2xl rounded-full ml-[15%]'>
 					Começar
 				</button>
 			</div>
-			<div>
-				<svg
-					viewBox='0 0 746 738'
-					fill='none'
-					xmlns='http://www.w3.org/2000/svg'
-					className=' absolute w-[60vw] -z-40 right-0 -bottom-60'>
-					<path
-						fillRule='evenodd'
-						clipRule='evenodd'
-						d='M434.174 0.259953C523.4 -2.9282 613.834 23.3089 681.024 73.4674C745.05 121.264 771.293 193.914 788.719 264.934C804.562 329.505 792.012 393.247 775.289 457.656C756.643 529.47 748.727 608.293 686.373 659.121C620.25 713.021 524.619 747.411 434.174 735.717C347.345 724.49 303.056 644.419 232.033 600.375C161.064 556.366 56.2996 545.888 18.9056 478.199C-19.4843 408.708 7.1315 325.428 40.7746 254.17C72.7447 186.457 133.652 134.643 201.911 90.5867C271.46 45.6979 347.021 3.37401 434.174 0.259953Z'
-						fill='#CF94C6'
-					/>
-				</svg>
-				<div className='absolute top-[45%] left-[max(calc(50%+6rem),calc(100%-850px))] transform -translate-y-1/2 -rotate-90'>
-					<Image src='/HeroDogDesktop.png' height={1000} width={700} alt='HeroDog' />
+			<div className='absolute right-0 bottom-0 w-[calc(50vw-6rem)] h-full'>
+				<div className='absolute right-0 w-11/12 transform -translate-y-1/2 top-1/2'>
+					<svg
+						viewBox='0 0 580 671'
+						fill='none'
+						xmlns='http://www.w3.org/2000/svg'
+						className='absolute right-0 top-1/2 transform -translate-y-1/2'>
+						<path
+							fill-rule='evenodd'
+							clip-rule='evenodd'
+							d='M418.455 1.0962C507.681 -2.09196 598.116 24.1451 665.306 74.3036C729.332 122.1 755.574 194.75 773 265.771C788.843 330.341 776.293 394.084 759.57 458.493C740.925 530.306 733.008 609.129 670.654 659.957C604.532 713.857 606.404 541.053 474.93 572.053C474.93 572.053 405.318 607.432 190.818 642.336C138 642.336 28.9297 622.813 14.5 495.596C-13 426.096 4.35681 331.594 37.9999 260.336C69.97 192.622 117.933 135.479 186.193 91.4229C255.742 46.5341 331.303 4.21025 418.455 1.0962Z'
+							fill='#CF94C6'
+						/>
+					</svg>
+				</div>
+
+				<div className='absolute right-0 top-0 w-full h-full'>
+					<div className='absolute transform top-[calc(50%-4.5rem)] -rotate-90 left-0 -translate-y-1/2 translate-x-[21%]'>
+						<Image src='/HeroDogDesktop.png' height={1250} width={875} alt='HeroDog' />
+					</div>
 				</div>
 			</div>
 		</div>

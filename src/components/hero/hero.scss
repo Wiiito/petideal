@@ -1,12 +1,4 @@
-.backgroundShadow {
-    position: absolute;
-    width: 100vw;
-    height: 75vw;
-    background: linear-gradient(37deg, transparent 50%, theme('colors.reallyLight'));
-    z-index: -50;
-}
-
 .buttonGradient {
-    background: linear-gradient(180deg, #FFC8DD 26.47%, #CDB4DB 88.24%);
+    background: linear-gradient(180deg, theme('colors.lightPastel') 26.47%, theme('colors.pastel') 88.24%);
     box-shadow: 0px 4px 4px 0px #00000040;
 }

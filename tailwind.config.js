@@ -13,8 +13,8 @@ module.exports = {
 			darker: '#CF94C6',
 			light: '#DB9BC7',
 			reallyLight: '#FFAFCC',
-			pastel: '#CDB4DB',
-			lightPastel: '#FFC8DD',
+			pastel: '#CD8EC0',
+			lightPastel: '#FF9FC2',
 		},
 		extend: {
 			backgroundImage: {
