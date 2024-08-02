@@ -4,27 +4,28 @@ import './hero.scss'
 
 const Hero = () => {
 	return (
-		<div className='relative overflow-hidden h-screen w-screen'>
+		<div className='relative overflow-hidden h-screen w-screen pt-[5vh] md:pt-40 lg:pt-28'>
 			<div className='w-[49.5vw] mt-8 lg:ml-24 md:ml-16 ml-10'>
 				<div className='lg:text-7xl lg:leading-[5.625rem] md:text-5xl md:leading-[4rem] text-4xl font-bold'>
-					Descubra seu companheiro <span className='uppercase text-darker'>ideal</span> de quatro
-					patas!
+					Descubra seu companheiro{' '}
+					<span className='uppercase text-darker'>ideal</span> de quatro patas!
 				</div>
 				<div className='w-2/3 lg:text-lg md:text-base text-sm mt-9'>
-					Adotar um animal é mais do que dar um lar; é oferecer amor incondicional e transformar
-					vidas para sempre.
+					Adotar um animal é mais do que dar um lar; é oferecer amor
+					incondicional e transformar vidas para sempre.
 				</div>
-				<button className='uppercase buttonGradient font-bold text-white mt-16 lg:w-80 lg:h-20 lg:text-3xl md:w-56 md:h-14 md:text-2xl rounded-full ml-[15%] hover:scale-105 transition-all ease-in-out'>
+				<button className='uppercase buttonGradient font-bold text-white mt-16 w-40 h-10 lg:w-80 lg:h-20 lg:text-3xl md:w-56 md:h-14 md:text-2xl rounded-full ml-[15%] hover:scale-105 transition-all ease-in-out'>
 					Começar
 				</button>
 			</div>
-			<div className='absolute right-0 bottom-0 w-[calc(50vw-6rem)] h-full'>
-				<div className='absolute right-0 w-11/12 transform -translate-y-1/2 top-1/2'>
+			<div className='absolute right-0 bottom-0 w-1/2 md:w-[calc(50vw-6rem)] h-full'>
+				<div className='absolute right-0 w-11/12 transform -translate-y-1/2 top-[calc(50%-4.5rem)] lg:top-1/2'>
 					<svg
 						viewBox='0 0 580 671'
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
-						className='absolute right-0 top-1/2 transform -translate-y-1/2'>
+						className='absolute right-0 top-1/2 transform -translate-y-1/2'
+					>
 						<path
 							fillRule='evenodd'
 							clipRule='evenodd'
@@ -36,7 +37,13 @@ const Hero = () => {
 
 				<div className='absolute right-0 top-0 w-full h-full'>
 					<div className='absolute transform top-[calc(50%-4.5rem)] -rotate-90 left-0 -translate-y-1/2 translate-x-[21%]'>
-						<Image src='/HeroDogDesktop.png' height={1250} width={875} alt='HeroDog' priority />
+						<Image
+							src='/HeroDogDesktop.png'
+							height={1250}
+							width={875}
+							alt='HeroDog'
+							priority
+						/>
 					</div>
 				</div>
 			</div>
