@@ -2,8 +2,14 @@
 
 import Form from './form'
 
+import '@/styles/forms.scss'
+
 const Page = () => {
-	return <Form />
+	return (
+		<div className='formContainer'>
+			<Form />
+		</div>
+	)
 }
 
 export default Page
