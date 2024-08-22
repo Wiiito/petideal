@@ -50,12 +50,15 @@ const Header = () => {
 						<Link href='/' className='hover:after:w-[120%]'>
 							<li>Início</li>
 						</Link>
-						<Link href='/happyEnding' className='hover:after:w-[120%]'>
+						<Link
+							href='/happyEnding'
+							className='hover:after:w-[120%]'
+						>
 							<li>Finais Felizes</li>
 						</Link>
 						<Link href='/petideal' className='hover:after:w-[120%]'>
 							<li className='relative flex items-center after:content-[""] after:absolute after:w-0 after:h-1 after:rounded-full after:bg-reallyLight after:bottom-0 after:left-1/2 hover:after:w-[120%] after:transform after:-translate-x-1/2 after:transition-all after:duration-300'>
-								Petidel
+								Petideal
 								<svg
 									width='10'
 									height='5'

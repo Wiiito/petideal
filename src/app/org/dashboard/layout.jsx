@@ -2,7 +2,6 @@
 
 import { useSession } from 'next-auth/react'
 import { redirect } from 'next/navigation'
-import { Children } from 'react'
 import Link from 'next/link'
 
 const Page = ({ children }) => {
@@ -20,7 +19,9 @@ const Page = ({ children }) => {
 
 	return (
 		<div>
-			<header className='w-full h-20 bg-reallyLight'>Org Dashboard</header>
+			<header className='w-full h-20 bg-reallyLight'>
+				Org Dashboard
+			</header>
 			{/* Container que contem tudo 👍 */}
 			<div className='w-full min-h-[calc(100vh-5rem)] flex'>
 				<menu className='w-1/5 bg-darker'>
