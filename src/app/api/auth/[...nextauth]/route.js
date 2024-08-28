@@ -36,6 +36,7 @@ export const AuthOptions = {
 			},
 		}),
 	],
+	secret: process.env.NEXTAUTH_SECRET,
 	callbacks: {
 		async jwt({ token, user, account, profile }) {
 			if (account) {
