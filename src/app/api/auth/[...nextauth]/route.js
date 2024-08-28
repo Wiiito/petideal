@@ -47,7 +47,7 @@ export const AuthOptions = {
 
 		async session({ session, token }) {
 			session.user._id = token._id
-			if (token.cnpj) session.cnpj = token.cnpj
+			if (token.cnpj) session.user.cnpj = token.cnpj
 
 			return session
 		},

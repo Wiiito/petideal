@@ -6,15 +6,16 @@ const PetSchema = mongoose.Schema({
 		required: true,
 	},
 	orgId: {
-		type: ObjectId,
+		type: String,
 		required: true,
 	},
 	images: [String],
+	description: String,
 	characteristics: [Number], // Tabela caracteristicas do pet é substituida por um array
 	observation: [String],
 	patronize: Boolean,
-	raceId: ObjectId, // Referencia o modelo da raca
+	raceId: String, // Referencia o modelo da raca
 })
 
-const PetModel = mongoose.models.pet || mongoose.model('pet', PetSchema)
+const PetModel = mongoose.models.pets || mongoose.model('pets', PetSchema)
 export default PetModel
