@@ -1,10 +1,10 @@
 import dbConnect from '@/lib/dbConnect'
 import PetModel from '@/models/pet'
 
-export default async function deletePet(name) {
-    await dbConnect()
+export default async function deletePet(id) {
+	await dbConnect()
 
-    const res = await PetModel.deleteOne({ name: name })
+	const res = await PetModel.deleteOne({ _id: id })
 
-    return { sucess: res.acknowledged }
+	return { sucess: res.acknowledged }
 }

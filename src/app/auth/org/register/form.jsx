@@ -29,9 +29,11 @@ const Form = () => {
 		const result = await submitOrg(org)
 		if (result.success) {
 			redirect('/')
+		} else {
+			console.log('Something went wrong')
 		}
 
-		setFormError(prev => {
+		setFormError((prev) => {
 			return {
 				...prev, // Queria muito que tivesse um jeito melhor de fazer isso... que coisa feia
 				cnpj: result.error.cnpj,
@@ -53,26 +55,27 @@ const Form = () => {
 		return false
 	}
 
-	useEffect(() => {
-		console.log(formError)
-	}, [formError])
-
-	const handleChange = async e => {
+	const handleChange = async (e) => {
 		const name = e.target.name
 		const value = e.target.value
 
 		if (name === 'cnpj' && value.length === 14) {
 			// Olha se o CNPJ é valido / pesquisa informações
 			try {
-				const res = await fetch('https://brasilapi.com.br/api/cnpj/v1/' + e.target.value)
+				const res = await fetch(
+					'https://brasilapi.com.br/api/cnpj/v1/' + e.target.value
+				)
 				const data = await res.json()
 
-				setOrg(prev => {
+				setOrg((prev) => {
 					return {
 						...prev,
 						name: data.nome_fantasia || data.razao_social,
 						zipCode: data.cep,
-						address: data.descricao_tipo_de_logradouro + ' ' + data.logradouro,
+						address:
+							data.descricao_tipo_de_logradouro +
+							' ' +
+							data.logradouro,
 						addressNumber: data.numero,
 						addressCity: data.municipio,
 						addressNeighborhood: data.bairro,
@@ -86,12 +89,14 @@ const Form = () => {
 			}
 		}
 
-		setOrg(prev => {
+		setOrg((prev) => {
 			if (name === 'number') {
-				const numbers = Array.from(document.getElementsByName('number')).map(e => e.value)
+				const numbers = Array.from(
+					document.getElementsByName('number')
+				).map((e) => e.value)
 				setNumbers(numbers)
 				const validNumbers = []
-				numbers.forEach(e => {
+				numbers.forEach((e) => {
 					if (e !== '') validNumbers.push(e)
 				})
 				return { ...prev, contact: validNumbers }
@@ -102,7 +107,13 @@ const Form = () => {
 
 	return (
 		<form action={handleSubmit}>
-			<input type='text' placeholder='CNPJ' name='cnpj' onChange={handleChange} value={org.cnpj} />
+			<input
+				type='text'
+				placeholder='CNPJ'
+				name='cnpj'
+				onChange={handleChange}
+				value={org.cnpj}
+			/>
 			<span>{formError.cnpj ? formError.cnpj[0] : ''}</span>
 			<input
 				type='text'
@@ -136,7 +147,9 @@ const Form = () => {
 				onChange={handleChange}
 				value={org.addressNumber}
 			/>
-			<span>{formError.addressNumber ? formError.addressNumber[0] : ''}</span>
+			<span>
+				{formError.addressNumber ? formError.addressNumber[0] : ''}
+			</span>
 			<input
 				type='text'
 				placeholder='Complemento'
@@ -144,7 +157,11 @@ const Form = () => {
 				onChange={handleChange}
 				value={org.addressComplement}
 			/>
-			<span>{formError.addressComplement ? formError.addressComplement[0] : ''}</span>
+			<span>
+				{formError.addressComplement
+					? formError.addressComplement[0]
+					: ''}
+			</span>
 			<input
 				type='text'
 				placeholder='Bairro'
@@ -152,7 +169,11 @@ const Form = () => {
 				onChange={handleChange}
 				value={org.addressNeighborhood}
 			/>
-			<span>{formError.addressNeighborhood ? formError.addressNeighborhood[0] : ''}</span>
+			<span>
+				{formError.addressNeighborhood
+					? formError.addressNeighborhood[0]
+					: ''}
+			</span>
 			<input
 				type='text'
 				placeholder='Estado'
@@ -160,7 +181,9 @@ const Form = () => {
 				onChange={handleChange}
 				value={org.addressState}
 			/>
-			<span>{formError.addressState ? formError.addressState[0] : ''}</span>
+			<span>
+				{formError.addressState ? formError.addressState[0] : ''}
+			</span>
 			<input
 				type='text'
 				placeholder='Cidade'
@@ -199,8 +222,9 @@ const Form = () => {
 			<button
 				type='button'
 				onClick={() => {
-					setNumbers(prev => [...prev, ''])
-				}}>
+					setNumbers((prev) => [...prev, ''])
+				}}
+			>
 				Add Number
 			</button>
 
