@@ -19,3 +19,8 @@ export async function getPageOfPets(orgId, page, perPage) {
 
 	return JSON.parse(JSON.stringify(pets))
 }
+
+export async function getAllPets() {
+	let pets = await PetModel.find({}).sort({ name: 'asc' })
+	return JSON.parse(JSON.stringify(pets))
+}
