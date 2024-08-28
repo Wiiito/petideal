@@ -1,0 +1,13 @@
+.hamburguerMenu {
+    span:first-child, span:last-child {
+        width: 0%;
+    }
+
+    span:nth-child(2) {
+        position: absolute;
+        transform: rotate(45deg);
+    }
+    span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+}

@@ -15,6 +15,7 @@ module.exports = {
 			reallyLight: '#FFAFCC',
 			pastel: '#CD8EC0',
 			lightPastel: '#FF9FC2',
+			lightGrey: '#C3C3C3'
 		},
 		extend: {
 			backgroundImage: {

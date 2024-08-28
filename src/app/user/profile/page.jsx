@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react'
 import { redirect } from 'next/navigation'
 import { useEffect } from 'react'
 
-const page = () => {
+const Profile = () => {
 	const { data: session, status } = useSession({
 		required: true,
 		onUnauthenticated() {
@@ -34,4 +34,4 @@ const page = () => {
 	)
 }
 
-export default page
+export default Profile

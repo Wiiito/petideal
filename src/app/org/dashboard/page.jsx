@@ -13,7 +13,7 @@ const Page = () => {
 
 	if (status === 'authenticated' && !session.cnpj) {
 		// Caso não seja uma org
-		redirect('/profile')
+		redirect('/user/profile')
 	}
 
 	return <div>Org dashboard</div>
