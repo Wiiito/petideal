@@ -1,6 +1,7 @@
 'use server'
 
 import createPet from '@/actions/pet/create'
+import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 
 const dog = z.object({
@@ -18,8 +19,8 @@ export default async function submitDog(data) {
 		return { success: false, error: validate.error.flatten().fieldErrors }
 
 	try {
-		const res = await createPet(data)
-		console.log('abla')
+		await createPet(data)
+		revalidatePath('/org/dashboard/dogs')
 		return { success: true }
 	} catch (error) {
 		console.error(error)

@@ -19,9 +19,7 @@ const Page = ({ children }) => {
 
 	return (
 		<div>
-			<header className='w-full h-20 bg-reallyLight'>
-				Org Dashboard
-			</header>
+			<header className='w-full h-20 bg-reallyLight'>Org Dashboard</header>
 			{/* Container que contem tudo 👍 */}
 			<div className='w-full min-h-[calc(100vh-5rem)] flex'>
 				<menu className='w-1/5 bg-darker'>
@@ -34,7 +32,7 @@ const Page = ({ children }) => {
 						</Link>
 					</ul>
 				</menu>
-				<div>{children}</div>
+				<div className='w-full'>{children}</div>
 			</div>
 		</div>
 	)

@@ -17,5 +17,5 @@ const PetSchema = mongoose.Schema({
 	raceId: String, // Referencia o modelo da raca
 })
 
-const PetModel = mongoose.models.pet || mongoose.model('pet', PetSchema)
+const PetModel = mongoose.models.pets || mongoose.model('pets', PetSchema)
 export default PetModel

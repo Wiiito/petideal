@@ -3,13 +3,16 @@
 import { useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 import submitDog from './action'
+import { redirect } from 'next/navigation'
 
 const Form = () => {
 	const { data: session, status } = useSession()
 	const [data, setData] = useState({
 		name: '',
 		orgId: '',
-		images: [''],
+		images: [
+			'https://i0.statig.com.br/bancodeimagens/2f/ym/i8/2fymi85z5vo5pcl5rsnsr3xgi.jpg',
+		],
 		characteristics: [1],
 		observation: '',
 		patronize: false,
@@ -29,7 +32,12 @@ const Form = () => {
 	)
 
 	const handleSubmit = async () => {
-		submitDog(data)
+		const res = await submitDog(data)
+
+		if (res.success) {
+			redirect('/org/dashboard/dogs')
+		}
+
 		return false
 	}
 
