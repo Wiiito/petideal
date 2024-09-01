@@ -14,7 +14,7 @@ const Page = () => {
 
 	useEffect(() => {
 		const requestDogs = async () => {
-			setDogs(await getPageOfPets(session.user.cnpj, 1))
+			setDogs(await getPageOfPets(session.user._id, 1))
 		}
 		if (status === 'authenticated') requestDogs()
 	}, [status, update])

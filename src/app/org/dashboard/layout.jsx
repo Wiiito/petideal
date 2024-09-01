@@ -32,7 +32,7 @@ const Page = ({ children }) => {
 						</Link>
 					</ul>
 				</menu>
-				<div className='w-full'>{children}</div>
+				<div className='w-full overflow-y-scroll'>{children}</div>
 			</div>
 		</div>
 	)
