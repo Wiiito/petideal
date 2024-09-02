@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react'
 import { useEffect, useRef, useState } from 'react'
 import submitDog from './action'
 import { redirect } from 'next/navigation'
-import './customCheckbox.scss'
+import './customFormStyles.scss'
 
 const Form = () => {
 	const descriptionRef = useRef()
@@ -18,9 +18,7 @@ const Form = () => {
 	const [data, setData] = useState({
 		name: '',
 		orgId: '',
-		images: [
-			'https://i0.statig.com.br/bancodeimagens/2f/ym/i8/2fymi85z5vo5pcl5rsnsr3xgi.jpg',
-		],
+		images: [],
 		characteristics: [1],
 		observation: [''],
 		patronize: false,
@@ -30,7 +28,7 @@ const Form = () => {
 
 	// Calls create dog action
 	const handleSubmit = async () => {
-		const res = await submitDog(data)
+		const res = await submitDog(JSON.parse(JSON.stringify(data)))
 
 		if (res.success) {
 			redirect('/org/dashboard/dogs')
@@ -87,8 +85,21 @@ const Form = () => {
 		console.log(data)
 	}
 
+	const handleImage = (e) => {
+		setData((prev) => {
+			return {
+				...prev,
+				images: [...data.images, ...e.target.files],
+			}
+		})
+	}
+
+	useEffect(() => {
+		console.log(data)
+	}, [data])
+
 	return (
-		<form action={handleSubmit} className='w-full'>
+		<form action={handleSubmit} className='w-full mb-4'>
 			<div className='w-[calc(100%-2rem)] p-4 rounded-xl shadow-inner shadow-black m-4'>
 				<input
 					type='text'
@@ -99,11 +110,35 @@ const Form = () => {
 				/>
 				<input
 					type='file'
-					name=''
+					name='images'
 					id='addImage'
-					multiple={true}
+					multiple
 					className='hidden'
+					accept='image/*'
+					onChange={handleImage}
 				/>
+				{data.images[0] && (
+					<div className='dogsImagesSlider mb-4'>
+						<div
+							id='slider'
+							style={{
+								width: 17 * data.images.length - 1 + 'rem',
+							}}
+						>
+							{data.images.map((img, i) => {
+								return (
+									<div className='dogImageContainer'>
+										<img
+											src={URL.createObjectURL(img)}
+											alt={img.name}
+											key={i}
+										/>
+									</div>
+								)
+							})}
+						</div>
+					</div>
+				)}
 				<label htmlFor='addImage' className='cursor-pointer'>
 					<div className='w-full min-h-20 flex justify-center items-center outline-dotted outline-darker rounded-xl mb-4'>
 						Adicionar Imagem
@@ -120,7 +155,10 @@ const Form = () => {
 					ref={descriptionRef}
 				></textarea>
 				<div className='flex items-center mt-2'>
-					<label htmlFor='patronize' className='text-xl font-semibold mr-2'>
+					<label
+						htmlFor='patronize'
+						className='text-xl font-semibold mr-2'
+					>
 						Apadrinhavel:{' '}
 					</label>
 					<input

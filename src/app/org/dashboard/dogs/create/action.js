@@ -11,18 +11,19 @@ const dog = z.object({
 	description: z.string(),
 	patronize: z.boolean(),
 	observation: z.string().array(),
-	images: z.any(),
+	images: z.any().array(),
 })
 
 export default async function submitDog(data) {
-	let res = await getSignedS3Url()
-	console.log(res)
-	return { success: false }
-
 	// const validate = dog.safeParse(data)
 
 	// if (!validate.success)
 	// 	return { success: false, error: validate.error.flatten().fieldErrors }
+
+	const resUrl = await getSignedS3Url()
+	console.log(resUrl)
+
+	return { success: false }
 
 	// try {
 	// 	await createPet(data)

@@ -19,9 +19,11 @@ const Page = ({ children }) => {
 
 	return (
 		<div>
-			<header className='w-full h-20 bg-reallyLight'>Org Dashboard</header>
+			<header className='w-full h-20 bg-reallyLight'>
+				Org Dashboard
+			</header>
 			{/* Container que contem tudo 👍 */}
-			<div className='w-full min-h-[calc(100vh-5rem)] flex'>
+			<div className='w-full h-[calc(100vh-5rem)] flex'>
 				<menu className='w-1/5 bg-darker'>
 					<ul>
 						<Link href='/org/dashboard/profile'>
@@ -32,7 +34,9 @@ const Page = ({ children }) => {
 						</Link>
 					</ul>
 				</menu>
-				<div className='w-full overflow-y-scroll'>{children}</div>
+				<div className='w-full h-full overflow-y-scroll'>
+					{children}
+				</div>
 			</div>
 		</div>
 	)
