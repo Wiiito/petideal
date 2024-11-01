@@ -28,7 +28,25 @@ const Form = () => {
 
 	// Calls create dog action
 	const handleSubmit = async () => {
-		const res = await submitDog(JSON.parse(JSON.stringify(data)))
+		// Se não utilizar a api FormData, é impossivel mandar imagem para rota do background
+		let formData = new FormData()
+		formData.append('name', data.name)
+		formData.append('orgId', data.orgId)
+		formData.append('characteristics', [1])
+		formData.append('patronize', data.patronize)
+		formData.append('description', data.description)
+		formData.append('raceId', 'Caramelo')
+
+		data.images.forEach((image) => {
+			formData.append('images', image)
+		})
+
+		data.observation.forEach((obs) => {
+			formData.append('observation', obs)
+		})
+
+		const res = await submitDog(formData)
+		console.log(formData.get('images'))
 
 		if (res.success) {
 			redirect('/org/dashboard/dogs')
@@ -94,10 +112,6 @@ const Form = () => {
 		})
 	}
 
-	useEffect(() => {
-		console.log(data)
-	}, [data])
-
 	return (
 		<form action={handleSubmit} className='w-full mb-4'>
 			<div className='w-[calc(100%-2rem)] p-4 rounded-xl shadow-inner shadow-black m-4'>
@@ -127,12 +141,8 @@ const Form = () => {
 						>
 							{data.images.map((img, i) => {
 								return (
-									<div className='dogImageContainer'>
-										<img
-											src={URL.createObjectURL(img)}
-											alt={img.name}
-											key={i}
-										/>
+									<div className='dogImageContainer' key={i}>
+										<img src={URL.createObjectURL(img)} alt={img.name} />
 									</div>
 								)
 							})}
@@ -155,10 +165,7 @@ const Form = () => {
 					ref={descriptionRef}
 				></textarea>
 				<div className='flex items-center mt-2'>
-					<label
-						htmlFor='patronize'
-						className='text-xl font-semibold mr-2'
-					>
+					<label htmlFor='patronize' className='text-xl font-semibold mr-2'>
 						Apadrinhavel:{' '}
 					</label>
 					<input
