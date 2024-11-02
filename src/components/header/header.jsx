@@ -2,15 +2,12 @@
 
 import Link from 'next/link'
 import { useRef } from 'react'
-import { useSession } from 'next-auth/react'
 
 import './styles.scss'
 
 const Header = () => {
 	const menuOverlay = useRef(null)
 	const hambMenu = useRef(null)
-
-	const { data: session, status } = useSession()
 
 	function hambClick() {
 		menuOverlay.current.classList.toggle('-left-[100vw]')
@@ -50,10 +47,7 @@ const Header = () => {
 						<Link href='/' className='hover:after:w-[120%]'>
 							<li>Início</li>
 						</Link>
-						<Link
-							href='/happyEnding'
-							className='hover:after:w-[120%]'
-						>
+						<Link href='/happyEnding' className='hover:after:w-[120%]'>
 							<li>Finais Felizes</li>
 						</Link>
 						<Link href='/petideal' className='hover:after:w-[120%]'>
@@ -85,28 +79,6 @@ const Header = () => {
 					<span></span>
 					<span></span>
 					<span></span>
-				</div>
-
-				<div className='flex items-center text-center font-medium'>
-					{status === 'authenticated' ? (
-						<div className='w-32 h-9 content-center rounded-full bg-reallyLight text-white opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out'>
-							<Link href='/profile'>Meu Perfil</Link>
-						</div>
-					) : (
-						<>
-							<Link href='/auth/user/signin' className='mr-4'>
-								<div className='w-32 h-9 content-center rounded-full border border-black opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out'>
-									Entrar
-								</div>
-							</Link>
-
-							<Link href='/auth/user/register'>
-								<div className='w-32 h-9 content-center rounded-full bg-reallyLight text-white opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out'>
-									Registrar-se
-								</div>
-							</Link>
-						</>
-					)}
 				</div>
 			</header>
 		</>
