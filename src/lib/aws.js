@@ -7,7 +7,7 @@ import { getServerSession } from 'next-auth'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 
-export async function getSignedS3Url(file) {
+export async function getSignedS3Url(file, key) {
 	const session = await getServerSession(AuthOptions)
 	if (!session.user._id) return { success: false, message: 'User id not found' }
 
@@ -30,7 +30,7 @@ export async function getSignedS3Url(file) {
 
 	const command = new PutObjectCommand({
 		Bucket: s3BucketName,
-		Key: file.name,
+		Key: key,
 		ContentType: file.ContentType,
 	})
 

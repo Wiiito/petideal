@@ -46,7 +46,6 @@ const Form = () => {
 		})
 
 		const res = await submitDog(formData)
-		console.log(formData.get('images'))
 
 		if (res.success) {
 			redirect('/org/dashboard/dogs')
