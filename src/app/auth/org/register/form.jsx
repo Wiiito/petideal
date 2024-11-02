@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import submitOrg from './action'
 import { redirect } from 'next/navigation'
 
@@ -72,10 +72,7 @@ const Form = () => {
 						...prev,
 						name: data.nome_fantasia || data.razao_social,
 						zipCode: data.cep,
-						address:
-							data.descricao_tipo_de_logradouro +
-							' ' +
-							data.logradouro,
+						address: data.descricao_tipo_de_logradouro + ' ' + data.logradouro,
 						addressNumber: data.numero,
 						addressCity: data.municipio,
 						addressNeighborhood: data.bairro,
@@ -91,9 +88,9 @@ const Form = () => {
 
 		setOrg((prev) => {
 			if (name === 'number') {
-				const numbers = Array.from(
-					document.getElementsByName('number')
-				).map((e) => e.value)
+				const numbers = Array.from(document.getElementsByName('number')).map(
+					(e) => e.value
+				)
 				setNumbers(numbers)
 				const validNumbers = []
 				numbers.forEach((e) => {
@@ -147,9 +144,7 @@ const Form = () => {
 				onChange={handleChange}
 				value={org.addressNumber}
 			/>
-			<span>
-				{formError.addressNumber ? formError.addressNumber[0] : ''}
-			</span>
+			<span>{formError.addressNumber ? formError.addressNumber[0] : ''}</span>
 			<input
 				type='text'
 				placeholder='Complemento'
@@ -158,9 +153,7 @@ const Form = () => {
 				value={org.addressComplement}
 			/>
 			<span>
-				{formError.addressComplement
-					? formError.addressComplement[0]
-					: ''}
+				{formError.addressComplement ? formError.addressComplement[0] : ''}
 			</span>
 			<input
 				type='text'
@@ -170,9 +163,7 @@ const Form = () => {
 				value={org.addressNeighborhood}
 			/>
 			<span>
-				{formError.addressNeighborhood
-					? formError.addressNeighborhood[0]
-					: ''}
+				{formError.addressNeighborhood ? formError.addressNeighborhood[0] : ''}
 			</span>
 			<input
 				type='text'
@@ -181,9 +172,7 @@ const Form = () => {
 				onChange={handleChange}
 				value={org.addressState}
 			/>
-			<span>
-				{formError.addressState ? formError.addressState[0] : ''}
-			</span>
+			<span>{formError.addressState ? formError.addressState[0] : ''}</span>
 			<input
 				type='text'
 				placeholder='Cidade'

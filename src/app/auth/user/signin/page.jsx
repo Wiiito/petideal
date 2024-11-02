@@ -15,13 +15,14 @@ const Page = () => {
 
 	return (
 		<form
-			onSubmit={e => {
+			onSubmit={(e) => {
 				e.preventDefault()
 				credentialsLogin()
-			}}>
+			}}
+		>
 			<input type='email' name='email' placeholder='Email' required />
-			<input type='password' name='password' placeholder='Password' required />
-			<button type='submit'>Sign In</button>
+			<input type='password' name='password' placeholder='Senha' required />
+			<button type='submit'>Entrar</button>
 		</form>
 	)
 }

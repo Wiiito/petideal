@@ -1,0 +1,23 @@
+.formContainer {
+    @apply min-h-screen w-screen bg-gradient-to-br from-white to-ultraLightPastel from-50% flex items-center justify-center;
+
+    .form {
+        @apply block w-full md:w-2/5 h-screen md:h-auto text-center bg-[#fdfdfd] rounded-xl pt-8 bg-opacity-20 backdrop-blur-xl;
+
+        &Content {
+            @apply h-full md:h-auto w-full px-8 py-8;
+
+            form {
+                @apply flex flex-col justify-evenly h-full md:block;
+            }
+
+            input {
+                @apply w-full px-4 py-2 border border-darker rounded-xl mb-4 focus:outline-none placeholder:text-darker text-black bg-transparent;
+            }
+
+            button {
+                @apply w-full bg-gradient-to-tl from-primary to-lightPastel text-white font-bold p-2 rounded-xl;
+            }
+        }
+    }
+}

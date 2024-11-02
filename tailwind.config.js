@@ -20,6 +20,7 @@ module.exports = {
 			reallyLight: '#FFAFCC',
 			pastel: '#CD8EC0',
 			lightPastel: '#FF9FC2',
+			ultraLightPastel: '#e8cce2',
 			transparent: 'transparent',
 		},
 		extend: {
