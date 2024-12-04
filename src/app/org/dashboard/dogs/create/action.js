@@ -6,6 +6,7 @@ import createPet from '@/actions/pet/create'
 import { getSignedS3Url } from '@/lib/aws'
 import { revalidatePath } from 'next/cache'
 import { v4 as uuidv4 } from 'uuid'
+import { getAllRacesNames } from '@/actions/race/get'
 
 export default async function submitDog(data) {
 	const session = await getServerSession(AuthOptions)
@@ -55,4 +56,9 @@ export default async function submitDog(data) {
 			message: 'Algo deu errado, tente novamente!',
 		}
 	}
+}
+
+export async function getRaces() {
+	const dogs = await getAllRacesNames()
+	return dogs
 }

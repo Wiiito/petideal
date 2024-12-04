@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react'
 import { useEffect, useRef, useState } from 'react'
-import submitDog from './action'
+import submitDog, { getRaces } from './action'
 import { redirect } from 'next/navigation'
 import './customFormStyles.scss'
 
@@ -14,12 +14,16 @@ const Form = () => {
 	// Observations state
 	const [observations, setObservations] = useState([])
 
+	// Races loading
+	const [races, setRaces] = useState(['Carregando...'])
+	const [filterRaces, setFilterRaces] = useState(['Carregando...'])
+
 	// All data state
 	const [data, setData] = useState({
 		name: '',
 		orgId: '',
 		images: [],
-		characteristics: [1],
+		characteristics: [],
 		observation: [''],
 		patronize: false,
 		description: '',
@@ -37,11 +41,11 @@ const Form = () => {
 		formData.append('description', data.description)
 		formData.append('raceId', 'Caramelo')
 
-		data.images.forEach((image) => {
+		data.images.forEach(image => {
 			formData.append('images', image)
 		})
 
-		data.observation.forEach((obs) => {
+		data.observation.forEach(obs => {
 			formData.append('observation', obs)
 		})
 
@@ -55,8 +59,8 @@ const Form = () => {
 	}
 
 	// Updates data state
-	const handleChange = (e) => {
-		setData((prev) => {
+	const handleChange = e => {
+		setData(prev => {
 			if (e.target.name === 'patronize') {
 				return {
 					...prev,
@@ -70,7 +74,7 @@ const Form = () => {
 	// Set user id on form
 	useEffect(
 		() =>
-			setData((prev) => {
+			setData(prev => {
 				return {
 					...prev,
 					orgId: status === 'authenticated' ? session.user._id : '',
@@ -78,6 +82,20 @@ const Form = () => {
 			}),
 		[session]
 	)
+
+	const fetchDogs = async () => {
+		const races = await getRaces()
+		setRaces(races.races)
+		setFilterRaces(races.races)
+	}
+
+	useEffect(() => {
+		fetchDogs()
+	}, [])
+
+	useEffect(() => {
+		console.log(races)
+	}, [races])
 
 	// Updates description size
 	const handleDescriptionInput = () => {
@@ -90,20 +108,20 @@ const Form = () => {
 	const handleObservation = () => {
 		const observationFormValues = Array.from(
 			document.getElementsByName('observation')
-		).map((e) => {
+		).map(e => {
 			if (e.value) {
 				return e.value
 			}
 		})
-		setData((prev) => {
+		setData(prev => {
 			return { ...prev, observation: observationFormValues }
 		})
 		setObservations(observationFormValues)
 		console.log(data)
 	}
 
-	const handleImage = (e) => {
-		setData((prev) => {
+	const handleImage = e => {
+		setData(prev => {
 			return {
 				...prev,
 				images: [...data.images, ...e.target.files],
@@ -136,8 +154,7 @@ const Form = () => {
 							id='slider'
 							style={{
 								width: 17 * data.images.length - 1 + 'rem',
-							}}
-						>
+							}}>
 							{data.images.map((img, i) => {
 								return (
 									<div className='dogImageContainer' key={i}>
@@ -161,22 +178,39 @@ const Form = () => {
 					onChange={handleChange}
 					onInput={handleDescriptionInput}
 					className='w-full resize-none focus:outline-none p-4 border border-black rounded-md h-20'
-					ref={descriptionRef}
-				></textarea>
-				<div className='flex items-center mt-2'>
-					<label htmlFor='patronize' className='text-xl font-semibold mr-2'>
-						Apadrinhavel:{' '}
-					</label>
-					<input
-						type='checkbox'
-						name='patronize'
-						id='patronize'
-						onChange={handleChange}
-						className='customCheckbox'
-					/>
-					<span className='opacity-75 ml-2 font-bold h-5 w-5 text-sm border-2 border-black flex justify-center items-center rounded-full cursor-help'>
-						?
-					</span>
+					ref={descriptionRef}></textarea>
+				<div className='flex justify-between mt-2'>
+					<div className='flex items-center mt-2'>
+						<label htmlFor='patronize' className='text-xl font-semibold mr-2'>
+							Apadrinhavel:{' '}
+						</label>
+						<input
+							type='checkbox'
+							name='patronize'
+							id='patronize'
+							onChange={handleChange}
+							className='customCheckbox'
+						/>
+						<span className='opacity-75 ml-2 font-bold h-5 w-5 text-sm border-2 border-black flex justify-center items-center rounded-full cursor-help'>
+							?
+						</span>
+					</div>
+					<div className='relative'>
+						<input
+							type='text'
+							placeholder='Raça'
+							className='focus:outline-none py-2 px-4 border-black border rounded-lg'
+						/>
+						<div className='block absolute max-h-52 overflow-y-scroll p-2 rounded-xl bg-white overflow-x-hidden shadow-[2px_2px_10px_0px_rgba(0,0,0,0.3)]'>
+							{filterRaces.map((race, i) => {
+								return (
+									<div className='w-full' key={i}>
+										{race.name}
+									</div>
+								)
+							})}
+						</div>
+					</div>
 				</div>
 				<h4 className='mt-4 pt-2 border-t border-black w-full text-xl'>
 					Observações:{' '}
@@ -204,16 +238,14 @@ const Form = () => {
 								setObservations([...observations, ''])
 							}
 						}}
-						className='w-full px-3 py-1 rounded-full focus:outline-none bg-light text-white uppercase font-semibold text-base'
-					>
+						className='w-full px-3 py-1 rounded-full focus:outline-none bg-light text-white uppercase font-semibold text-base'>
 						Adicionar observação <span className='text-xl'>+</span>
 					</button>
 				</div>
 			</div>
 			<button
 				type='submit'
-				className='mx-4 mt-2 w-[calc(100%-2rem)] bg-gradient-to-tr from-primary to-reallyLight text-2xl py-1 rounded-full font-bold text-white font-mono uppercase shadow-sm shadow-black'
-			>
+				className='mx-4 mt-2 w-[calc(100%-2rem)] bg-gradient-to-tr from-primary to-reallyLight text-2xl py-1 rounded-full font-bold text-white font-mono uppercase shadow-sm shadow-black'>
 				Cadastrar
 			</button>
 		</form>
