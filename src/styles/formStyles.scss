@@ -5,18 +5,26 @@
         @apply block w-full md:w-2/5 h-screen md:h-auto text-center bg-[#fdfdfd] rounded-xl pt-8 bg-opacity-20 backdrop-blur-xl;
 
         &Content {
-            @apply h-full md:h-auto w-full px-8 py-8;
+            @apply h-full md:h-auto w-full px-8 py-4;
 
             form {
                 @apply flex flex-col justify-evenly h-full md:block;
             }
 
             input {
-                @apply w-full px-4 py-2 border border-darker rounded-xl mb-4 focus:outline-none placeholder:text-darker text-black bg-transparent;
+                @apply w-full px-4 py-2 border border-darker rounded-xl mt-1 focus:outline-none placeholder:text-darker text-black bg-transparent;
+            }
+
+            .incorrect {
+                @apply border-error;
             }
 
             button {
-                @apply w-full bg-gradient-to-tl from-primary to-lightPastel text-white font-bold p-2 rounded-xl;
+                @apply w-full bg-gradient-to-tl mb-2 mt-2 from-primary to-lightPastel text-white font-bold p-2 rounded-xl;
+            }
+
+            span {
+                @apply text-error relative block mt-1 text-sm w-full text-left pl-4 after:content-[''] after:block after:w-1 after:h-1 after:rounded-full after:bg-error after:absolute after:left-2 after:top-2;
             }
         }
     }

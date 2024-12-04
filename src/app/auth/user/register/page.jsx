@@ -4,6 +4,7 @@ import { useFormState } from 'react-dom'
 import handleSubmit from './action'
 import { signIn } from 'next-auth/react'
 import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 const initialState = {
 	name: '',
@@ -15,44 +16,91 @@ const initialState = {
 
 const Form = () => {
 	const [state, formAction] = useFormState(handleSubmit, initialState)
+	const router = useRouter()
 
 	useEffect(() => {
 		if (state.user) {
-			signIn('credentials', {
-				email: state.user.email,
-				password: state.user.password,
-				type: 'user',
-				redirect: true,
-				callbackUrl: '/',
-			})
+			setTimeout(() => {
+				signIn('credentials', {
+					email: state.user.email,
+					password: state.user.password,
+					type: 'user',
+					redirect: false,
+				}).then(({ ok }) => {
+					if (ok) {
+						router.push('/')
+					}
+				})
+			}, 1000)
 		}
 	}, [state])
 
 	return (
 		<form action={formAction}>
 			<div className='field'>
-				<input type='text' placeholder='Nome' name='name' />
-				<span>{state.name ? state.name[0] : ''}</span>
+				<input
+					type='text'
+					placeholder='Nome'
+					name='name'
+					className={state?.name ? 'incorrect' : ''}
+				/>
+				{state?.name
+					? Array.from(state.name).map((message, i) => {
+							return <span key={i}>{message}</span>
+					  })
+					: ''}
 			</div>
 			<div className='field'>
-				<input type='text' placeholder='Email' name='email' />
-				<span>{state.email ? state.email[0] : ''}</span>
+				<input
+					type='text'
+					placeholder='Email'
+					name='email'
+					className={state?.email ? 'incorrect' : ''}
+				/>
+				{state?.email
+					? Array.from(state.email).map((message, i) => {
+							return <span key={i}>{message}</span>
+					  })
+					: ''}
 			</div>
 			<div className='field'>
-				<input type='text' placeholder='Repita seu email' name='repeatEmail' />
-				<span>{state.repeatEmail ? state.repeatEmail[0] : ''}</span>
+				<input
+					type='text'
+					placeholder='Repita seu email'
+					name='repeatEmail'
+					className={state?.repeatEmail ? 'incorrect' : ''}
+				/>
+				{state?.repeatEmail
+					? Array.from(state.repeatEmail).map((message, i) => {
+							return <span key={i}>{message}</span>
+					  })
+					: ''}
 			</div>
 			<div className='field'>
-				<input type='password' placeholder='Senha' name='password' />
-				<span>{state.password ? state.password[0] : ''}</span>
+				<input
+					type='password'
+					placeholder='Senha'
+					name='password'
+					className={state?.password ? 'incorrect' : ''}
+				/>
+				{state?.password
+					? Array.from(state.password).map((message, i) => {
+							return <span key={i}>{message}</span>
+					  })
+					: ''}
 			</div>
 			<div className='field'>
 				<input
 					type='password'
 					placeholder='Repita sua senha'
 					name='repeatPassword'
+					className={state?.repeatPassword ? 'incorrect' : ''}
 				/>
-				<span>{state.repeatPassword ? state.repeatPassword[0] : ''}</span>
+				{state?.repeatPassword
+					? Array.from(state.repeatPassword).map((message, i) => {
+							return <span key={i}>{message}</span>
+					  })
+					: ''}
 			</div>
 			<button type='submit'>Register</button>
 		</form>

@@ -22,6 +22,7 @@ module.exports = {
 			lightPastel: '#FF9FC2',
 			ultraLightPastel: '#e8cce2',
 			transparent: 'transparent',
+			error: '#eb4034',
 		},
 		extend: {
 			backgroundImage: {

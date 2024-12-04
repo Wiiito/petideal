@@ -17,27 +17,27 @@ const userSchema = z
 			.min(8, { message: 'Senha deve conter no minimo 8 caracteres' }),
 		repeatPassword: z.string().min(1, { message: 'Repita sua senha' }),
 	})
-	.refine(d => d.email === d.repeatEmail, {
+	.refine((d) => d.email === d.repeatEmail, {
 		path: ['email', 'repeatEmail'],
 		message: 'Emails devem ser iguais',
 	})
-	.refine(d => d.password === d.repeatPassword, {
+	.refine((d) => d.password === d.repeatPassword, {
 		path: ['password', 'repeatPassword'],
 		message: 'Senhas devem ser iguais',
 	})
-	.refine(d => d.password.match(/[a-z]/g), {
+	.refine((d) => d.password.match(/[a-z]/g), {
 		path: ['password'],
 		message: 'Senha deve conter minúsculas',
 	})
-	.refine(d => d.password.match(/[A-Z]/g), {
+	.refine((d) => d.password.match(/[A-Z]/g), {
 		path: ['password'],
 		message: 'Senha deve conter maiúsculas',
 	})
-	.refine(d => d.password.match(/[0-9]/g), {
+	.refine((d) => d.password.match(/[0-9]/g), {
 		path: ['password'],
 		message: 'Senha deve conter números',
 	})
-	.refine(d => d.password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/g), {
+	.refine((d) => d.password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/g), {
 		path: ['password'],
 		message: 'Senha deve conter caracteres especiais',
 	})
