@@ -11,7 +11,7 @@ const PetSchema = mongoose.Schema({
 	},
 	images: [String],
 	description: String,
-	characteristics: [Number], // Tabela caracteristicas do pet é substituida por um array
+	embedding: [Number], // Tabela caracteristicas do pet é substituida por um array
 	observation: [String],
 	patronize: Boolean,
 	raceId: String, // Referencia o modelo da raca

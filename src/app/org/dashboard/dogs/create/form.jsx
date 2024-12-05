@@ -2,12 +2,14 @@
 
 import { useSession } from 'next-auth/react'
 import { useEffect, useRef, useState } from 'react'
-import submitDog, { getRaces } from './action'
+import submitDog from './action'
 import { redirect } from 'next/navigation'
 import './customFormStyles.scss'
+import { getAllRacesNames, getRaceBaseEmbedding } from '@/actions/race/get'
 
 const Form = () => {
 	const descriptionRef = useRef()
+	const inputRaceSearchRef = useRef()
 
 	const { data: session, status } = useSession()
 
@@ -16,18 +18,21 @@ const Form = () => {
 
 	// Races loading
 	const [races, setRaces] = useState(['Carregando...'])
+	const [racesName, setRacesName] = useState(['Carregando...'])
 	const [filterRaces, setFilterRaces] = useState(['Carregando...'])
+
+	const racesBoxRef = useRef(null)
 
 	// All data state
 	const [data, setData] = useState({
 		name: '',
 		orgId: '',
 		images: [],
-		characteristics: [],
+		embedding: [],
 		observation: [''],
 		patronize: false,
 		description: '',
-		raceId: 'Caramelo',
+		raceId: '',
 	})
 
 	// Calls create dog action
@@ -36,16 +41,16 @@ const Form = () => {
 		let formData = new FormData()
 		formData.append('name', data.name)
 		formData.append('orgId', data.orgId)
-		formData.append('characteristics', [1])
+		formData.append('embedding', data.embedding)
 		formData.append('patronize', data.patronize)
 		formData.append('description', data.description)
-		formData.append('raceId', 'Caramelo')
+		formData.append('raceId', data.raceId)
 
-		data.images.forEach(image => {
+		data.images.forEach((image) => {
 			formData.append('images', image)
 		})
 
-		data.observation.forEach(obs => {
+		data.observation.forEach((obs) => {
 			formData.append('observation', obs)
 		})
 
@@ -59,8 +64,8 @@ const Form = () => {
 	}
 
 	// Updates data state
-	const handleChange = e => {
-		setData(prev => {
+	const handleChange = (e) => {
+		setData((prev) => {
 			if (e.target.name === 'patronize') {
 				return {
 					...prev,
@@ -74,7 +79,7 @@ const Form = () => {
 	// Set user id on form
 	useEffect(
 		() =>
-			setData(prev => {
+			setData((prev) => {
 				return {
 					...prev,
 					orgId: status === 'authenticated' ? session.user._id : '',
@@ -84,18 +89,18 @@ const Form = () => {
 	)
 
 	const fetchDogs = async () => {
-		const races = await getRaces()
+		const races = await getAllRacesNames()
 		setRaces(races.races)
-		setFilterRaces(races.races)
+		const racesNames = Array.from(races.races).map((race) => {
+			return race.name
+		})
+		setRacesName(racesNames)
+		setFilterRaces(racesNames)
 	}
 
 	useEffect(() => {
 		fetchDogs()
 	}, [])
-
-	useEffect(() => {
-		console.log(races)
-	}, [races])
 
 	// Updates description size
 	const handleDescriptionInput = () => {
@@ -108,20 +113,19 @@ const Form = () => {
 	const handleObservation = () => {
 		const observationFormValues = Array.from(
 			document.getElementsByName('observation')
-		).map(e => {
+		).map((e) => {
 			if (e.value) {
 				return e.value
 			}
 		})
-		setData(prev => {
+		setData((prev) => {
 			return { ...prev, observation: observationFormValues }
 		})
 		setObservations(observationFormValues)
-		console.log(data)
 	}
 
-	const handleImage = e => {
-		setData(prev => {
+	const handleImage = (e) => {
+		setData((prev) => {
 			return {
 				...prev,
 				images: [...data.images, ...e.target.files],
@@ -154,7 +158,8 @@ const Form = () => {
 							id='slider'
 							style={{
 								width: 17 * data.images.length - 1 + 'rem',
-							}}>
+							}}
+						>
 							{data.images.map((img, i) => {
 								return (
 									<div className='dogImageContainer' key={i}>
@@ -178,7 +183,8 @@ const Form = () => {
 					onChange={handleChange}
 					onInput={handleDescriptionInput}
 					className='w-full resize-none focus:outline-none p-4 border border-black rounded-md h-20'
-					ref={descriptionRef}></textarea>
+					ref={descriptionRef}
+				></textarea>
 				<div className='flex justify-between mt-2'>
 					<div className='flex items-center mt-2'>
 						<label htmlFor='patronize' className='text-xl font-semibold mr-2'>
@@ -200,12 +206,48 @@ const Form = () => {
 							type='text'
 							placeholder='Raça'
 							className='focus:outline-none py-2 px-4 border-black border rounded-lg'
+							onFocus={() => (racesBoxRef.current.style.display = 'block')}
+							onBlur={() => (racesBoxRef.current.style.display = 'none')}
+							onChange={(e) =>
+								setFilterRaces(
+									racesName.filter((race) => {
+										if (
+											race.toLowerCase().includes(e.target.value.toLowerCase())
+										)
+											return true
+									})
+								)
+							}
+							ref={inputRaceSearchRef}
 						/>
-						<div className='block absolute max-h-52 overflow-y-scroll p-2 rounded-xl bg-white overflow-x-hidden shadow-[2px_2px_10px_0px_rgba(0,0,0,0.3)]'>
+						<div
+							className='hidden absolute w-full max-h-52 overflow-y-scroll p-2 rounded-xl bg-white overflow-x-hidden shadow-[2px_2px_10px_0px_rgba(0,0,0,0.3)]'
+							ref={racesBoxRef}
+						>
 							{filterRaces.map((race, i) => {
 								return (
-									<div className='w-full' key={i}>
-										{race.name}
+									<div
+										className='w-full h-8 border-b border-black items-center flex hover:bg-ultraLightPastel cursor-pointer'
+										key={i}
+										onMouseDown={async () => {
+											const selectedRace = races.filter((allRaces) => {
+												if (allRaces.name === race) return true
+											})[0]
+											inputRaceSearchRef.current.value = race
+											const raceEmbedding = await getRaceBaseEmbedding(
+												selectedRace._id
+											)
+
+											setData((prev) => {
+												return {
+													...prev,
+													raceId: selectedRace._id,
+													embedding: raceEmbedding.embbeding,
+												}
+											})
+										}}
+									>
+										{race}
 									</div>
 								)
 							})}
@@ -238,14 +280,16 @@ const Form = () => {
 								setObservations([...observations, ''])
 							}
 						}}
-						className='w-full px-3 py-1 rounded-full focus:outline-none bg-light text-white uppercase font-semibold text-base'>
+						className='w-full px-3 py-1 rounded-full focus:outline-none bg-light text-white uppercase font-semibold text-base'
+					>
 						Adicionar observação <span className='text-xl'>+</span>
 					</button>
 				</div>
 			</div>
 			<button
 				type='submit'
-				className='mx-4 mt-2 w-[calc(100%-2rem)] bg-gradient-to-tr from-primary to-reallyLight text-2xl py-1 rounded-full font-bold text-white font-mono uppercase shadow-sm shadow-black'>
+				className='mx-4 mt-2 w-[calc(100%-2rem)] bg-gradient-to-tr from-primary to-reallyLight text-2xl py-1 rounded-full font-bold text-white font-mono uppercase shadow-sm shadow-black'
+			>
 				Cadastrar
 			</button>
 		</form>

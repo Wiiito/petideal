@@ -6,7 +6,6 @@ import createPet from '@/actions/pet/create'
 import { getSignedS3Url } from '@/lib/aws'
 import { revalidatePath } from 'next/cache'
 import { v4 as uuidv4 } from 'uuid'
-import { getAllRacesNames } from '@/actions/race/get'
 
 export default async function submitDog(data) {
 	const session = await getServerSession(AuthOptions)
@@ -18,12 +17,12 @@ export default async function submitDog(data) {
 	jsonData.observation = data.getAll('observation') // Recebe o array de observações e adiciona ao json
 
 	// TODO: FAZ A VALIDAÇÃO DO FORM DATA AQUI PELO AMOR DE DEUS
-
 	/*
-		O codigo abaixo é responsavel por ler todas a imagens no formulario,
-		upa-las pro servidor s3 e salvar seu uuid no array de imagens que será
-		upado para a database
+	O codigo abaixo é responsavel por ler todas a imagens no formulario,
+	upa-las pro servidor s3 e salvar seu uuid no array de imagens que será
+	upado para a database
 	*/
+
 	jsonData.images = []
 	data.getAll('images').forEach(async (file) => {
 		const key = uuidv4()
@@ -47,6 +46,7 @@ export default async function submitDog(data) {
 	try {
 		await createPet(jsonData)
 		revalidatePath('/org/dashboard/dogs')
+		console.log('aaaaaaaaaa')
 		return { success: true, status: 201 }
 	} catch (error) {
 		console.error('Erro ao cadastrar animal:' + error)
@@ -56,9 +56,4 @@ export default async function submitDog(data) {
 			message: 'Algo deu errado, tente novamente!',
 		}
 	}
-}
-
-export async function getRaces() {
-	const dogs = await getAllRacesNames()
-	return dogs
 }
