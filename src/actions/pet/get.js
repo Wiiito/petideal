@@ -19,3 +19,14 @@ export async function getPageOfPets(orgId, page, perPage) {
 
 	return JSON.parse(JSON.stringify(pets))
 }
+
+export async function getFromAllPageOfPets(page, perPage) {
+	if (!perPage) perPage = 12
+	await dbConnect()
+	let pets = await PetModel.find()
+		.limit(perPage)
+		.skip(perPage * (page - 1))
+		.sort({ name: 'asc' })
+
+	return JSON.parse(JSON.stringify(pets))
+}
