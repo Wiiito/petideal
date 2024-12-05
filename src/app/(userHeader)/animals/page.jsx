@@ -10,8 +10,8 @@ const Page = () => {
 	const [page, setPage] = useState(1)
 	const [perPage, setPerPage] = useState(20)
 
-	const changePage = async (page) => {
-		if (!dogs[0].name) {
+	const changePage = async page => {
+		if (dogs[0] === 'Loading...') {
 			dogs.pop()
 		}
 
@@ -27,10 +27,10 @@ const Page = () => {
 		fetchDogs(page)
 	}
 
-	const fetchDogs = async (page) => {
+	const fetchDogs = async page => {
 		const newDogs = await getFromAllPageOfPets(page, perPage)
 
-		setDogs((prev) => {
+		setDogs(prev => {
 			return [...dogs, ...newDogs]
 		})
 	}

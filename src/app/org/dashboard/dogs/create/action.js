@@ -43,10 +43,13 @@ export default async function submitDog(data) {
 			})
 	})
 
+	jsonData.embedding = jsonData.embedding.split(',').map(num => {
+		return Number(num)
+	})	
+
 	try {
 		await createPet(jsonData)
 		revalidatePath('/org/dashboard/dogs')
-		console.log('aaaaaaaaaa')
 		return { success: true, status: 201 }
 	} catch (error) {
 		console.error('Erro ao cadastrar animal:' + error)
