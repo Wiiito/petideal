@@ -1,16 +1,22 @@
 'use client'
 
-import { getFromAllPageOfPets } from '@/actions/pet/get'
+import { getFromAllPageOfPets, vectorSearch } from '@/actions/pet/get'
+import { getRaceBaseEmbedding } from '@/actions/race/get'
+import { getEmbedding } from '@/actions/user/get'
 import DogComponent from '@/components/DogComponent/DogComponent'
+import { useSession } from 'next-auth/react'
+import { redirect } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 const Page = () => {
+	const { data: session, status } = useSession()
+
 	const [dogs, setDogs] = useState(['Loading...'])
 	const [loadedDogs, setLoadedDogs] = useState(['Loading...'])
 	const [page, setPage] = useState(1)
 	const [perPage, setPerPage] = useState(20)
 
-	const changePage = async page => {
+	const changePage = async (page) => {
 		if (dogs[0] === 'Loading...') {
 			dogs.pop()
 		}
@@ -27,28 +33,38 @@ const Page = () => {
 		fetchDogs(page)
 	}
 
-	const fetchDogs = async page => {
-		const newDogs = await getFromAllPageOfPets(page, perPage)
+	const fetchDogs = async (page) => {
+		const userEmbedding = await getEmbedding(session.user._id)
 
-		setDogs(prev => {
+		const newDogs = await vectorSearch(userEmbedding.perfil, perPage)
+
+		setDogs((prev) => {
 			return [...dogs, ...newDogs]
 		})
 	}
 
 	useEffect(() => {
-		changePage(1)
-		console.log(dogs)
-	}, [page])
+		if (status === 'unauthenticated') {
+			redirect('/auth/user/register')
+		}
+	}, [status])
 
 	useEffect(() => {
-		console.log(dogs)
-	}, [dogs])
+		if (status === 'authenticated') {
+			changePage(1)
+		}
+	}, [page, status])
 
 	return (
 		<section>
 			{dogs[0] !== 'Loading...'
 				? dogs.map((dog, i) => {
-						return <DogComponent dog={dog} key={i} />
+						return (
+							<>
+								<DogComponent dog={dog} key={i} />
+								Compatibilidade: {Number(dog.score * 100).toFixed(1)}%
+							</>
+						)
 				  })
 				: 'Loading...'}
 		</section>
