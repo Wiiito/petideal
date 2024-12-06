@@ -5,23 +5,19 @@
 		"popularity": 148,
 		"min_height": 22.86,
 		"max_height": 29.21,
-		"min_weight": 3.18,
-		"max_weight": 4.54,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.60, 0.60, 0.60, 0.80, 1.00]
+		"embbeding": [0.6, 0.6, 0.6, 0.8, 1.0]
 	},
 	{
-		"name": "Galgo afegão",
-		"description": "O galgo afegão é uma raça antiga, toda a sua aparência é de dignidade e indiferença – seus olhos olham para longe como se estivessem na memória de eras passadas. Uma mente inteligente e independente, toda a sua aparência é de dignidade e estilo. Aos seus, ele é dedicado e leal, com uma personalidade encantadora e viva. O galgo afegão é um atleta capaz de velocidade imensa e requer uma grande cerca no quintal e exercícios diários. Desde os tempos antigos, os galgos afegãos são famosos por sua beleza elegante. Mas a pelagem espessa, sedosa e esvoaçante que é a maior glória da raça não é apenas para exibição - serviu como proteção contra o clima rigoroso nas regiões montanhosas onde os afegãos originalmente ganhavam seu sustento. Por baixo do exterior glamoroso do afegão está um cão de caça poderoso e ágil – com até 27 polegadas de altura no ombro – construído para um longo dia de caça. Suas enormes patas funcionavam como amortecedores no terreno difícil de sua terra natal. O galgo afegão é uma raça especial para pessoas especiais. Um especialista em raça escreve: “Não é a raça para todos os possíveis donos de cães, mas quando a combinação cão e dono é certa, nenhum animal pode se igualar ao galgo afegão como animal de estimação”. O galgo afegão é um aristocrata distante e digno de beleza sublime. Apesar de sua aparência majestosa, ele é conhecido por sua profunda lealdade, natureza sensível e amor absoluto por aqueles que chama de seus.",
+		"name": "Galgo Afegão",
+		"description": "O Galgo Afegão é uma raça antiga, toda a sua aparência é de dignidade e indiferença – seus olhos olham para longe como se estivessem na memória de eras passadas. Uma mente inteligente e independente, toda a sua aparência é de dignidade e estilo. Aos seus, ele é dedicado e leal, com uma personalidade encantadora e viva. O galgo afegão é um atleta capaz de velocidade imensa e requer uma grande cerca no quintal e exercícios diários. Desde os tempos antigos, os galgos afegãos são famosos por sua beleza elegante. Mas a pelagem espessa, sedosa e esvoaçante que é a maior glória da raça não é apenas para exibição - serviu como proteção contra o clima rigoroso nas regiões montanhosas onde os afegãos originalmente ganhavam seu sustento. Por baixo do exterior glamoroso do afegão está um cão de caça poderoso e ágil – com até 27 polegadas de altura no ombro – construído para um longo dia de caça. Suas enormes patas funcionavam como amortecedores no terreno difícil de sua terra natal. O galgo afegão é uma raça especial para pessoas especiais. Um especialista em raça escreve: “Não é a raça para todos os possíveis donos de cães, mas quando a combinação cão e dono é certa, nenhum animal pode se igualar ao galgo afegão como animal de estimação”. O galgo afegão é um aristocrata distante e digno de beleza sublime. Apesar de sua aparência majestosa, ele é conhecido por sua profunda lealdade, natureza sensível e amor absoluto por aqueles que chama de seus.",
 		"popularity": 113,
 		"min_height": 63.50,
 		"max_height": 68.58,
-		"min_weight": 22.68,
-		"max_weight": 27.22,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.80, 0.20, 0.80, 0.20, 0.20]
+		"embbeding": [0.8, 0.2, 0.8, 0.2, 0.2]
 	},
 	{
 		"name": "Airedale Terrier",
@@ -29,11 +25,9 @@
 		"popularity": 60,
 		"min_height": 58.42,
 		"max_height": 58.42,
-		"min_weight": 22.68,
-		"max_weight": 31.75,
 		"min_expectancy": 11.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.60, 0.40, 0.60, 1.00, 0.80]
+		"embbeding": [0.6, 0.4, 0.6, 1.0, 0.8]
 	},
 	{
 		"name": "Akita",
@@ -41,11 +35,9 @@
 		"popularity": 47,
 		"min_height": 60.96,
 		"max_height": 71.12,
-		"min_weight": 31.75,
-		"max_weight": 58.97,
 		"min_expectancy": 10.00,
 		"max_expectancy": 13.00,
-		"embbeding": [0.80, 0.60, 0.80, 1.00, 0.60]
+		"embbeding": [0.8, 0.6, 0.8, 1.0, 0.6]
 	},
 	{
 		"name": "Malamute do Alasca",
@@ -53,46 +45,39 @@
 		"popularity": 58,
 		"min_height": 58.42,
 		"max_height": 63.50,
-		"min_weight": 34.02,
-		"max_weight": 38.56,
 		"min_expectancy": 10.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.60, 0.60, 0.80, 0.40, 0.80]
+		"embbeding": [0.6, 0.6, 0.8, 0.4, 0.8]
 	},
 	{
 		"name": "Bulldog Americano",
 		"description": "O Bulldog Americano é descendente do Bulldog Inglês. Acredita-se que o bulldog já existia na América no século XVII. Eles vieram para os Estados Unidos em 1800, com imigrantes que trouxeram consigo seus buldogues de trabalho. Pequenos agricultores e pecuaristas usaram este cão de trabalho versátil para muitas tarefas, incluindo guardiões de fazendas, cães de gado e cães de caça. A raça sobreviveu em grande parte, principalmente nos estados do sul, devido à sua capacidade de derrubar e capturar porcos selvagens. A raça que conhecemos como Bulldog Americano era originalmente conhecida por muitos nomes diferentes antes de o nome American Bulldog se tornar o padrão. Em diferentes partes do Sul, ele era conhecido como Bulldog Branco do Sul Inglês, mas mais comumente apenas “buldogue”. A raça não foi chamada de bulldog por causa de uma certa aparência, mas porque eles faziam um verdadeiro trabalho de bulldog. Informações de contato da raçaKatrina HuffmasterTelefone: 850-519-3089 American Bulldogs são cães atléticos bem equilibrados que demonstram grande força, resistência, agilidade e uma atitude amigável. Historicamente, eles foram criados para serem cães utilitários usados ​​no trabalho na fazenda.",
+		"popularity": -1.00,
 		"min_height": 50.80,
 		"max_height": 63.50,
-		"min_weight": 27.22,
-		"max_weight": 45.36,
 		"min_expectancy": 10.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.20, 0.60, 0.80, 0.60, 0.60]
+		"embbeding": [0.2, 0.6, 0.8, 0.6, 0.6]
 	},
 	{
-		"name": "Coonhound Inglês Americano",
-		"description": "Com até 26 polegadas de altura no ombro, os American English Coonhounds são atletas de peito largo e rosto doce, amados pelos esportistas por sua velocidade e resistência. Esticado firmemente sobre o corpo atlético está um casaco de comprimento médio com vários padrões, alguns com listras. A cabeça é larga, com um crânio abobadado, com orelhas macias e baixas e olhos castanho-escuros que brilham com calor e bondade. Os Coonhounds ingleses americanos são suaves quando estão de folga, mas tenazes e teimosos na perseguição de suas presas de cauda anelada. Seu impulso e energia para o trabalho, a paciência necessária para treiná-los para outras coisas além da caça ao guaxinim e seu latido alto e sonoro podem tornar a raça uma péssima opção como animais de estimação para proprietários novatos. Alguns fãs apaixonados dos Coonhounds ingleses americanos sentem que, sem uma saída esportiva para as virtudes deste cão de caça, você está simplesmente desperdiçando um bom cachorro. Esses cães elegantes e atrevidos, magros, mas musculosos, trabalham do anoitecer ao amanhecer em busca do astuto guaxinim. A visão do American English Coonhound rasgando a floresta enluarada, todo vigoroso e determinado, berrando sua vigorosa música noturna, é o paraíso dos caçadores de guaxinins.",
+		"name": "Coonhound Inglês",
+		"description": "Com até 26 polegadas de altura no ombro, os Coonhounds Ingleses são atletas de peito largo e rosto doce, amados pelos esportistas por sua velocidade e resistência. Esticado firmemente sobre o corpo atlético está um casaco de comprimento médio com vários padrões, alguns com listras. A cabeça é larga, com um crânio abobadado, com orelhas macias e baixas e olhos castanho-escuros que brilham com calor e bondade. Os Coonhounds ingleses americanos são suaves quando estão de folga, mas tenazes e teimosos na perseguição de suas presas de cauda anelada. Seu impulso e energia para o trabalho, a paciência necessária para treiná-los para outras coisas além da caça ao guaxinim e seu latido alto e sonoro podem tornar a raça uma péssima opção como animais de estimação para proprietários novatos. Alguns fãs apaixonados dos Coonhounds ingleses americanos sentem que, sem uma saída esportiva para as virtudes deste cão de caça, você está simplesmente desperdiçando um bom cachorro. Esses cães elegantes e atrevidos, magros, mas musculosos, trabalham do anoitecer ao amanhecer em busca do astuto guaxinim. A visão do American English Coonhound rasgando a floresta enluarada, todo vigoroso e determinado, berrando sua vigorosa música noturna, é o paraíso dos caçadores de guaxinins.",
 		"popularity": 175,
 		"min_height": 58.42,
 		"max_height": 66.04,
-		"min_weight": 20.41,
-		"max_weight": 29.48,
 		"min_expectancy": 11.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.20, 0.40, 0.80, 0.60, 0.60]
+		"embbeding": [0.2, 0.4, 0.8, 0.6, 0.6]
 	},
 	{
-		"name": "Cão esquimó americano",
-		"description": "O cão esquimó americano vem em três tamanhos – padrão, miniatura e brinquedo – medindo até 19 polegadas no ombro ou tão curto quanto 9 polegadas. Os traços distintivos incluem uma pelagem branca densa e brilhante com uma gola semelhante a um leão ao redor do peito e ombros; um rosto sorridente, com nariz, lábios e contorno dos olhos pretos que transmitem uma expressão perspicaz e inteligente; e uma cauda emplumada transportada nas costas. Alguns Eskies têm marcas com o delicioso nome da cor “creme de biscoito”. Eles se movem com um andar ousado e ágil. Os esquis são animais sociais e podem desenvolver comportamentos problemáticos quando negligenciados ou mal treinados – eles insistem em fazer parte da vida familiar. Entre as raças mais treináveis, o inteligente e amigo das crianças Eskie praticamente inventou a frase “ansioso por agradar”. O cão esquimó americano combina uma beleza marcante com uma mente rápida e inteligente em um pacote total de inteligência e beleza. Nem tímidos nem agressivos, os Eskies estão sempre alertas e amigáveis, embora sejam um pouco conservadores na hora de fazer novos amigos.",
+		"name": "Esquimó Americano",
+		"description": "O Esquimó Americano vem em três tamanhos – padrão, miniatura e brinquedo – medindo até 19 polegadas no ombro ou tão curto quanto 9 polegadas. Os traços distintivos incluem uma pelagem branca densa e brilhante com uma gola semelhante a um leão ao redor do peito e ombros; um rosto sorridente, com nariz, lábios e contorno dos olhos pretos que transmitem uma expressão perspicaz e inteligente; e uma cauda emplumada transportada nas costas. Alguns Eskies têm marcas com o delicioso nome da cor “creme de biscoito”. Eles se movem com um andar ousado e ágil. Os esquis são animais sociais e podem desenvolver comportamentos problemáticos quando negligenciados ou mal treinados – eles insistem em fazer parte da vida familiar. Entre as raças mais treináveis, o inteligente e amigo das crianças Eskie praticamente inventou a frase “ansioso por agradar”. O cão esquimó americano combina uma beleza marcante com uma mente rápida e inteligente em um pacote total de inteligência e beleza. Nem tímidos nem agressivos, os Eskies estão sempre alertas e amigáveis, embora sejam um pouco conservadores na hora de fazer novos amigos.",
 		"popularity": 122,
 		"min_height": 22.86,
 		"max_height": 48.26,
-		"min_weight": 2.72,
-		"max_weight": 15.88,
 		"min_expectancy": 13.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.60, 0.80, 1.00, 1.00]
+		"embbeding": [0.4, 0.6, 0.8, 1.0, 1.0]
 	},
 	{
 		"name": "Foxhound americano",
@@ -100,125 +85,116 @@
 		"popularity": 186,
 		"min_height": 53.34,
 		"max_height": 63.50,
-		"min_weight": 27.22,
-		"max_weight": 31.75,
 		"min_expectancy": 11.00,
 		"max_expectancy": 13.00,
-		"embbeding": [0.20, 0.60, 0.80, 0.40, 0.80]
+		"embbeding": [0.2, 0.6, 0.8, 0.4, 0.8]
 	},
 	{
-		"name": "Terrier Calvo Americano",
-		"description": "O American Hairless Terrier mede entre 30 e 45 centímetros no ombro e vem em variedades com e sem pêlo. A variedade sem pêlo pode ter sobrancelhas e bigodes, enquanto a pelagem tem uma pelagem curta e brilhante. A pele dos sem pelos é macia e quente ao toque. A cabeça larga em forma de cunha é uma marca registrada de ambas as variedades. Orelhas eretas em formato de V emolduram os olhos redondos e expressivos que brilham de curiosidade. O American Hairless se move com vitalidade em seus passos que anunciam a verdadeira atitude do terrier. A variedade sem pêlo é tão hipoalergênica quanto um cão pode ser. A falta de pêlos, porém, apresenta seus próprios desafios. As queimaduras solares são uma preocupação e o tempo frio requer precauções especiais. Esta raça protege seus humanos e é um cão de guarda alerta. O American Hairless Terrier, nativo da Louisiana, é um cão inteligente, curioso e brincalhão que vem em variedades sem pêlo e com pêlo. Ele é uma ótima escolha para quem sofre de alergias e deseja um cão com a verdadeira coragem e coragem do terrier.",
+		"name": "Terrier Americano Pelado",
+		"description": "O Terrier Americano Pelado mede entre 30 e 45 centímetros no ombro e vem em variedades com e sem pêlo. A variedade sem pêlo pode ter sobrancelhas e bigodes, enquanto a pelagem tem uma pelagem curta e brilhante. A pele dos sem pelos é macia e quente ao toque. A cabeça larga em forma de cunha é uma marca registrada de ambas as variedades. Orelhas eretas em formato de V emolduram os olhos redondos e expressivos que brilham de curiosidade. O American Hairless se move com vitalidade em seus passos que anunciam a verdadeira atitude do terrier. A variedade sem pêlo é tão hipoalergênica quanto um cão pode ser. A falta de pêlos, porém, apresenta seus próprios desafios. As queimaduras solares são uma preocupação e o tempo frio requer precauções especiais. Esta raça protege seus humanos e é um cão de guarda alerta. O Terrier Americano Pelado, nativo da Louisiana, é um cão inteligente, curioso e brincalhão que vem em variedades sem pêlo e com pêlo. Ele é uma ótima escolha para quem sofre de alergias e deseja um cão com a verdadeira coragem e coragem do terrier.",
 		"popularity": 136,
 		"min_height": 30.48,
 		"max_height": 40.64,
-		"min_weight": 5.44,
-		"max_weight": 7.26,
 		"min_expectancy": 14.00,
 		"max_expectancy": 16.00,
-		"embbeding": []
+		"grooming_frequency_category": -1.00,
+		"shedding_category": -1.00,
+		"energy_level_category": -1.00,
+		"trainability_category": -1.00,
+		"demeanor_category": -1.00,
+		"embbeding": [-1.0, -1.0, -1.0, -1.0, -1.0]
 	},
 	{
 		"name": "Cão Leopardo Americano",
-		"description": "O American Leopard Hound é um cão de médio a grande porte e vem em três padrões: Sólido, Leopardo e Tigrado; nove cores oficiais diferentes; e uma variedade de marcas, no entanto, sessenta por cento de todos os leopardos americanos são cães de cor sólida. A raça é muito versátil na caça de uma variedade de espécies de caça, incluindo, mas não se limitando a, guaxinim, urso, lince, puma, esquilo e qualquer outro jogo arbóreo. Por serem uma raça especialmente resistente, eles também se saem excepcionalmente bem em climas extremos, tanto quentes quanto frios. O American Leopard foi oficialmente organizado e nomeado American Leopard Cur em 1960, mas alterado pelos membros do clube da raça para American Leopard Hound em 1º de maio de 2008, anos antes de vir para o American Kennel Club. Contato da raçaNome: Jackie CarpenterE-mail: plott_dog@yahoo.com Inteligência é um dos melhores atributos do American Leopard Hound. A raça é amorosa e afetuosa com sua família e é extremamente protetora com as crianças. Os leopardos americanos são uma das raças de cães arbóreos mais antigas dos EUA e têm habilidades de rastreamento extremamente fortes, muitas vezes capazes de rastrear presas por quilômetros.",
+		"description": "O Cão Leopardo Americano é um cão de médio a grande porte e vem em três padrões: Sólido, Leopardo e Tigrado; nove cores oficiais diferentes; e uma variedade de marcas, no entanto, sessenta por cento de todos os leopardos americanos são cães de cor sólida. A raça é muito versátil na caça de uma variedade de espécies de caça, incluindo, mas não se limitando a, guaxinim, urso, lince, puma, esquilo e qualquer outro jogo arbóreo. Por serem uma raça especialmente resistente, eles também se saem excepcionalmente bem em climas extremos, tanto quentes quanto frios. O American Leopard foi oficialmente organizado e nomeado American Leopard Cur em 1960, mas alterado pelos membros do clube da raça para Cão Leopardo Americano em 1º de maio de 2008, anos antes de vir para o American Kennel Club. Contato da raçaNome: Jackie CarpenterE-mail: plott_dog@yahoo.com Inteligência é um dos melhores atributos do Cão Leopardo Americano. A raça é amorosa e afetuosa com sua família e é extremamente protetora com as crianças. Os leopardos americanos são uma das raças de cães arbóreos mais antigas dos EUA e têm habilidades de rastreamento extremamente fortes, muitas vezes capazes de rastrear presas por quilômetros.",
+		"popularity": -1.00,
 		"min_height": 53.34,
 		"max_height": 68.58,
-		"min_weight": 20.41,
-		"max_weight": 31.75,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.60, 0.80, 1.00, 0.60]
+		"embbeding": [0.4, 0.6, 0.8, 1.0, 0.6]
 	},
 	{
 		"name": "Staffordshire Terrier Americano",
-		"description": "AmStaffs são terriers atarracados e musculosos do tipo bull, medindo de 17 a 19 polegadas no ombro. A cabeça é larga, as mandíbulas bem definidas, as maçãs do rosto pronunciadas e os olhos escuros e redondos bem separados. O movimento AmStaff é ágil e gracioso, com um andar elástico que anuncia a confiança inata da raça. A pelagem rígida e brilhante vem em várias cores e padrões. AmStaffers descrevem seus cães como profundamente conscientes do que os rodeia, dispostos a tudo e adoráveis ​​“cães de personalidade” em casa. AmStaffs gostam de desafios mentais e físicos. Eles são altamente treináveis, como sugerem suas muitas incursões no showbiz. Ao adquirir um AmStaff, só há um caminho a percorrer: faça sua lição de casa e encontre um criador AKC responsável. O American Staffordshire Terrier, conhecido por seus fãs como AmStaffs, é um companheiro inteligente, confiante e bem-humorado. A coragem deles é proverbial. Um AmStaff bem socializado e criado de forma responsável é um amigo leal e confiável até o fim.",
+		"description": "Os Staffordshires Terriers Americanos são terriers atarracados e musculosos do tipo bull, medindo de 17 a 19 polegadas no ombro. A cabeça é larga, as mandíbulas bem definidas, as maçãs do rosto pronunciadas e os olhos escuros e redondos bem separados. O movimento AmStaff é ágil e gracioso, com um andar elástico que anuncia a confiança inata da raça. A pelagem rígida e brilhante vem em várias cores e padrões. AmStaffers descrevem seus cães como profundamente conscientes do que os rodeia, dispostos a tudo e adoráveis ​​“cães de personalidade” em casa. AmStaffs gostam de desafios mentais e físicos. Eles são altamente treináveis, como sugerem suas muitas incursões no showbiz. Ao adquirir um AmStaff, só há um caminho a percorrer: faça sua lição de casa e encontre um criador AKC responsável. O American Staffordshire Terrier, conhecido por seus fãs como AmStaffs, é um companheiro inteligente, confiante e bem-humorado. A coragem deles é proverbial. Um AmStaff bem socializado e criado de forma responsável é um amigo leal e confiável até o fim.",
 		"popularity": 85,
 		"min_height": 43.18,
 		"max_height": 48.26,
-		"min_weight": 18.14,
-		"max_weight": 31.75,
 		"min_expectancy": 12.00,
 		"max_expectancy": 16.00,
-		"embbeding": [0.20, 0.40, 0.60, 0.60, 0.60]
+		"embbeding": [0.2, 0.4, 0.6, 0.6, 0.6]
 	},
 	{
-		"name": "Spaniel de Água Americano",
-		"description": "American Water Spaniels são gundogs musculosos de tamanho médio, não chamativos na aparência ou no desempenho, e reconhecíveis por uma pelagem marrom exuberante que é bem encaracolada ou ondulada. Criados para trabalhar nas águas geladas e nas margens pantanosas da região dos Grandes Lagos, esses spaniels estão idealmente equipados para o trabalho: a pelagem é densa e impermeável, os pés são densamente acolchoados, os dedos são palmados e o corpo é pequeno o suficiente para o cachorro entrar e sair de um esquife sem balançar o barco. Os admiradores da raça descrevem um spaniel alegre, inteligente e versátil, adequado para uma variedade de esportes caninos. Como caçadores, eles combinam as características de trabalho dos spaniels e dos retrievers. A chave para a felicidade do American Water Spaniel é a atividade, especialmente ao lado de seu adorado humano. Um cão subempregado pode latir e ser destrutivo. O American Water Spaniel, nativo da região lacustre do alto meio-oeste, é um atleta alegre e ao ar livre que adora caçar e nadar. Eles são conhecidos por serem felizes, ansiosos e charmosos, embora indiferentes com estranhos e um pouco teimosos.",
+		"name": "Cão d'Água Americano",
+		"description": "Cão d'Água Americano são gundogs musculosos de tamanho médio, não chamativos na aparência ou no desempenho, e reconhecíveis por uma pelagem marrom exuberante que é bem encaracolada ou ondulada. Criados para trabalhar nas águas geladas e nas margens pantanosas da região dos Grandes Lagos, esses spaniels estão idealmente equipados para o trabalho: a pelagem é densa e impermeável, os pés são densamente acolchoados, os dedos são palmados e o corpo é pequeno o suficiente para o cachorro entrar e sair de um esquife sem balançar o barco. Os admiradores da raça descrevem um spaniel alegre, inteligente e versátil, adequado para uma variedade de esportes caninos. Como caçadores, eles combinam as características de trabalho dos spaniels e dos retrievers. A chave para a felicidade do American Water Spaniel é a atividade, especialmente ao lado de seu adorado humano. Um cão subempregado pode latir e ser destrutivo. O American Water Spaniel, nativo da região lacustre do alto meio-oeste, é um atleta alegre e ao ar livre que adora caçar e nadar. Eles são conhecidos por serem felizes, ansiosos e charmosos, embora indiferentes com estranhos e um pouco teimosos.",
 		"popularity": 166,
 		"min_height": 38.10,
 		"max_height": 45.72,
-		"min_weight": 11.34,
-		"max_weight": 20.41,
 		"min_expectancy": 10.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.60, 0.20, 0.60, 1.00, 0.80]
+		"embbeding": [0.6, 0.2, 0.6, 1.0, 0.8]
 	},
 	{
-		"name": "Cão pastor da Anatólia",
+		"name": "Pastor da Anatólia",
 		"description": "O Pastor da Anatólia mede entre 27 e 29 polegadas no ombro e pode pesar até 150 libras. Profundamente musculosos, mas ágeis, os anatólios são mais do que páreo para os predadores e o terreno acidentado de sua terra natal. Os Anatólios descendem de algumas das mais antigas linhagens caninas domésticas conhecidas. Isso confere à raça uma sensação de atemporalidade, uma qualidade simples e intocada que nos leva de volta 6.000 anos à Idade do Bronze. Os Anatólios são inteligentes, dedicados, receptivos e adaptáveis. Eles protegerão seu rebanho – gado, crianças, cães menores e até mesmo o gato da família – com intensidade. Os proprietários da Anatólia devem ser líderes fortes, dispostos e capazes de lidar com um cão tão dominador e exigente quanto calmo e amoroso. Um cão pastor da Anatólia é um guardião de rebanho robusto e imponente de linhagem antiga. Protetores e territoriais, mas também inteligentes, pacientes e profundamente leais, esses vingadores musculosos são valorizados como cães de guarda sem igual.",
 		"popularity": 90,
 		"min_height": 68.58,
 		"max_height": 73.66,
-		"min_weight": 36.29,
-		"max_weight": 68.04,
 		"min_expectancy": 11.00,
 		"max_expectancy": 13.00,
-		"embbeding": [0.40, 0.60, 0.60, 0.40, 0.40]
+		"embbeding": [0.4, 0.6, 0.6, 0.4, 0.4]
 	},
 	{
-		"name": "Appenzeller Sennenhund",
-		"description": "O Appenzeller Sennenhund também é conhecido como Appenzeller Mountain Dog ou Appenzell Cattle Dog. Ele é animado, espirituoso, autoconfiante, confiável e destemido. Um pouco desconfiado com estranhos, ele é um bom cão de guarda que não pode ser subornado. A inteligência da raça os torna alunos altamente capazes. Devido à sua personalidade e necessidades de exercícios, ele não é adequado para morar em um apartamento. O Appenzeller Sennenhund é tricolor, de tamanho médio e de construção quase quadrada e equilibrado. Ele é musculoso e ágil e é um bom cão de condução, guarda, guarda, casa ou fazenda. Pela sua versatilidade e disposição, primam pela agilidade, obediência, pastoreio e busca e salvamento.",
+		"name": "Boiadeiro de Appenzell",
+		"description": "O Boiadeiro de Appenzell também é conhecido como Appenzeller Mountain Dog ou Appenzell Cattle Dog. Ele é animado, espirituoso, autoconfiante, confiável e destemido. Um pouco desconfiado com estranhos, ele é um bom cão de guarda que não pode ser subornado. A inteligência da raça os torna alunos altamente capazes. Devido à sua personalidade e necessidades de exercícios, ele não é adequado para morar em um apartamento. O Boiadeiro de Appenzell é tricolor, de tamanho médio e de construção quase quadrada e equilibrado. Ele é musculoso e ágil e é um bom cão de condução, guarda, guarda, casa ou fazenda. Pela sua versatilidade e disposição, primam pela agilidade, obediência, pastoreio e busca e salvamento.",
+		"popularity": -1.00,
 		"min_height": 48.26,
 		"max_height": 55.88,
-		"min_weight": 21.77,
-		"max_weight": 31.75,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.80, 1.00, 0.20, 0.40]
+		"embbeding": [0.4, 0.8, 1.0, 0.2, 0.4]
 	},
 	{
-		"name": "Cão de gado australiano",
-		"description": "Medindo entre 17 e 20 polegadas no ombro, o Australian Cattle Dog é um pastor robusto e musculoso, com força e agilidade. O ACD nasce com uma pelagem branca que fica azul acinzentada ou vermelha. Ambas as variedades de pelagem apresentam padrões distintos de manchas ou manchas. Os ACDs têm imenso impulso para o trabalho e são excelentes na caça, perseguição e, claro, na movimentação de gado. Sua energia ilimitada e marcha flexível os tornam excelentes parceiros de corrida. Os ACDs são leais, notoriamente inteligentes, sempre alertas e cautelosos com estranhos. Se um ACD não for desafiado, ele facilmente fica entediado e faz travessuras. É recomendado que os proprietários de ACD participem com seus cães de algum trabalho, esporte ou exercício regular para mantê-lo em boa forma física e mental. O compacto mas musculoso Australian Cattle Dog, também chamado Blue Heeler ou Queensland Heeler, está relacionado ao famoso cão selvagem da Austrália, o Dingo. Esses pastores resilientes são inteligentes o suficiente para superar seus donos rotineiramente.",
+		"name": "Boiadeiro Australiano",
+		"description": "Medindo entre 17 e 20 polegadas no ombro, o Boiadeiro Australiano é um pastor robusto e musculoso, com força e agilidade. O ACD nasce com uma pelagem branca que fica azul acinzentada ou vermelha. Ambas as variedades de pelagem apresentam padrões distintos de manchas ou manchas. Os ACDs têm imenso impulso para o trabalho e são excelentes na caça, perseguição e, claro, na movimentação de gado. Sua energia ilimitada e marcha flexível os tornam excelentes parceiros de corrida. Os ACDs são leais, notoriamente inteligentes, sempre alertas e cautelosos com estranhos. Se um ACD não for desafiado, ele facilmente fica entediado e faz travessuras. É recomendado que os proprietários de ACD participem com seus cães de algum trabalho, esporte ou exercício regular para mantê-lo em boa forma física e mental. O compacto mas musculoso Boiadeiro Australiano, também chamado Blue Heeler ou Queensland Heeler, está relacionado ao famoso cão selvagem da Austrália, o Dingo. Esses pastores resilientes são inteligentes o suficiente para superar seus donos rotineiramente.",
 		"popularity": 55,
 		"min_height": 43.18,
 		"max_height": 50.80,
-		"min_weight": 15.88,
-		"max_weight": 22.68,
 		"min_expectancy": 12.00,
 		"max_expectancy": 16.00,
-		"embbeding": [0.20, 0.80, 1.00, 0.20, 0.40]
+		"embbeding": [0.2, 0.8, 1.0, 0.2, 0.4]
 	},
 	{
 		"name": "Kelpie Australiano",
 		"description": "Como cão pastor, o Australian Kelpie é intensamente leal e dedicado ao dever. Possui instinto e aptidão naturais para trabalhar com ovelhas, seja em campos abertos ou quintais fechados. Esta raça originou-se de cães do tipo Collie importados da Escócia, mas foi desenvolvida para suportar o forte calor e as condições de seca dos vastos espaços abertos da Austrália. O Kelpie Australiano é um cão ágil e ativo, capaz de um trabalho incansável. Ele é extremamente inteligente, alerta e ávido por energia ilimitada.",
+		"popularity": -1.00,
 		"min_height": 43.18,
 		"max_height": 50.80,
+		"min_weight": -1.00,
+		"max_weight": -1.00,
 		"min_expectancy": 10.00,
 		"max_expectancy": 13.00,
-		"embbeding": [0.40, 0.80, 0.80, 1.00, 0.60]
+		"embbeding": [0.4, 0.8, 0.8, 1.0, 0.6]
 	},
 	{
-		"name": "pastor australiano",
-		"description": "O pastor australiano, o cão pastor preferido do cowboy, é um trabalhador de tamanho médio com um olhar aguçado e penetrante. Os casacos australianos oferecem looks diferentes, incluindo merle (um padrão manchado com tons contrastantes de azul ou vermelho). Em todos os sentidos, eles são a imagem de movimentadores de estoque robustos e ágeis. Os australianos exibem um impulso irresistível de pastorear qualquer coisa: pássaros, cachorros, crianças. Esse forte impulso para o trabalho pode tornar os australianos cães demais para um dono de animal sedentário. Os australianos são extremamente inteligentes, capazes de enganar um proprietário novato desavisado. Resumindo, este não é o animal de estimação para todos. Mas se você está procurando um parceiro inteligente, incansável e treinável para trabalho ou esporte, sua busca pode terminar aqui. O pastor australiano, um cão de fazenda magro e resistente, é uma daquelas histórias “só na América”: uma raça europeia aperfeiçoada na Califórnia, passando pela Austrália. Presentes no circuito de rodeio, estão intimamente associados à vida do cowboy.",
+		"name": "Pastor Australiano",
+		"description": "O Pastor Australiano, o cão pastor preferido do cowboy, é um trabalhador de tamanho médio com um olhar aguçado e penetrante. Os casacos australianos oferecem looks diferentes, incluindo merle (um padrão manchado com tons contrastantes de azul ou vermelho). Em todos os sentidos, eles são a imagem de movimentadores de estoque robustos e ágeis. Os australianos exibem um impulso irresistível de pastorear qualquer coisa: pássaros, cachorros, crianças. Esse forte impulso para o trabalho pode tornar os australianos cães demais para um dono de animal sedentário. Os australianos são extremamente inteligentes, capazes de enganar um proprietário novato desavisado. Resumindo, este não é o animal de estimação para todos. Mas se você está procurando um parceiro inteligente, incansável e treinável para trabalho ou esporte, sua busca pode terminar aqui. O Pastor Australiano, um cão de fazenda magro e resistente, é uma daquelas histórias “só na América”: uma raça europeia aperfeiçoada na Califórnia, passando pela Austrália. Presentes no circuito de rodeio, estão intimamente associados à vida do cowboy.",
 		"popularity": 17,
 		"min_height": 45.72,
 		"max_height": 58.42,
-		"min_weight": 18.14,
-		"max_weight": 29.48,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.60, 0.80, 1.00, 0.60]
+		"embbeding": [0.4, 0.6, 0.8, 1.0, 0.6]
 	},
 	{
-		"name": "Cão de gado australiano com cauda atarracada",
-		"description": "O Australian Stumpy Tail Cattle Dog não é um Australian Cattle Dog com cauda cortada. Existem grandes diferenças estruturais no tipo de raça entre as duas raças de cães pastores. Stumpy Tail Cattle Dogs são uma raça natural de cauda boba. Alguns filhotes Stumpy Tail nascem com caudas longas e não devem ser descartados de um programa de criação se forem de qualidade estrutural, mas sim reproduzidos com caudas bob naturais de qualidade. Sociedade Australiana de Stumpy Tail Cattle Dog dos Estados UnidosDenyse Adams: chredacds8@gmail.comLori Graham: lgraham1145@yahoo.comKim McDonald: breezyacresstumpies@gmail.comKevin Nicholson: nicholson.klnicholson@gmail.com O Australian Stumpy Tail Cattle Dog não é australiano Cão de gado com cauda cortada. Ele é uma raça naturalmente de cauda curta e é quadrado, com bastante comprimento de perna sob o corpo.",
+		"name": "Boiadeiro Australiano de Cauda Chata",
+		"description": "O Boiadeiro Australiano de Cauda Chata não é um Boiadeiro Australiano com cauda cortada. Existem grandes diferenças estruturais no tipo de raça entre as duas raças de cães pastores. Stumpy Tail Cattle Dogs são uma raça natural de cauda boba. Alguns filhotes Stumpy Tail nascem com caudas longas e não devem ser descartados de um programa de criação se forem de qualidade estrutural, mas sim reproduzidos com caudas bob naturais de qualidade. Sociedade Australiana de Stumpy Tail Cattle Dog dos Estados UnidosDenyse Adams: chredacds8@gmail.comLori Graham: lgraham1145@yahoo.comKim McDonald: breezyacresstumpies@gmail.comKevin Nicholson: nicholson.klnicholson@gmail.com Boiadeiro Australiano de Cauda Chata não é australiano Cão de gado com cauda cortada. Ele é uma raça naturalmente de cauda curta e é quadrado, com bastante comprimento de perna sob o corpo.",
+		"popularity": -1.00,
 		"min_height": 43.18,
 		"max_height": 50.80,
-		"min_weight": 14.51,
-		"max_weight": 20.41,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.40, 0.80, 0.80, 0.60]
+		"embbeding": [0.4, 0.4, 0.8, 0.8, 0.6]
 	},
 	{
 		"name": "Terrier Australiano",
@@ -226,33 +202,26 @@
 		"popularity": 140,
 		"min_height": 25.40,
 		"max_height": 27.94,
-		"min_weight": 6.80,
-		"max_weight": 9.07,
 		"min_expectancy": 11.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.20, 0.80, 0.60, 0.80]
+		"embbeding": [0.4, 0.2, 0.8, 0.6, 0.8]
 	},
 	{
 		"name": "Azawakh",
 		"description": "Este antigo cão de caça é tão magro e esbelto que sua estrutura óssea e musculatura podem ser vistas claramente sob sua pele. Os contornos suaves em forma de S, o peito profundo e a cabeça aerodinâmica marcam o Azwakh como um membro da família dos sighthound, velocistas caninos que contam com uma visão aguçada e uma velocidade incrível para fixar e perseguir suas presas. O casaco ultrafino vem em diversas cores e padrões. A aparência geral deste cão de pernas compridas é de elegância e delicadeza, mas não se deixe enganar: este é um caçador resistente e durável que persegue gazelas pelas areias escaldantes do Saara há mais de mil anos. Alto e elegante, o Azawakh é um sighthound da África Ocidental originário dos países de Burkina Faso, Mali e Níger. O Azawakh tem uma pelagem curta e fina que pode vir em qualquer cor ou combinação de cores: vermelho, areia clara a fulvo, tigrado, particolor (que pode ser predominantemente branco), azul, preto e marrom. A cabeça pode ter uma máscara preta e pode haver manchas brancas nas pernas, no babador e na ponta da cauda. Não há desqualificações de cor ou marcação na raça. De acordo com sua herança, o Azawakh se destaca como companheiro, guardião e caçador de iscas nos Estados Unidos.",
 		"min_height": 59.69,
 		"max_height": 73.66,
-		"min_weight": 14.97,
-		"max_weight": 24.95,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.40, 0.60, 0.40, 0.80]
+		"embbeding": [0.4, 0.4, 0.6, 0.4, 0.8]
 	},
 	{
 		"name": "Barbeto",
 		"description": "A característica definidora deste cão-pássaro rústico de tamanho médio é a pelagem densa e encaracolada que o cobre do topo da cabeça grande e larga até a ponta da cauda curva. A pelagem vem em tons de preto, cinza, marrom ou fulvo, às vezes com manchas brancas. A pelagem deliciosamente desgrenhada e a natureza amigável da raça criam a impressão de um Muppet ganhando vida, mas o Barbet é um cão forte e de constituição sólida, criado durante séculos para ser um caçador afiado e um nadador incansável. Barbets são muito inteligentes e aprendem coisas novas rapidamente. Eles têm uma natureza calma e são fáceis de conviver, desde que suas necessidades de exercícios sejam atendidas. Cão de água arquetípico da França, o Barbet é uma raça rústica de tamanho médio e proporções equilibradas que aparece em obras de arte já no século XVI. De perfil, o Barbet é ligeiramente retangular, com uma cabeça substancial e uma cauda longa e extensa. Ele tem uma longa e densa cobertura de cabelo encaracolado e uma barba distinta. Atleta ágil, o Barbet tem sido usado principalmente para localizar, liberar e recuperar aves. Ele tem um temperamento alegre e é muito sociável e leal.",
 		"min_height": 48.26,
-		"max_height": 62.23,
-		"min_weight": 15.88,
-		"max_weight": 29.48,
 		"min_expectancy": 12.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.40, 0.20, 0.60, 0.60, 0.80]
+		"embbeding": [0.4, 0.2, 0.6, 0.6, 0.8]
 	},
 	{
 		"name": "Basenji",
@@ -260,22 +229,19 @@
 		"popularity": 87,
 		"min_height": 40.64,
 		"max_height": 43.18,
-		"min_weight": 9.98,
-		"max_weight": 10.89,
 		"min_expectancy": 13.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.20, 0.40, 0.80, 0.40, 0.40]
+		"embbeding": [0.2, 0.4, 0.8, 0.4, 0.4]
 	},
 	{
-		"name": "Basset Fauve da Bretanha",
-		"description": "O Basset Fauve de Bretagne, também conhecido como Fawn Colored Brittany Basset, é um cão pequeno, atarracado, de pelagem áspera e resistente, enérgico e rápido para seu tamanho. O Fauve se dá bem com crianças e outros animais de estimação. O treinamento e a socialização são essenciais ou os Fauves podem se envolver em travessuras. Não sendo latidos incômodos, você saberá, no entanto, se um coelho corre pelo quintal, pois eles então dão “voz” ao cão e o perseguem. Esta raça fica tão feliz brincando no campo quanto enrolada ao lado da família no sofá. Inteligente, corajoso e determinado, o Basset Fauve de Bretagne é um caçador sério, facilmente adaptável a diferentes tipos de caça e terrenos. É igualmente um excelente cão de companhia, sendo alegre, inteligente e com vontade de agradar.",
+		"name": "Basset Fulvo da Bretanha",
+		"description": "O Basset Fulvo de Bretagne, também conhecido como Fawn Colored Brittany Basset, é um cão pequeno, atarracado, de pelagem áspera e resistente, enérgico e rápido para seu tamanho. O Fulvo se dá bem com crianças e outros animais de estimação. O treinamento e a socialização são essenciais ou os Fulvos podem se envolver em travessuras. Não sendo latidos incômodos, você saberá, no entanto, se um coelho corre pelo quintal, pois eles então dão “voz” ao cão e o perseguem. Esta raça fica tão feliz brincando no campo quanto enrolada ao lado da família no sofá. Inteligente, corajoso e determinado, o Basset Fulvo de Bretagne é um caçador sério, facilmente adaptável a diferentes tipos de caça e terrenos. É igualmente um excelente cão de companhia, sendo alegre, inteligente e com vontade de agradar.",
+		"popularity": -1.00,
 		"min_height": 31.75,
 		"max_height": 39.37,
-		"min_weight": 12.25,
-		"max_weight": 15.88,
 		"min_expectancy": 12.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.40, 0.60, 0.60, 0.20, 1.00]
+		"embbeding": [0.4, 0.6, 0.6, 0.2, 1.0]
 	},
 	{
 		"name": "Basset Hound",
@@ -283,22 +249,19 @@
 		"popularity": 39,
 		"min_height": 38.10,
 		"max_height": 38.10,
-		"min_weight": 18.14,
-		"max_weight": 29.48,
 		"min_expectancy": 12.00,
 		"max_expectancy": 13.00,
-		"embbeding": [0.60, 0.40, 0.20, 0.40, 0.80]
+		"embbeding": [0.6, 0.4, 0.2, 0.4, 0.8]
 	},
 	{
-		"name": "Cão de cheiro da montanha da Baviera",
-		"description": "Vindo da Alemanha, o Bavarian Mountain Scent Hound é o Bayerischer Gebirgsschweisshund em seu alemão nativo. A característica mais notável da raça é sua excelente capacidade de rastreamento de “nariz frio”. Seu nariz é tão aguçado que ele consegue distinguir entre a caça ferida que está caçando e outros animais da mesma espécie. Esta raça um tanto leve, ativa e de tamanho médio é dedicada ao seu dono, mas pode ser reservada com estranhos. Ele não é um cão de canil e prefere estar perto de sua família humana. O Bavarian Mountain Scent Hound é calmo e equilibrado, dedicado ao seu dono e reservado com estranhos. Ele é um cão sólido, seguro de si, destemido e dócil, nem tímido nem agressivo.",
+		"name": "Sabujo Montanhês da Baviera",
+		"description": "Vindo da Alemanha, o Sabujo Montanhês da Baviera é o Bayerischer Gebirgsschweisshund em seu alemão nativo. A característica mais notável da raça é sua excelente capacidade de rastreamento de “nariz frio”. Seu nariz é tão aguçado que ele consegue distinguir entre a caça ferida que está caçando e outros animais da mesma espécie. Esta raça um tanto leve, ativa e de tamanho médio é dedicada ao seu dono, mas pode ser reservada com estranhos. Ele não é um cão de canil e prefere estar perto de sua família humana. O Sabujo Montanhês da Baviera é calmo e equilibrado, dedicado ao seu dono e reservado com estranhos. Ele é um cão sólido, seguro de si, destemido e dócil, nem tímido nem agressivo.",
+		"popularity": -1.00,
 		"min_height": 43.18,
 		"max_height": 52.07,
-		"min_weight": 16.78,
-		"max_weight": 29.94,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.80, 0.60, 0.60, 0.40]
+		"embbeding": [0.4, 0.8, 0.6, 0.6, 0.4]
 	},
 	{
 		"name": "Beagle",
@@ -306,35 +269,29 @@
 		"popularity": 6,
 		"min_height": 33.02,
 		"max_height": 38.10,
-		"min_weight": 5.90,
-		"max_weight": 13.61,
 		"min_expectancy": 10.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.60, 0.60, 0.80, 0.60, 0.80]
+		"embbeding": [0.6, 0.6, 0.8, 0.6, 0.8]
 	},
 	{
-		"name": "Collie barbudo",
+		"name": "Collie Barbudo",
 		"description": "Com 50 a 55 centímetros de altura nos ombros e coberto da cabeça à cauda com um casaco duplo felpudo, os Beardies têm uma semelhança passageira com outro favorito britânico, o Old English Sheepdog. Por baixo dos casacos, os Beardies são os mais magros e angulosos dos dois. Os luxuosos pelos faciais não devem obscurecer a expressão característica: um olhar sonhador e distante. Esses quadrinhos indisciplinados podem ser um punhado, mas principalmente, os Beardies têm aproximadamente 50 quilos de coração, energia e risadas. Beardies bem socializados se darão bem com outros animais e crianças. Eles ficam entediados facilmente e o treinamento deve ser mantido interessante. Famílias que gostam de atividades ao ar livre e procuram um cão robusto para compartilhar um estilo de vida agitado nunca encontrarão um companheiro mais afetuoso e divertido. Um cão de condução barulhento e carismático da Escócia, o Bearded Collie de pêlo peludo (“Beardie” para seus amigos) gosta de exercícios ao ar livre em qualquer clima. Criados para serem tomadores de decisão independentes, eles podem ser obstinados, mas são sempre amigáveis.",
 		"popularity": 127,
 		"min_height": 50.80,
 		"max_height": 55.88,
-		"min_weight": 20.41,
-		"max_weight": 24.95,
 		"min_expectancy": 12.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.80, 0.60, 0.60, 0.40, 1.00]
+		"embbeding": [0.8, 0.6, 0.6, 0.4, 1.0]
 	},
 	{
-		"name": "Beauceron",
+		"name": "Pastor de Bauce",
 		"description": "Beaucerons são musculosos, robustos e grandes, chegando a atingir 27,5 polegadas de altura nos ombros, e ainda assim graciosos e equilibrados em todos os aspectos. Seus casacos pretos escuros apresentam belos detalhes em vermelho-esquilo, incluindo os pés vermelhos que dão à raça o apelido francês de Bas-Rouge (“meias vermelhas”). Eles também são vistos em um casaco preto-acinzentado. A cabeça longa é bem esculpida e os olhos castanhos escuros projetam uma expressão que os criadores da raça descrevem como franca e confiante. Eles não são para proprietários novatos, que podem acabar sendo propriedade de seu cão dominante, e não o contrário. Dito isso, Beaucerons bem treinados e socializados são cães de guarda e guardiões sensatos, especialmente bons com os jovens, os pequenos e os indefesos. O Beauceron é imponente e poderoso, mas também extremamente inteligente, espirituoso e um pastor versátil – imagine o cérebro de um Border Collie em um corpo de 45 quilos. Eles são especialmente amados pelas mulheres como companheiros e protetores arrojados, mas sensíveis.",
 		"popularity": 124,
 		"min_height": 60.96,
 		"max_height": 69.85,
-		"min_weight": 31.75,
-		"max_weight": 49.90,
 		"min_expectancy": 10.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.60, 1.00, 1.00, 0.80, 0.40]
+		"embbeding": [0.6, 1.0, 1.0, 0.8, 0.4]
 	},
 	{
 		"name": "Bedlington Terrier",
@@ -342,22 +299,20 @@
 		"popularity": 141,
 		"min_height": 38.10,
 		"max_height": 44.45,
-		"min_weight": 7.71,
-		"max_weight": 10.43,
 		"min_expectancy": 11.00,
 		"max_expectancy": 16.00,
-		"embbeding": [0.60, 0.80, 0.60, 0.60]
+		"shedding_category": -1.00,
+		"embbeding": [0.6, -1.0, 0.8, 0.6, 0.6]
 	},
 	{
-		"name": "Laekenois belga",
+		"name": "Laekenois Belga",
 		"description": "Dos quatro pastores belgas intimamente relacionados – o cão pastor belga, Malinois, Tervuren e Laekenois – o Laekenois é o mais raro. Este cão forte e robusto se distingue de seus irmãos por uma pelagem áspera e desgrenhada que vem em tons de vermelho ou fulvo ou em tons acinzentados. O escurecimento ao redor do focinho indica a expressão de vigilância aguçada que brilha nos olhos escuros e amendoados. O Laekenois belga protege seu mestre e sua propriedade. Embora observador com estranhos, a raça é afetuosa e amigável com quem conhece bem. A pelagem Laekenois requer escovação regular e banhos ocasionais e, como cão de trabalho, necessita de exercícios diários. Forte, ágil e cheio de vida, o Laekenois belga (pronuncia-se 'Lak-in-wah') é um dos quatro cães nativos da Bélgica. Embora semelhante em corpo e temperamento aos Malinois, Shepherd e Tervuren, o Laekenois difere na cor, textura e comprimento da pelagem, bem como na região de origem.",
+		"popularity": -1.00,
 		"min_height": 55.88,
 		"max_height": 66.04,
-		"min_weight": 24.95,
-		"max_weight": 29.48,
 		"min_expectancy": 10.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.40, 0.80, 0.80, 0.80, 0.40]
+		"embbeding": [0.4, 0.8, 0.8, 0.8, 0.4]
 	},
 	{
 		"name": "Belga Malinois",
@@ -365,23 +320,19 @@
 		"popularity": 43,
 		"min_height": 55.88,
 		"max_height": 66.04,
-		"min_weight": 18.14,
-		"max_weight": 36.29,
 		"min_expectancy": 14.00,
 		"max_expectancy": 16.00,
-		"embbeding": [0.40, 0.60, 0.80, 0.80, 0.40]
+		"embbeding": [0.4, 0.6, 0.8, 0.8, 0.4]
 	},
 	{
-		"name": "Cão pastor belga",
+		"name": "Pastor Belga",
 		"description": "A silhueta vibrante de um cão pastor belga transmite elegância e determinação muscular. Uma bela característica da raça é o porte extremamente orgulhoso da cabeça e do pescoço. Um homem pode ter 26 polegadas de altura no ombro; as fêmeas são menores. Os olhos escuros brilham com uma inteligência questionadora, e a pelagem preta é abundante, desde a “gola” do pescoço até as “calças” dos posteriores. Em todos os sentidos, os cães pastores belgas têm olhos brilhantes e cauda espessa. Em qualquer esporte ou atividade, um belga sempre dará 100 por cento. Por sua vez, os proprietários tendem a formar um vínculo especial com seus ávidos workaholics. Como disse um devoto, os belgas “inspiram uma lealdade tão intensa porque eles próprios vivem e amam com grande paixão”. O cão pastor belga é um pastor altamente treinável, cuja versatilidade e inteligência são lendas caninas. Esta é uma raça construída para o trabalho duro, e muito. Essas almas sensíveis anseiam pela companhia humana e abominam a negligência.",
 		"popularity": 125,
 		"min_height": 55.88,
 		"max_height": 66.04,
-		"min_weight": 20.41,
-		"max_weight": 34.02,
 		"min_expectancy": 12.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.60, 0.60, 0.80, 0.80, 0.40]
+		"embbeding": [0.6, 0.6, 0.8, 0.8, 0.4]
 	},
 	{
 		"name": "Bichon Frisé",
@@ -389,11 +340,9 @@
 		"popularity": 46,
 		"min_height": 24.13,
 		"max_height": 29.21,
-		"min_weight": 5.44,
-		"max_weight": 8.16,
 		"min_expectancy": 14.00,
 		"max_expectancy": 15.00,
-		"embbeding": [1.00, 0.20, 0.60, 0.60, 1.00]
+		"embbeding": [1.0, 0.2, 0.6, 0.6, 1.0]
 	},
 	{
 		"name": "Border collie",
@@ -401,11 +350,9 @@
 		"popularity": 35,
 		"min_height": 45.72,
 		"max_height": 55.88,
-		"min_weight": 13.61,
-		"max_weight": 24.95,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.60, 0.60, 1.00, 1.00, 0.40]
+		"embbeding": [0.6, 0.6, 1.0, 1.0, 0.4]
 	},
 	{
 		"name": "Borzoi",
@@ -413,11 +360,9 @@
 		"popularity": 103,
 		"min_height": 66.04,
 		"max_height": 71.12,
-		"min_weight": 27.22,
-		"max_weight": 47.63,
 		"min_expectancy": 9.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.40, 0.60, 0.80, 0.40, 0.60]
+		"embbeding": [0.4, 0.6, 0.8, 0.4, 0.6]
 	},
 	{
 		"name": "Boxer",
@@ -425,11 +370,9 @@
 		"popularity": 11,
 		"min_height": 54.61,
 		"max_height": 63.50,
-		"min_weight": 6.80,
-		"max_weight": 36.29,
 		"min_expectancy": 10.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.40, 0.40, 0.80, 0.80, 1.00]
+		"embbeding": [0.4, 0.4, 0.8, 0.8, 1.0]
 	},
 	{
 		"name": "Bull Terrier",
@@ -437,11 +380,9 @@
 		"popularity": 62,
 		"min_height": 53.34,
 		"max_height": 55.88,
-		"min_weight": 22.68,
-		"max_weight": 31.75,
 		"min_expectancy": 12.00,
 		"max_expectancy": 13.00,
-		"embbeding": [0.40, 0.60, 0.80, 0.40, 0.80]
+		"embbeding": [0.4, 0.6, 0.8, 0.4, 0.8]
 	},
 	{
 		"name": "Buldogue",
@@ -449,11 +390,9 @@
 		"popularity": 5,
 		"min_height": 35.56,
 		"max_height": 38.10,
-		"min_weight": 18.14,
-		"max_weight": 22.68,
 		"min_expectancy": 8.00,
 		"max_expectancy": 10.00,
-		"embbeding": [0.60, 0.80, 0.60, 0.60, 0.80]
+		"embbeding": [0.6, 0.8, 0.6, 0.6, 0.8]
 	},
 	{
 		"name": "Bullmastife",
@@ -461,11 +400,9 @@
 		"popularity": 51,
 		"min_height": 60.96,
 		"max_height": 68.58,
-		"min_weight": 45.36,
-		"max_weight": 58.97,
 		"min_expectancy": 7.00,
 		"max_expectancy": 9.00,
-		"embbeding": [0.20, 0.60, 0.80, 0.60, 0.60]
+		"embbeding": [0.2, 0.6, 0.8, 0.6, 0.6]
 	},
 	{
 		"name": "Cairn Terrier",
@@ -473,11 +410,9 @@
 		"popularity": 69,
 		"min_height": 24.13,
 		"max_height": 25.40,
-		"min_weight": 5.90,
-		"max_weight": 6.35,
 		"min_expectancy": 13.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.40, 0.60, 0.60, 0.80]
+		"embbeding": [0.4, 0.4, 0.6, 0.6, 0.8]
 	},
 	{
 		"name": "Cane Corso",
@@ -485,9 +420,11 @@
 		"popularity": 32,
 		"min_height": 59.69,
 		"max_height": 69.85,
+		"min_weight": 40.00,
+		"max_weight": 50.00,
 		"min_expectancy": 9.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.00, 0.00, 0.20, 0.40, 0.80, 0.60, 0.60]
+		"embbeding": [0.2, 0.4, 0.8, 0.6, 0.6]
 	},
 	{
 		"name": "Cavalier King Charles Spaniel",
@@ -495,35 +432,29 @@
 		"popularity": 18,
 		"min_height": 30.48,
 		"max_height": 33.02,
-		"min_weight": 5.90,
-		"max_weight": 8.16,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.40, 0.40, 1.00, 0.80]
+		"embbeding": [0.4, 0.4, 0.4, 1.0, 0.8]
 	},
 	{
-		"name": "chihuahua",
+		"name": "Chihuahua",
 		"description": "O Chihuahua é um cão equilibrado e gracioso, com comportamento semelhante ao de um terrier, pesando não mais que 3 quilos. A cabeça arredondada de “maçã” é uma marca registrada da raça. As orelhas eretas e os olhos cheios e luminosos são extremamente expressivos. Os casacos vêm em várias cores e padrões e podem ser longos ou curtos. As variedades são idênticas, exceto pela pelagem. Os chihuahuas possuem lealdade, charme e atitude de cachorro grande. Até mesmo cães pequenos precisam de treinamento e, sem ele, esse patife inteligente governará sua casa como um pequeno Napoleão. Compactos e confiantes, os chihuahuas são animais de estimação ideais para a cidade. Eles são pequenos demais para brigar com crianças e devem ser tomados cuidados especiais em climas frios, mas os chihuahuas são adaptáveis ​​– desde que tenham muito tempo de qualidade em seu colo preferido. O Chihuahua é um cachorrinho com uma personalidade enorme. Símbolo nacional do México, estes alertas e divertidos “cães de bolsa” estão entre as raças mais antigas das Américas, com uma linhagem que remonta aos antigos reinos dos tempos pré-colombianos.",
 		"popularity": 33,
 		"min_height": 12.70,
 		"max_height": 20.32,
-		"min_weight": 2.72,
-		"max_weight": 2.72,
 		"min_expectancy": 14.00,
 		"max_expectancy": 16.00,
-		"embbeding": [0.20, 0.40, 0.60, 0.40, 0.60]
+		"embbeding": [0.2, 0.4, 0.6, 0.4, 0.6]
 	},
 	{
 		"name": "Chow Chow",
-		"description": "Chows são cães poderosos e de constituição compacta, com até 50 centímetros de altura no ombro. Seus traços distintivos incluem uma juba de leão ao redor da cabeça e dos ombros; uma língua preto-azulada; olhos amendoados profundos que contribuem para uma expressão carrancuda e esnobe; e uma marcha com pernas rígidas. Os chows podem ter pelagens ásperas ou lisas em vermelho, preto, azul, canela ou creme. Os proprietários dizem que os chows são os cães mais limpos: eles invadem a casa com facilidade, têm pouco odor de cachorro e são conhecidos por serem tão meticulosos quanto os gatos. Chows bem socializados nunca são ferozes ou intratáveis, mas sempre refinados e dignos. Eles são indiferentes a estranhos e eternamente leais aos entes queridos. Serenos e adaptáveis, sem necessidades especiais de exercícios, os Chows aceitam alegremente a vida na cidade. O Chow Chow, um cão versátil da China antiga, apresenta a imagem de um aristocrata musculoso e de peito largo com um ar de inescrutável atemporalidade. Digno, sério e indiferente, o Chow Chow é uma raça de delícias únicas.",
+		"description": "Chow Chows são cães poderosos e de constituição compacta, com até 50 centímetros de altura no ombro. Seus traços distintivos incluem uma juba de leão ao redor da cabeça e dos ombros; uma língua preto-azulada; olhos amendoados profundos que contribuem para uma expressão carrancuda e esnobe; e uma marcha com pernas rígidas. Os chows podem ter pelagens ásperas ou lisas em vermelho, preto, azul, canela ou creme. Os proprietários dizem que os chows são os cães mais limpos: eles invadem a casa com facilidade, têm pouco odor de cachorro e são conhecidos por serem tão meticulosos quanto os gatos. Chows bem socializados nunca são ferozes ou intratáveis, mas sempre refinados e dignos. Eles são indiferentes a estranhos e eternamente leais aos entes queridos. Serenos e adaptáveis, sem necessidades especiais de exercícios, os Chows aceitam alegremente a vida na cidade. O Chow Chow, um cão versátil da China antiga, apresenta a imagem de um aristocrata musculoso e de peito largo com um ar de inescrutável atemporalidade. Digno, sério e indiferente, o Chow Chow é uma raça de delícias únicas.",
 		"popularity": 75,
 		"min_height": 43.18,
 		"max_height": 50.80,
-		"min_weight": 20.41,
-		"max_weight": 31.75,
 		"min_expectancy": 8.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.60, 0.60, 0.60, 0.20, 0.40]
+		"embbeding": [0.6, 0.6, 0.6, 0.2, 0.4]
 	},
 	{
 		"name": "Cocker spaniel",
@@ -531,11 +462,9 @@
 		"popularity": 30,
 		"min_height": 34.29,
 		"max_height": 39.37,
-		"min_weight": 9.07,
-		"max_weight": 13.61,
 		"min_expectancy": 10.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.80, 0.40, 0.60, 1.00, 1.00]
+		"embbeding": [0.8, 0.4, 0.6, 1.0, 1.0]
 	},
 	{
 		"name": "Collie",
@@ -543,11 +472,9 @@
 		"popularity": 38,
 		"min_height": 55.88,
 		"max_height": 66.04,
-		"min_weight": 22.68,
-		"max_weight": 34.02,
 		"min_expectancy": 12.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.60, 0.60, 0.60, 0.80, 0.80]
+		"embbeding": [0.6, 0.6, 0.6, 0.8, 0.8]
 	},
 	{
 		"name": "Dachshund",
@@ -555,34 +482,30 @@
 		"popularity": 12,
 		"min_height": 12.70,
 		"max_height": 22.86,
-		"min_weight": 4.99,
-		"max_weight": 14.51,
 		"min_expectancy": 12.00,
 		"max_expectancy": 16.00,
-		"embbeding": [0.40, 0.40, 0.60, 0.60, 0.60]
+		"embbeding": [0.4, 0.4, 0.6, 0.6, 0.6]
 	},
 	{
-		"name": "Doberman Pinscher",
+		"name": "Doberman",
 		"description": "Os dobermans são cães de constituição compacta – musculosos, rápidos e poderosos – medindo entre 24 e 28 polegadas no ombro. O corpo é elegante, mas substancial, e é coberto por uma camada brilhante de preto, azul, vermelho ou fulvo, com marcas de ferrugem. Essas qualidades elegantes, combinadas com uma cabeça nobre em formato de cunha e uma maneira fácil e atlética de se mover, deram aos Dobermans a reputação de realeza no reino canino. Um Doberman bem condicionado em patrulha deterá todos, exceto o intruso mais tolo. Elegante e poderoso, possuindo um físico magnífico e uma inteligência aguçada, o Doberman Pinscher é um dos nobres da raça canina. Esta raça incomparavelmente destemida e vigilante está orgulhosamente entre os melhores cães de proteção do mundo.",
 		"popularity": 17,
 		"min_height": 60.96,
 		"max_height": 71.12,
-		"min_weight": 27.22,
-		"max_weight": 45.36,
 		"min_expectancy": 10.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.20, 0.80, 1.00, 1.00, 0.60]
+		"embbeding": [0.2, 0.8, 1.0, 1.0, 0.6]
 	},
 	{
 		"name": "Dogo Argentino",
 		"description": "O Dogo Argentino ideal é um estudo em harmonia. Ele é grande, poderoso e atlético. Sua cabeça forte é sustentada por um pescoço grosso, mas elegante, que se conecta a um corpo equilibrado, sustentado por patas dianteiras retas e substanciais e posteriores muito musculosos e de angulações médias. O Dogo dá a impressão de poder e energia explosivos. Desenvolvido para encontrar, perseguir e capturar animais perigosos, o Dogo deve ter um bom nariz, grande capacidade pulmonar e uma constituição muscular poderosa, mas ágil. Sua expressão é alerta e inteligente, com acentuada dureza. O Dogo é instantaneamente identificável por sua pelagem curta e totalmente branca. O Dogo Argentino é um cão de caça de matilha, criado para a caça de grandes animais como javalis e puma, e possui a força, inteligência e capacidade de resposta rápida de um atleta sério. Sua pelagem curta, lisa e lisa é completamente branca, mas uma mancha escura perto dos olhos é permitida desde que não cubra mais de 10% da cabeça.",
 		"min_height": 60.96,
 		"max_height": 67.31,
-		"min_weight": 39.92,
-		"max_weight": 45.36,
 		"min_expectancy": 9.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.20, 0.20, 1.00]
+		"trainability_category": -1.00,
+		"demeanor_category": -1.00,
+		"embbeding": [0.2, 0.2, 1.0, -1.0, -1.0]
 	},
 	{
 		"name": "Buldogue Francês",
@@ -590,23 +513,19 @@
 		"popularity": 4,
 		"min_height": 27.94,
 		"max_height": 33.02,
-		"min_weight": 12.70,
-		"max_weight": 12.70,
 		"min_expectancy": 10.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.20, 0.80, 0.40, 0.60, 0.60]
+		"embbeding": [0.2, 0.8, 0.4, 0.6, 0.6]
 	},
 	{
-		"name": "Golden retriever",
+		"name": "Golden Retriever",
 		"description": "O Golden Retriever é um cão robusto e musculoso de tamanho médio, famoso pela pelagem dourada densa e brilhante que dá nome à raça. A cabeça larga, com olhos amigáveis ​​e inteligentes, orelhas curtas e focinho reto, é uma marca registrada da raça. Em movimento, os Goldens se movem com um andar suave e poderoso, e a cauda emplumada é portada, como dizem os criadores da raça, com uma “ação alegre”. Os registros mais completos do desenvolvimento do Golden Retriever estão incluídos nos livros de recordes que foram mantido de 1835 até cerca de 1890 pelos guarda-caças da propriedade Guisachan (pronuncia-se Gooeesicun) de Lord Tweedmouth em Inverness-Shire, Escócia. Esses registros foram divulgados ao público na Country Life em 1952, quando o sobrinho-neto de Lord Tweedmouth, o sexto conde de Ilchester, historiador e esportista, publicou material que havia sido deixado por seu ancestral. Eles forneceram confirmação factual às histórias que foram transmitidas através de gerações. Goldens são cães de família extrovertidos, confiáveis ​​​​e ansiosos para agradar, e relativamente fáceis de treinar. Eles adotam uma abordagem alegre e divertida da vida e mantêm esse comportamento de filhote até a idade adulta. Esses gundogs enérgicos e poderosos gostam de brincar ao ar livre. Para uma raça criada para capturar aves aquáticas por horas a fio, nadar e buscar são passatempos naturais. O Golden Retriever, um exuberante cão de caça escocês de grande beleza, está entre as raças de cães mais populares da América. Eles trabalham seriamente na caça e no trabalho de campo, como guias de cegos e em busca e salvamento, gostam de obediência e de outros eventos competitivos e têm um amor cativante pela vida quando não estão no trabalho.",
 		"popularity": 3,
 		"min_height": 54.61,
 		"max_height": 60.96,
-		"min_weight": 24.95,
-		"max_weight": 34.02,
 		"min_expectancy": 10.00,
 		"max_expectancy": 12.00,
-		"embbeding": [0.40, 0.60, 1.00, 1.00, 0.80]
+		"embbeding": [0.4, 0.6, 1.0, 1.0, 0.8]
 	},
 	{
 		"name": "Havanês",
@@ -614,11 +533,9 @@
 		"popularity": 24,
 		"min_height": 21.59,
 		"max_height": 29.21,
-		"min_weight": 3.18,
-		"max_weight": 5.90,
 		"min_expectancy": 14.00,
 		"max_expectancy": 16.00,
-		"embbeding": [0.60, 0.40, 0.60, 0.80, 1.00]
+		"embbeding": [0.6, 0.4, 0.6, 0.8, 1.0]
 	},
 	{
 		"name": "Galgo Italiano",
@@ -626,34 +543,28 @@
 		"popularity": 73,
 		"min_height": 33.02,
 		"max_height": 38.10,
-		"min_weight": 3.18,
-		"max_weight": 6.35,
 		"min_expectancy": 14.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.20, 0.60, 0.60, 0.40, 0.20]
+		"embbeding": [0.2, 0.6, 0.6, 0.4, 0.2]
 	},
 	{
-		"name": "labrador",
+		"name": "Labrador",
 		"description": "O robusto e bem equilibrado Labrador Retriever pode, dependendo do sexo, medir de 21,5 a 24,5 polegadas no ombro e pesar entre 55 a 80 libras. A pelagem densa e dura vem em amarelo, preto e um delicioso chocolate. A cabeça é larga, os olhos brilham com gentileza e a “cauda de lontra” grossa e afilada parece estar sempre sinalizando a ansiedade inata da raça. Eles são companheiros de casa companheiros que se relacionam com toda a família e se socializam bem com os cães vizinhos e também com os humanos. Mas não confunda sua personalidade descontraída com pouca energia: The Lab é um atleta entusiasmado que exige muito exercício, como natação e maratonas de busca, para se manter em boa forma física e mental. O adorável e doce Labrador Retriever é a raça de cães mais popular da América. Os laboratórios são companheiros amigáveis, extrovertidos e espirituosos que têm carinho mais do que suficiente para atender uma família que procura um cachorro de médio a grande porte.",
+		"popularity": 1,
 		"min_height": 54.61,
-		"max_height": 62.23,
-		"min_weight": 24.95,
-		"max_weight": 36.29,
 		"min_expectancy": 10.00,
 		"max_expectancy": 12.00,
-		"embbeding": [1, 0.40, 0.80, 1.00, 1.00, 1.00]
+		"embbeding": [0.4, 0.8, 1.0, 1.0, 1.0]
 	},
 	{
-		"name": "maltês",
+		"name": "Maltês",
 		"description": "Os malteses são cachorrinhos afetuosos que pesam menos de três quilos e são cobertos por uma pelagem longa, reta e sedosa. Sob o manto todo branco está um corpo compacto que se move com uma marcha suave e sem esforço. A imagem geral retrata elegância e equilíbrio fluidos. O irresistível rosto maltês - com seus grandes olhos escuros e nariz preto em formato de gota - pode conquistar a sensibilidade mais cansada. Apesar de seu porte aristocrático, os malteses são animais de estimação resistentes e adaptáveis. Eles são cães de guarda alertas e destemidos, como um charmoso cachorro de brinquedo, e são pequenos atletas na pista de agilidade. Os malteses têm pouca queda, têm vida longa e ficam felizes em fazer novos amigos de todas as idades. Às vezes teimosos e obstinados, eles respondem bem ao treinamento baseado em recompensas. O minúsculo maltês, “Ye Ancient Dogge of Malta”, está sentado no colo do luxo desde que a Bíblia era um trabalho em andamento. Famosos por seu casaco que vai até o chão, os malteses são companheiros de brinquedo brincalhões, charmosos e adaptáveis.",
 		"popularity": 37,
 		"min_height": 17.78,
 		"max_height": 22.86,
-		"min_weight": 3.18,
-		"max_weight": 3.18,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.80, 0.20, 0.60, 0.60, 1.00]
+		"embbeding": [0.8, 0.2, 0.6, 0.6, 1.0]
 	},
 	{
 		"name": "Mastim",
@@ -661,22 +572,19 @@
 		"popularity": 29,
 		"min_height": 69.85,
 		"max_height": 76.20,
-		"min_weight": 54.43,
-		"max_weight": 104.33,
 		"min_expectancy": 6.00,
 		"max_expectancy": 10.00,
-		"embbeding": [0.20, 0.40, 0.60, 0.60, 0.60]
+		"embbeding": [0.2, 0.4, 0.6, 0.6, 0.6]
 	},
 	{
 		"name": "Mudi",
 		"description": "O Mudi (pronuncia-se “moodie”) é um cão pastor de tamanho médio da Hungria que existe desde o século XIX. Diz-se que o Mudi evoluiu naturalmente a partir de cruzamentos das raças Puli, Pumi e Spitz Alemão. Hoje, o Mudi, embora muito raro, é visto como uma raça de trabalho ativa, inteligente e dócil. Estima-se que não existam mais do que alguns milhares de Mudi em todo o mundo, com os maiores números na Hungria, seguida pela Finlândia, e ainda mais escassos na Europa, nos EUA e no Canadá. O Mudi é excelente em agilidade, obediência e flyball, bem como em outros esportes caninos. Ele é uma verdadeira raça de trabalho e brilha no pastoreio de gado e ovelhas, e encontrou fama como cão de busca e resgate na Finlândia e nos EUA. Detalhes de contato do clubeClube: Mudi Club of AmericaNome: Susanne AndersonE-mail: sande2404@gmail.com The Mudi é um cão de fazenda húngaro extremamente versátil, inteligente, alerta, ágil e versátil. Sua coragem é útil para trabalhar até o gado mais teimoso. A raça é uma protetora leal da propriedade e dos membros da família, sem ser excessivamente agressiva.",
+		"popularity": -1.00,
 		"min_height": 38.10,
 		"max_height": 46.99,
-		"min_weight": 8.16,
-		"max_weight": 13.15,
 		"min_expectancy": 12.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.20, 0.40, 1.00, 1.00, 0.40]
+		"embbeding": [0.2, 0.4, 1.0, 1.0, 0.4]
 	},
 	{
 		"name": "Corgi Galês Pembroke",
@@ -684,11 +592,9 @@
 		"popularity": 13,
 		"min_height": 25.40,
 		"max_height": 30.48,
-		"min_weight": 12.70,
-		"max_weight": 13.61,
 		"min_expectancy": 12.00,
 		"max_expectancy": 13.00,
-		"embbeding": [0.40, 0.80, 0.80, 0.60, 1.00]
+		"embbeding": [0.4, 0.8, 0.8, 0.6, 1.0]
 	},
 	{
 		"name": "Pomerânia",
@@ -696,71 +602,64 @@
 		"popularity": 23,
 		"min_height": 15.24,
 		"max_height": 17.78,
-		"min_weight": 1.36,
-		"max_weight": 3.18,
 		"min_expectancy": 12.00,
 		"max_expectancy": 16.00,
-		"embbeding": [0.60, 0.60, 0.60, 0.60, 0.60]
+		"embbeding": [0.6, 0.6, 0.6, 0.6, 0.6]
 	},
 	{
-		"name": "Caniche (miniatura)",
-		"description": "Os poodles vêm em três variedades de tamanho: os padrões devem ter mais de 15 centímetros de altura nos ombros; As miniaturas têm 15 polegadas ou menos; Os brinquedos não têm mais de 25 centímetros. Todas as três variedades têm a mesma constituição e proporções. Em exposições caninas, os Poodles geralmente são vistos no elaborado Continental Clip. A maioria dos donos de animais de estimação prefere o Sporting Clip mais simples, no qual a pelagem é tosquiada para seguir o contorno do corpo quadrado e musculoso. Esqueça aqueles velhos estereótipos de Poodles como cachorros maricas. Os poodles são “cães reais” ávidos, atléticos e extremamente inteligentes, com notável versatilidade. O Standard, com seu maior tamanho e força, é o melhor atleta versátil da família, mas todos os Poodles podem ser treinados com grande sucesso. Seja padrão, miniatura ou brinquedo, e preto, branco ou damasco, o Poodle está orgulhosamente entre os verdadeiros aristocratas do dogdom. Por baixo da pelagem encaracolada e com baixo teor de alérgenos está um atleta elegante e companheiro para todos os motivos e estações.",
+		"name": "Poodle Miniatura",
+		"description": "Os poodles vêm em três variedades de tamanho: os padrões devem ter mais de 15 centímetros de altura nos ombros; As miniaturas têm 15 polegadas ou menos; Os toys não têm mais de 25 centímetros. Todas as três variedades têm a mesma constituição e proporções. Em exposições caninas, os Poodles geralmente são vistos no elaborado Continental Clip. A maioria dos donos de animais de estimação prefere o Sporting Clip mais simples, no qual a pelagem é tosquiada para seguir o contorno do corpo quadrado e musculoso. Esqueça aqueles velhos estereótipos de Poodles como cachorros maricas. Os poodles são “cães reais” ávidos, atléticos e extremamente inteligentes, com notável versatilidade. O Standard, com seu maior tamanho e força, é o melhor atleta versátil da família, mas todos os Poodles podem ser treinados com grande sucesso. Seja padrão, miniatura ou brinquedo, e preto, branco ou damasco, o Poodle está orgulhosamente entre os verdadeiros aristocratas do dogdom. Por baixo da pelagem encaracolada e com baixo teor de alérgenos está um atleta elegante e companheiro para todos os motivos e estações.",
 		"popularity": 7,
 		"min_height": 25.40,
 		"max_height": 38.10,
-		"min_weight": 4.54,
-		"max_weight": 6.80,
 		"min_expectancy": 10.00,
 		"max_expectancy": 18.00,
-		"embbeding": []
+		"grooming_frequency_category": -1.00,
+		"shedding_category": -1.00,
+		"energy_level_category": -1.00,
+		"trainability_category": -1.00,
+		"demeanor_category": -1.00,
+		"embbeding": [-1.0, -1.0, -1.0, -1.0, -1.0]
 	},
 	{
-		"name": "Caniche (padrão)",
-		"description": "Os poodles vêm em três variedades de tamanho: os padrões devem ter mais de 15 centímetros de altura nos ombros; As miniaturas têm 15 polegadas ou menos; Os brinquedos não têm mais de 25 centímetros. Todas as três variedades têm a mesma constituição e proporções. Em exposições caninas, os Poodles geralmente são vistos no elaborado Continental Clip. A maioria dos donos de animais de estimação prefere o Sporting Clip mais simples, no qual a pelagem é tosquiada para seguir o contorno do corpo quadrado e musculoso. Esqueça aqueles velhos estereótipos de Poodles como cachorros maricas. Os poodles são “cães reais” ávidos, atléticos e extremamente inteligentes, com notável versatilidade. O Standard, com seu maior tamanho e força, é o melhor atleta versátil da família, mas todos os Poodles podem ser treinados com grande sucesso. Seja padrão, miniatura ou brinquedo, e preto, branco ou damasco, o Poodle está orgulhosamente entre os verdadeiros aristocratas do dogdom. Por baixo da pelagem encaracolada e com baixo teor de alérgenos está um atleta elegante e companheiro para todos os motivos e estações.",
+		"name": "Poodle",
+		"description": "Os poodles vêm em três variedades de tamanho: os padrões devem ter mais de 15 centímetros de altura nos ombros; As miniaturas têm 15 polegadas ou menos; Os toys não têm mais de 25 centímetros. Todas as três variedades têm a mesma constituição e proporções. Em exposições caninas, os Poodles geralmente são vistos no elaborado Continental Clip. A maioria dos donos de animais de estimação prefere o Sporting Clip mais simples, no qual a pelagem é tosquiada para seguir o contorno do corpo quadrado e musculoso. Esqueça aqueles velhos estereótipos de Poodles como cachorros maricas. Os poodles são “cães reais” ávidos, atléticos e extremamente inteligentes, com notável versatilidade. O Standard, com seu maior tamanho e força, é o melhor atleta versátil da família, mas todos os Poodles podem ser treinados com grande sucesso. Seja padrão, miniatura ou brinquedo, e preto, branco ou damasco, o Poodle está orgulhosamente entre os verdadeiros aristocratas do dogdom. Por baixo da pelagem encaracolada e com baixo teor de alérgenos está um atleta elegante e companheiro para todos os motivos e estações.",
 		"popularity": 7,
 		"min_height": 38.10,
 		"max_height": 38.10,
-		"min_weight": 18.14,
-		"max_weight": 31.75,
 		"min_expectancy": 10.00,
 		"max_expectancy": 18.00,
-		"embbeding": [1.00, 0.20, 0.60, 1.00, 0.80]
+		"embbeding": [1.0, 0.2, 0.6, 1.0, 0.8]
 	},
 	{
-		"name": "Caniche (brinquedo)",
-		"description": "Os poodles vêm em três variedades de tamanho: os padrões devem ter mais de 15 centímetros de altura nos ombros; As miniaturas têm 15 polegadas ou menos; Os brinquedos não têm mais de 25 centímetros. Todas as três variedades têm a mesma constituição e proporções. Em exposições caninas, os Poodles geralmente são vistos no elaborado Continental Clip. A maioria dos donos de animais de estimação prefere o Sporting Clip mais simples, no qual a pelagem é tosquiada para seguir o contorno do corpo quadrado e musculoso. Esqueça aqueles velhos estereótipos de Poodles como cachorros maricas. Os poodles são “cães reais” ávidos, atléticos e extremamente inteligentes, com notável versatilidade. Com muito caráter estável e inteligência, o Toy Poodle é uma “pessoa” e espera ser tratado como tal. Apesar de seu tamanho diminuto, o Toy Poodle está orgulhosamente entre os verdadeiros aristocratas do dogdom. Por baixo da pelagem encaracolada e com baixo teor de alérgenos está um atleta elegante e companheiro para todos os motivos e estações.",
+		"name": "Poodle Toy",
+		"description": "Os poodles vêm em três variedades de tamanho: os padrões devem ter mais de 15 centímetros de altura nos ombros; As miniaturas têm 15 polegadas ou menos; Os toys não têm mais de 25 centímetros. Todas as três variedades têm a mesma constituição e proporções. Em exposições caninas, os Poodles geralmente são vistos no elaborado Continental Clip. A maioria dos donos de animais de estimação prefere o Sporting Clip mais simples, no qual a pelagem é tosquiada para seguir o contorno do corpo quadrado e musculoso. Esqueça aqueles velhos estereótipos de Poodles como cachorros maricas. Os poodles são “cães reais” ávidos, atléticos e extremamente inteligentes, com notável versatilidade. Com muito caráter estável e inteligência, o Toy Poodle é uma “pessoa” e espera ser tratado como tal. Apesar de seu tamanho diminuto, o Toy Poodle está orgulhosamente entre os verdadeiros aristocratas do dogdom. Por baixo da pelagem encaracolada e com baixo teor de alérgenos está um atleta elegante e companheiro para todos os motivos e estações.",
 		"popularity": 7,
 		"min_height": 25.40,
 		"max_height": 25.40,
-		"min_weight": 1.81,
-		"max_weight": 2.72,
 		"min_expectancy": 10.00,
 		"max_expectancy": 18.00,
-		"embbeding": [1.00, 0.20, 0.60, 1.00, 0.80]
+		"embbeding": [1.0, 0.2, 0.6, 1.0, 0.8]
 	},
 	{
-		"name": "pug",
+		"name": "Pug",
 		"description": "O lema do Pug é a frase em latim “multum in parvo” (muito em pouco) – uma descrição adequada desta raça pequena, mas musculosa. Eles vêm em três cores: prata ou fulvo damasco com máscara preta, ou totalmente preto. A grande cabeça redonda, os olhos grandes e brilhantes e a testa enrugada dão aos Pugs uma série de expressões humanas - surpresa, felicidade, curiosidade - que encantam os proprietários há séculos. Os proprietários de Pugs dizem que sua raça é o cão doméstico ideal. Pugs ficam felizes na cidade ou no campo, com crianças ou idosos, como único animal de estimação ou em matilha. Eles gostam da comida e devem ser tomados cuidados para mantê-los em boa forma. Eles se dão melhor em climas moderados - nem muito quentes, nem muito frios - mas, com os devidos cuidados, os Pugs podem ser adoráveis ​​em qualquer lugar. Outrora companheiro travesso dos imperadores chineses e mais tarde mascote da Casa Real de Orange da Holanda, o pequeno mas sólido Pug é hoje adorado por seus milhões de fãs em todo o mundo. Pugs vivem para amar e ser amados em troca.",
 		"popularity": 28,
 		"min_height": 25.40,
 		"max_height": 33.02,
-		"min_weight": 6.35,
-		"max_weight": 8.16,
 		"min_expectancy": 13.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.40, 0.80, 0.60, 0.60, 0.80]
+		"embbeding": [0.4, 0.8, 0.6, 0.6, 0.8]
 	},
 	{
-		"name": "rottweiler",
+		"name": "Rottweiler",
 		"description": "Um Rottweiler macho terá entre 24 e 27 polegadas musculares no ombro; as fêmeas são um pouco menores e mais leves. O casaco preto curto e brilhante com marcas de ferrugem elegantes adicionam à imagem de força imponente. Um traseiro musculoso fortalece o trote sem esforço do Rottie. Um Rottie bem criado e bem criado será calmo e confiante, corajoso, mas não excessivamente agressivo. O comportamento indiferente que esses guardiões de classe mundial apresentam aos estranhos desmente a brincadeira e a tolice absoluta que tornam os Rotties queridos por seus entes queridos. (Ninguém disse ao Rottie que ele não é uma raça de brinquedo, então ele pode se jogar no seu colo para um abraço.) O treinamento e a socialização precoces irão aproveitar os instintos territoriais de um Rottie de uma forma positiva. O Rottweiler é uma raça de trabalho robusta e de grande força, descendente dos mastins das legiões romanas. Gentil companheiro de brincadeiras e protetor dentro do círculo familiar, o Rottie observa o mundo exterior com uma indiferença autoconfiante.",
 		"popularity": 8,
 		"min_height": 55.88,
 		"max_height": 68.58,
-		"min_weight": 36.29,
-		"max_weight": 61.23,
 		"min_expectancy": 9.00,
 		"max_expectancy": 10.00,
-		"embbeding": [0.40, 0.60, 0.60, 0.60, 0.40]
+		"embbeding": [0.4, 0.6, 0.6, 0.6, 0.4]
 	},
 	{
 		"name": "São Bernardo",
@@ -768,35 +667,28 @@
 		"popularity": 48,
 		"min_height": 66.04,
 		"max_height": 76.20,
-		"min_weight": 54.43,
-		"max_weight": 81.65,
 		"min_expectancy": 8.00,
 		"max_expectancy": 10.00,
-		"embbeding": [0.40, 0.60, 0.60, 0.60, 0.80]
+		"embbeding": [0.4, 0.6, 0.6, 0.6, 0.8]
 	},
 	{
-		"name": "Cão pastor de Shetland",
-		"description": "O Shetland Sheepdog é um cão pastor pequeno, ativo e ágil, medindo entre 13 e 16 polegadas no ombro. A pelagem longa é áspera e reta, com subpêlo denso, e vem nas cores preto, azul merle e zibelina, com manchas brancas. A pelagem, junto com uma cabeça longa em forma de cunha; orelhas pequenas, três quartos eretas; e torso profundo e nivelado, dão aos Shelties a aparência de um Collie de pelagem áspera em miniatura. Shelties brilhantes e ansiosos são treinadores fáceis e competidores de classe mundial em obediência, agilidade e testes de pastoreio. São cães de família sensíveis e afetuosos, muito sintonizados com o clima da casa. Eles gostam de latir e tendem a ser reservados com estranhos – duas qualificações de um excelente cão de guarda. O Shetland Sheepdog, também conhecido como Sheltie, é um pastor extremamente inteligente, rápido e obediente das remotas e acidentadas Ilhas Shetland da Escócia. Shelties têm uma forte semelhança familiar com seu primo mais velho, o Collie.",
+		"name": "Pastor de Shetland",
+		"description": "O Pastor de Shetland é um cão pastor pequeno, ativo e ágil, medindo entre 13 e 16 polegadas no ombro. A pelagem longa é áspera e reta, com subpêlo denso, e vem nas cores preto, azul merle e zibelina, com manchas brancas. A pelagem, junto com uma cabeça longa em forma de cunha; orelhas pequenas, três quartos eretas; e torso profundo e nivelado, dão aos Shelties a aparência de um Collie de pelagem áspera em miniatura. Shelties brilhantes e ansiosos são treinadores fáceis e competidores de classe mundial em obediência, agilidade e testes de pastoreio. São cães de família sensíveis e afetuosos, muito sintonizados com o clima da casa. Eles gostam de latir e tendem a ser reservados com estranhos – duas qualificações de um excelente cão de guarda. O Pastor de Shetland, também conhecido como Sheltie, é um pastor extremamente inteligente, rápido e obediente das remotas e acidentadas Ilhas Shetland da Escócia. Shelties têm uma forte semelhança familiar com seu primo mais velho, o Collie.",
 		"popularity": 25,
 		"min_height": 33.02,
 		"max_height": 40.64,
-		"min_weight": 6.80,
-		"max_weight": 11.34,
 		"min_expectancy": 12.00,
 		"max_expectancy": 14.00,
-		"embbeding": [0.60, 0.60, 0.60, 1.00, 0.40]
+		"embbeding": [0.6, 0.6, 0.6, 1.0, 0.4]
 	},
 	{
 		"name": "Shiba Inu",
 		"description": "Trazidos do Japão para a América há apenas 60 anos, os Shibas estão crescendo em popularidade no Ocidente e já são a raça mais popular em sua terra natal. Suas manchas brancas combinadas com sua coloração (vermelho, gergelim vermelho ou preto e castanho) e sua expressão alerta e passos suaves os tornam quase parecidos com uma raposa. Eles são cães robustos e musculosos, com uma personalidade ousada e confiante. Uma antiga raça japonesa, o Shiba Inu é um cão pequeno, mas musculoso, que já foi empregado como caçador. Hoje, o espirituoso e bem-humorado Shiba é o cão de companhia mais popular no Japão. O adaptável Shiba se sente em casa na cidade ou no campo.",
 		"popularity": 44,
 		"min_height": 34.29,
-		"max_height": 41.91,
-		"min_weight": 7.71,
-		"max_weight": 10.43,
 		"min_expectancy": 13.00,
 		"max_expectancy": 16.00,
-		"embbeding": [0.40, 0.60, 0.60, 0.40, 0.40]
+		"embbeding": [0.4, 0.6, 0.6, 0.4, 0.4]
 	},
 	{
 		"name": "Shih Tzu",
@@ -804,11 +696,9 @@
 		"popularity": 20,
 		"min_height": 22.86,
 		"max_height": 26.67,
-		"min_weight": 4.08,
-		"max_weight": 7.26,
 		"min_expectancy": 10.00,
 		"max_expectancy": 18.00,
-		"embbeding": [0.80, 0.20, 0.60, 0.60, 0.80]
+		"embbeding": [0.8, 0.2, 0.6, 0.6, 0.8]
 	},
 	{
 		"name": "Whippet",
@@ -816,11 +706,9 @@
 		"popularity": 61,
 		"min_height": 45.72,
 		"max_height": 55.88,
-		"min_weight": 11.34,
-		"max_weight": 18.14,
 		"min_expectancy": 12.00,
 		"max_expectancy": 15.00,
-		"embbeding": [0.20, 0.40, 0.60, 0.40, 0.40]
+		"embbeding": [0.2, 0.4, 0.6, 0.4, 0.4]
 	},
 	{
 		"name": "Yorkshire Terrier",
@@ -828,10 +716,8 @@
 		"popularity": 10,
 		"min_height": 17.78,
 		"max_height": 20.32,
-		"min_weight": 3.18,
-		"max_weight": 3.18,
 		"min_expectancy": 11.00,
 		"max_expectancy": 15.00,
-		"embbeding": [1.00, 0.20, 0.60, 0.20, 0.80]
+		"embbeding": [1.0, 0.2, 0.6, 0.2, 0.8]
 	}
 ]
