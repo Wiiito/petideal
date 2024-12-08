@@ -28,24 +28,26 @@ export default async function submitDog(data) {
 		const key = uuidv4()
 		jsonData.images.push(key) // Estaria dentro do then, porém o codigo assincrono que cadastra o animal na db roda antes do resultado do fetch...
 		const resUrl = await getSignedS3Url(file, key)
-		fetch(resUrl.url, {
-			body: file,
-			method: 'PUT',
-		})
-			.then()
-			.catch((err) => {
-				console.log('Erro upando imagem para a database: ' + err)
-				return {
-					success: false,
-					status: 500,
-					message: 'Something went worng while uploading photo',
-				}
+		if (resUrl.success) {
+			fetch(resUrl.url, {
+				body: file,
+				method: 'PUT',
 			})
+				.then()
+				.catch((err) => {
+					console.log('Erro upando imagem para a database: ' + err)
+					return {
+						success: false,
+						status: 500,
+						message: 'Something went worng while uploading photo',
+					}
+				})
+		}
 	})
 
-	jsonData.embedding = jsonData.embedding.split(',').map(num => {
+	jsonData.embedding = jsonData.embedding.split(',').map((num) => {
 		return Number(num)
-	})	
+	})
 
 	try {
 		await createPet(jsonData)
