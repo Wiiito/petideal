@@ -2,7 +2,6 @@
 
 import { updateEmbedding } from '@/actions/user/update'
 import { useSession } from 'next-auth/react'
-import { revalidatePath } from 'next/cache'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 
