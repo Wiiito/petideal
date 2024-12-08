@@ -1,13 +1,14 @@
 'use client'
 
 import { updateEmbedding } from '@/actions/user/update'
-import Header from '@/components/header/header'
 import { useSession } from 'next-auth/react'
-import { redirect } from 'next/navigation'
+import { revalidatePath } from 'next/cache'
+import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 
 const Page = () => {
 	const { data: session, status } = useSession()
+	const router = useRouter()
 
 	useEffect(() => {
 		if (status === 'unauthenticated') {
@@ -15,14 +16,15 @@ const Page = () => {
 		}
 	}, [status])
 
-	const handleSubmit = async e => {
+	const handleSubmit = async (e) => {
 		e.preventDefault()
 		const inputValues = Array.from(document.querySelectorAll('input')).map(
-			input => {
+			(input) => {
 				return input.value / 100
 			}
 		)
 		const user = await updateEmbedding(session.user._id, inputValues)
+		router.push('/animals')
 
 		return false
 	}
