@@ -6,13 +6,13 @@ export default async function createPet(pet) {
 		name,
 		orgId,
 		images,
-		characteristics,
+		embedding,
 		patronize,
 		description,
 		observation,
 		raceId,
 	} = pet
-	if (!name || !orgId || !images || !characteristics || !raceId)
+	if (!name || !orgId || !images || !embedding || !raceId)
 		return {
 			success: false,
 		}
@@ -23,7 +23,7 @@ export default async function createPet(pet) {
 		name: name,
 		orgId: orgId,
 		images: images,
-		characteristics: characteristics,
+		embedding: embedding,
 		observation: observation,
 		description: description,
 		patronize: patronize,

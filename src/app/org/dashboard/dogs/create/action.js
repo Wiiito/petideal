@@ -17,12 +17,12 @@ export default async function submitDog(data) {
 	jsonData.observation = data.getAll('observation') // Recebe o array de observações e adiciona ao json
 
 	// TODO: FAZ A VALIDAÇÃO DO FORM DATA AQUI PELO AMOR DE DEUS
-
 	/*
-		O codigo abaixo é responsavel por ler todas a imagens no formulario,
-		upa-las pro servidor s3 e salvar seu uuid no array de imagens que será
-		upado para a database
+	O codigo abaixo é responsavel por ler todas a imagens no formulario,
+	upa-las pro servidor s3 e salvar seu uuid no array de imagens que será
+	upado para a database
 	*/
+
 	jsonData.images = []
 	data.getAll('images').forEach(async (file) => {
 		const key = uuidv4()
@@ -42,6 +42,10 @@ export default async function submitDog(data) {
 				}
 			})
 	})
+
+	jsonData.embedding = jsonData.embedding.split(',').map(num => {
+		return Number(num)
+	})	
 
 	try {
 		await createPet(jsonData)
