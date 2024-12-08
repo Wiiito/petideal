@@ -11,9 +11,9 @@ export async function getSignedS3Url(file, key) {
 	const session = await getServerSession(AuthOptions)
 	if (!session.user._id) return { success: false, message: 'User id not found' }
 
-	const accessKeyId = process.env.AWS_ACCESS_KEY
-	const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY
-	const s3BucketName = process.env.AWS_S3_BUCKET_NAME
+	const accessKeyId = process.env.ACCESS_KEY
+	const secretAccessKey = process.env.SECRET_ACCESS_KEY
+	const s3BucketName = process.env.S3_BUCKET_NAME
 
 	if (!accessKeyId || !secretAccessKey || !s3BucketName) {
 		console.log('s3 credentials missing or not found')
