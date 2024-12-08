@@ -16,10 +16,6 @@ export async function getSignedS3Url(file, key) {
 	const s3BucketName = process.env.S3_BUCKET_NAME
 
 	if (!accessKeyId || !secretAccessKey || !s3BucketName) {
-		console.log(accessKeyId)
-		console.log(secretAccessKey)
-		console.log(s3BucketName)
-
 		console.log('s3 credentials missing or not found')
 		return { success: false, status: 500 }
 	}
