@@ -10,19 +10,13 @@ const Page = () => {
 	const { data: session, status } = useSession()
 
 	const [dogs, setDogs] = useState({})
-	const [update, setUpdate] = useState(false)
 
 	useEffect(() => {
 		const requestDogs = async () => {
 			setDogs(await getPageOfPets(session.user._id, 1))
 		}
 		if (status === 'authenticated') requestDogs()
-	}, [status, update])
-
-	const deletePet = async (id) => {
-		await adoptPet(id)
-		setUpdate(!update)
-	}
+	}, [status, session])
 
 	return (
 		<>

@@ -6,8 +6,20 @@ const Page = () => {
 	return (
 		<>
 			<div className='formImages'>
-				<Image src='/signinDog.png' width={744} height={879} priority />
-				<Image src='/signinCat.png' width={962} height={822} priority />
+				<Image
+					src='/signinDog.png'
+					width={744}
+					height={879}
+					priority
+					alt='DogImage'
+				/>
+				<Image
+					src='/signinCat.png'
+					width={962}
+					height={822}
+					priority
+					alt='CatImage'
+				/>
 			</div>
 			<div className='form'>
 				<Link href='/auth/user/register'>

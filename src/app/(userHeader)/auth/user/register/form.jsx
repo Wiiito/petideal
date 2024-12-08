@@ -33,7 +33,7 @@ const Form = () => {
 				})
 			}, 1000)
 		}
-	}, [state])
+	}, [state, router])
 
 	return (
 		<form action={formAction}>
