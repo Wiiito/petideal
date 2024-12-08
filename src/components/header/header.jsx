@@ -28,15 +28,15 @@ const Header = () => {
 						</li>
 
 						<li>
-							<Link href='/happyEnding'>Finais Felizes</Link>
+							<Link href='/'>Finais Felizes</Link>
 						</li>
 
 						<li>
-							<Link href='/petideal'>Petideal</Link>
+							<Link href='/'>Petideal</Link>
 						</li>
 
 						<li>
-							<Link href='/faq'>FAQ</Link>
+							<Link href='/'>FAQ</Link>
 						</li>
 					</ul>
 				</menu>
@@ -47,10 +47,10 @@ const Header = () => {
 						<Link href='/' className='hover:after:w-[120%]'>
 							<li>Início</li>
 						</Link>
-						<Link href='/happyEnding' className='hover:after:w-[120%]'>
+						<Link href='/' className='hover:after:w-[120%]'>
 							<li>Finais Felizes</li>
 						</Link>
-						<Link href='/petideal' className='hover:after:w-[120%]'>
+						<Link href='/' className='hover:after:w-[120%]'>
 							<li className='relative flex items-center after:content-[""] after:absolute after:w-0 after:h-1 after:rounded-full after:bg-reallyLight after:bottom-0 after:left-1/2 hover:after:w-[120%] after:transform after:-translate-x-1/2 after:transition-all after:duration-300'>
 								Petideal
 								<svg
@@ -65,7 +65,7 @@ const Header = () => {
 								</svg>
 							</li>
 						</Link>
-						<Link href='/faq' className='hover:after:w-[120%]'>
+						<Link href='/' className='hover:after:w-[120%]'>
 							<li>FAQ</li>
 						</Link>
 					</ul>

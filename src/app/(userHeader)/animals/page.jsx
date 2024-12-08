@@ -15,44 +15,44 @@ const Page = () => {
 	const [page, setPage] = useState(1)
 	const [perPage, setPerPage] = useState(20)
 
-	useEffect(() => {
-		const fetchDogs = async (page) => {
-			const userEmbedding = await getEmbedding(session.user._id)
-
-			const newDogs = await vectorSearch(userEmbedding.perfil, perPage)
-
-			setDogs((prev) => {
-				return [...dogs, ...newDogs]
-			})
+	const changePage = async (page) => {
+		if (dogs[0] === 'Loading...') {
+			dogs.pop()
 		}
 
-		const changePage = async (page) => {
-			if (dogs[0] === 'Loading...') {
-				dogs.pop()
+		if (page * perPage < dogs.length) {
+			let newDogs = []
+			for (let i = 0; i < perPage; i++) {
+				newDogs.add(dogs[(page - 1) * perPage + i])
 			}
-
-			if (page * perPage < dogs.length) {
-				let newDogs = []
-				for (let i = 0; i < perPage; i++) {
-					newDogs.add(dogs[(page - 1) * perPage + i])
-				}
-				setLoadedDogs(newDogs)
-				return
-			}
-
-			fetchDogs(page)
+			setLoadedDogs(newDogs)
+			return
 		}
 
-		if (status === 'authenticated') {
-			changePage(1)
-		}
-	}, [page, status, dogs, perPage])
+		fetchDogs(page)
+	}
+
+	const fetchDogs = async (page) => {
+		const userEmbedding = await getEmbedding(session.user._id)
+
+		const newDogs = await vectorSearch(userEmbedding.perfil, perPage)
+
+		setDogs((prev) => {
+			return [...dogs, ...newDogs]
+		})
+	}
 
 	useEffect(() => {
 		if (status === 'unauthenticated') {
 			redirect('/auth/user/register')
 		}
 	}, [status])
+
+	useEffect(() => {
+		if (status === 'authenticated') {
+			changePage(1)
+		}
+	}, [page, status])
 
 	return (
 		<section>

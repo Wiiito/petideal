@@ -11,7 +11,7 @@ const Page = () => {
 
 	useEffect(() => {
 		if (status === 'unauthenticated') {
-			redirect('/auth/user/register')
+			router.push('/auth/user/register')
 		}
 	}, [status])
 
