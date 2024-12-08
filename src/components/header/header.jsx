@@ -2,15 +2,12 @@
 
 import Link from 'next/link'
 import { useRef } from 'react'
-import { useSession } from 'next-auth/react'
 
 import './styles.scss'
 
 const Header = () => {
 	const menuOverlay = useRef(null)
 	const hambMenu = useRef(null)
-
-	const { data: session, status } = useSession()
 
 	function hambClick() {
 		menuOverlay.current.classList.toggle('-left-[100vw]')
@@ -31,15 +28,15 @@ const Header = () => {
 						</li>
 
 						<li>
-							<Link href='/happyEnding'>Finais Felizes</Link>
+							<Link href='/'>Finais Felizes</Link>
 						</li>
 
 						<li>
-							<Link href='/petideal'>Petideal</Link>
+							<Link href='/'>Petideal</Link>
 						</li>
 
 						<li>
-							<Link href='/faq'>FAQ</Link>
+							<Link href='/'>FAQ</Link>
 						</li>
 					</ul>
 				</menu>
@@ -50,13 +47,10 @@ const Header = () => {
 						<Link href='/' className='hover:after:w-[120%]'>
 							<li>Início</li>
 						</Link>
-						<Link
-							href='/happyEnding'
-							className='hover:after:w-[120%]'
-						>
+						<Link href='/' className='hover:after:w-[120%]'>
 							<li>Finais Felizes</li>
 						</Link>
-						<Link href='/petideal' className='hover:after:w-[120%]'>
+						<Link href='/' className='hover:after:w-[120%]'>
 							<li className='relative flex items-center after:content-[""] after:absolute after:w-0 after:h-1 after:rounded-full after:bg-reallyLight after:bottom-0 after:left-1/2 hover:after:w-[120%] after:transform after:-translate-x-1/2 after:transition-all after:duration-300'>
 								Petideal
 								<svg
@@ -71,7 +65,7 @@ const Header = () => {
 								</svg>
 							</li>
 						</Link>
-						<Link href='/faq' className='hover:after:w-[120%]'>
+						<Link href='/' className='hover:after:w-[120%]'>
 							<li>FAQ</li>
 						</Link>
 					</ul>
@@ -85,28 +79,6 @@ const Header = () => {
 					<span></span>
 					<span></span>
 					<span></span>
-				</div>
-
-				<div className='flex items-center text-center font-medium'>
-					{status === 'authenticated' ? (
-						<div className='w-32 h-9 content-center rounded-full bg-reallyLight text-white opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out'>
-							<Link href='/profile'>Meu Perfil</Link>
-						</div>
-					) : (
-						<>
-							<Link href='/auth/user/signin' className='mr-4'>
-								<div className='w-32 h-9 content-center rounded-full border border-black opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out'>
-									Entrar
-								</div>
-							</Link>
-
-							<Link href='/auth/user/register'>
-								<div className='w-32 h-9 content-center rounded-full bg-reallyLight text-white opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out'>
-									Registrar-se
-								</div>
-							</Link>
-						</>
-					)}
 				</div>
 			</header>
 		</>

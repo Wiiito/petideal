@@ -1,12 +1,13 @@
 import Image from 'next/image'
 
 import './hero.scss'
+import Link from 'next/link'
 
 const Hero = () => {
 	return (
 		<div className='relative overflow-hidden h-screen w-screen pt-[5vh] md:pt-40 lg:pt-28'>
-			<div className='w-[49.5vw] mt-8 lg:ml-24 md:ml-16 ml-10'>
-				<div className='lg:text-7xl lg:leading-[5.625rem] md:text-5xl md:leading-[4rem] text-4xl font-bold'>
+			<div className='w-[49.5vw] lg:ml-24 md:ml-16 ml-10'>
+				<div className='lg:text-6xl lg:leading-[5.625rem] md:text-5xl md:leading-[4rem] text-4xl font-bold'>
 					Descubra seu companheiro{' '}
 					<span className='uppercase text-darker'>ideal</span> de quatro patas!
 				</div>
@@ -14,9 +15,11 @@ const Hero = () => {
 					Adotar um animal é mais do que dar um lar; é oferecer amor
 					incondicional e transformar vidas para sempre.
 				</div>
-				<button className='uppercase buttonGradient font-bold text-white mt-16 w-40 h-10 lg:w-80 lg:h-20 lg:text-3xl md:w-56 md:h-14 md:text-2xl rounded-full ml-[15%] hover:scale-105 transition-all ease-in-out'>
-					Começar
-				</button>
+				<Link href='/form'>
+					<button className='uppercase buttonGradient font-bold text-white mt-16 w-40 h-10 lg:w-80 lg:h-20 lg:text-3xl md:w-56 md:h-14 md:text-2xl rounded-full ml-[15%] hover:scale-105 transition-all ease-in-out'>
+						Começar
+					</button>
+				</Link>
 			</div>
 			<div className='absolute right-0 bottom-0 w-1/2 md:w-[calc(50vw-6rem)] h-full'>
 				<div className='absolute right-0 w-11/12 transform -translate-y-1/2 top-[calc(50%-4.5rem)] lg:top-1/2'>
@@ -24,8 +27,7 @@ const Hero = () => {
 						viewBox='0 0 580 671'
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
-						className='absolute right-0 top-1/2 transform -translate-y-1/2'
-					>
+						className='absolute right-0 top-1/2 transform -translate-y-1/2'>
 						<path
 							fillRule='evenodd'
 							clipRule='evenodd'

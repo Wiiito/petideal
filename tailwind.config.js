@@ -13,6 +13,7 @@ module.exports = {
 		},
 		colors: {
 			black: '#191A15',
+			trueWhite: '#ffffff',
 			white: '#F2F2F2',
 			primary: '#CF82B7',
 			darker: '#CF94C6',
@@ -20,7 +21,9 @@ module.exports = {
 			reallyLight: '#FFAFCC',
 			pastel: '#CD8EC0',
 			lightPastel: '#FF9FC2',
+			ultraLightPastel: '#e8cce2',
 			transparent: 'transparent',
+			error: '#eb4034',
 		},
 		extend: {
 			backgroundImage: {
