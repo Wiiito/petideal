@@ -15,10 +15,10 @@ const Page = () => {
 		}
 	}, [status])
 
-	const handleSubmit = async (e) => {
+	const handleSubmit = async e => {
 		e.preventDefault()
 		const inputValues = Array.from(document.querySelectorAll('input')).map(
-			(input) => {
+			input => {
 				return input.value / 100
 			}
 		)
@@ -34,14 +34,19 @@ const Page = () => {
 			<form method='post' onSubmit={handleSubmit}>
 				Manutenção dos pelos:
 				<input type='range' name='groomingAdaptability' />
+				<br />
 				Quantidade de pelos soltos:
 				<input type='range' name='sheddingAdaptability' />
-				Adaptabilidade à energia:
+				<br />
+				Tamanho da casa:
 				<input type='range' name='energyAdaptability' />
-				Quer treinar o dog:
+				<br />
+				Disponibilidade de tempo:
 				<input type='range' name='trainabilityAdaptability' />
+				<br />
 				Amigavel:
 				<input type='range' name='demeanorAdaptability' />
+				<br />
 				<button>Enviar</button>
 			</form>
 		</>

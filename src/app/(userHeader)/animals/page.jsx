@@ -15,7 +15,7 @@ const Page = () => {
 	const [page, setPage] = useState(1)
 	const [perPage, setPerPage] = useState(20)
 
-	const changePage = async (page) => {
+	const changePage = async page => {
 		if (dogs[0] === 'Loading...') {
 			dogs.pop()
 		}
@@ -32,12 +32,12 @@ const Page = () => {
 		fetchDogs(page)
 	}
 
-	const fetchDogs = async (page) => {
+	const fetchDogs = async page => {
 		const userEmbedding = await getEmbedding(session.user._id)
 
 		const newDogs = await vectorSearch(userEmbedding.perfil, perPage)
 
-		setDogs((prev) => {
+		setDogs(prev => {
 			return [...dogs, ...newDogs]
 		})
 	}
@@ -55,7 +55,7 @@ const Page = () => {
 	}, [page, status])
 
 	return (
-		<section>
+		<section className='columns-2xs'>
 			{dogs[0] !== 'Loading...'
 				? dogs.map((dog, i) => {
 						return (

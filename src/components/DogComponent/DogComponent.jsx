@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 const DogComponent = ({ dog, children }) => {
 	return (
 		<div className='relative w-full h-60 rounded-2xl overflow-hidden border-black border'>
@@ -16,16 +14,6 @@ const DogComponent = ({ dog, children }) => {
 				</div>
 				<div className='px-3'>{dog.description}</div>
 				<div className='italic'>{dog.observation}</div>
-				<div className='absolute flex gap-2 right-2 bottom-2'>
-					<div className='right-2 bottom-2'>
-						<Link href='/' className='bg-lightPastel px-2 rounded-md'>
-							Editar
-						</Link>
-					</div>
-					<div className='bg-darker px-2 rounded-md'>
-						<button onClick={() => deletePet(dog._id)}>Adotar</button>
-					</div>
-				</div>
 			</div>
 		</div>
 	)
