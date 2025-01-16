@@ -7,9 +7,9 @@ const Hero = () => {
 	return (
 		<div className='relative overflow-hidden h-screen w-screen pt-[5vh] md:pt-40 lg:pt-28'>
 			<div className='w-[49.5vw] lg:ml-24 md:ml-16 ml-10'>
-				<div className='lg:text-6xl lg:leading-[5.625rem] md:text-5xl md:leading-[4rem] text-4xl font-bold'>
-					Descubra seu companheiro{' '}
-					<span className='uppercase text-darker'>ideal</span> de quatro patas!
+				<div className='lg:text-7xl lg:leading-[5.625rem] md:text-5xl md:leading-[4rem] text-4xl font-bold'>
+					Encontre o companheiro{' '}
+					<span className='uppercase text-darker'>ideal</span> para você!
 				</div>
 				<div className='w-2/3 lg:text-lg md:text-base text-sm mt-9'>
 					Adotar um animal é mais do que dar um lar; é oferecer amor
@@ -27,7 +27,8 @@ const Hero = () => {
 						viewBox='0 0 580 671'
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
-						className='absolute right-0 top-1/2 transform -translate-y-1/2'>
+						className='absolute right-0 top-1/2 transform -translate-y-1/2'
+					>
 						<path
 							fillRule='evenodd'
 							clipRule='evenodd'
@@ -36,9 +37,8 @@ const Hero = () => {
 						/>
 					</svg>
 				</div>
-
 				<div className='absolute right-0 top-0 w-full h-full'>
-					<div className='absolute transform top-[calc(50%-4.5rem)] -rotate-90 left-0 -translate-y-1/2 translate-x-[21%]'>
+					<div className='absolute transform top-[calc(50%-4.5rem)] -rotate-90 left-[10%] -translate-y-1/2 translate-x-[21%]'>
 						<Image
 							src='/HeroDogDesktop.png'
 							height={1250}

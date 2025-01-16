@@ -4,6 +4,8 @@ import Funcionamento from '@/components/funcionamento/funcionamento'
 
 import './home.scss'
 import HomeUserButtons from '@/components/HomeUserButtons'
+import Organizacao from '@/components/Organizacao'
+import FAQSection from '@/components/FAQHomeSection/FAQSection'
 
 export default function Home() {
 	return (
@@ -17,6 +19,8 @@ export default function Home() {
 			</header>
 			<Hero />
 			<Funcionamento />
+			<Organizacao className='relative' />
+			<FAQSection className='relative z-40' />
 		</div>
 	)
 }
