@@ -6,7 +6,7 @@ const Organizacao = () => {
 		<div className='relative w-full flex mt-8 lg:mt-0 pt-10 lg:pt-0'>
 			<div className='bg-darker w-full absolute left-0 bottom-0 h-full lg:h-2/3 '></div>
 			<div className='absolute left-0 top-0 pointer-events-none'>
-				<Image src='/patterns/paws.png' height={1000} width={1350} />
+				<Image src='/patterns/paws.png' height={1000} width={1350} alt='paws' />
 			</div>
 			<div className='relative w-2/5 z-10 hidden lg:flex max-h-full justify-center'>
 				<Image
@@ -14,6 +14,7 @@ const Organizacao = () => {
 					height={589}
 					width={438}
 					className='absolute bottom-0 max-h-full'
+					alt='cat'
 				/>
 			</div>
 			<div className='relative w-full lg:w-3/5'>

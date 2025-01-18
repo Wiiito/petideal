@@ -20,6 +20,7 @@ export async function getAllRacesNames() {
 export async function getRaceBaseEmbedding(raceId) {
 	await dbConnect()
 
-	const raceEmbedding = await RaceModel.findById(raceId).select('embbeding')
+	const raceEmbedding = await RaceModel.findById(raceId).select('embedding')
+
 	return JSON.parse(JSON.stringify(raceEmbedding))
 }

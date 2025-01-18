@@ -18,7 +18,7 @@ const Header = () => {
 	return (
 		<>
 			<div
-				className='fixed h-screen w-screen bg-gradient-to-br from-white to-reallyLight z-40 -left-[100vw] transition-all ease-in-out duration-300'
+				className='fixed h-screen w-screen bg-gradient-to-br from-white to-reallyLight z-40 -left-[100vw] transition-all ease-in-out duration-300 top-0'
 				ref={menuOverlay}
 			>
 				<menu className='py-16 px-7 h-full'>

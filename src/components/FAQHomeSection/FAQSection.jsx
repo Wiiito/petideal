@@ -18,7 +18,13 @@ const FAQSection = () => {
 				</Link>
 			</div>
 			<footer className='w-full'>
-				<Image src='footer.svg' height={173} width={1366} className='w-full' />
+				<Image
+					src='footer.svg'
+					height={173}
+					width={1366}
+					className='w-full'
+					alt='footer'
+				/>
 			</footer>
 		</div>
 	)

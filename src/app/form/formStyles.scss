@@ -1,0 +1,4 @@
+.background {
+    @apply w-full min-h-screen;
+    background: linear-gradient(168deg,theme('colors.white'), theme('colors.lightPastel'));
+}
