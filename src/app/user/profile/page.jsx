@@ -3,6 +3,7 @@
 import { useSession } from 'next-auth/react'
 import { redirect } from 'next/navigation'
 import { useEffect } from 'react'
+import { signOut } from 'next-auth/react'
 
 const Page = () => {
 	const { data: session, status } = useSession({
@@ -32,6 +33,9 @@ const Page = () => {
 					}
 				/>
 			</form>
+			<button className='bg-error px-4 py-2 rounded-xl' onClick={signOut}>
+				Sair
+			</button>
 		</div>
 	)
 }

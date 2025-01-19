@@ -18,17 +18,13 @@ const Header = () => {
 	return (
 		<>
 			<div
-				className='fixed h-screen w-screen bg-gradient-to-br from-white to-reallyLight z-40 -left-[100vw] transition-all ease-in-out duration-300'
+				className='fixed h-screen w-screen bg-gradient-to-br from-white to-reallyLight z-40 -left-[100vw] transition-all ease-in-out duration-300 top-0'
 				ref={menuOverlay}
 			>
 				<menu className='py-16 px-7 h-full'>
 					<ul className='*:text-2xl *:mb-6 *:font-medium *:uppercase h-full flex flex-col justify-around'>
 						<li>
 							<Link href='/'>Início</Link>
-						</li>
-
-						<li>
-							<Link href='/'>Finais Felizes</Link>
 						</li>
 
 						<li>
@@ -41,14 +37,11 @@ const Header = () => {
 					</ul>
 				</menu>
 			</div>
-			<header className='py-3 px-7 flex justify-between md:py-3 md:px-16 lg:px-24 items-center lg:float-right'>
+			<header className='py-3 flex justify-between md:px-16 lg:px-24 items-center lg:float-right'>
 				<nav className='hidden md:block lg:absolute lg:transform lg:-translate-x-1/2 lg:left-1/2'>
 					<ul className='list-none flex text-lg font-medium *:mr-6 *:relative *:after:content-[""] *:after:absolute *:after:w-0 *:after:h-1 *:after:rounded-full *:after:bg-reallyLight *:after:bottom-0 *:after:left-1/2 *:after:transform *:after:-translate-x-1/2 *:after:transition-all *:after:duration-300'>
 						<Link href='/' className='hover:after:w-[120%]'>
 							<li>Início</li>
-						</Link>
-						<Link href='/' className='hover:after:w-[120%]'>
-							<li>Finais Felizes</li>
 						</Link>
 						<Link href='/' className='hover:after:w-[120%]'>
 							<li className='relative flex items-center after:content-[""] after:absolute after:w-0 after:h-1 after:rounded-full after:bg-reallyLight after:bottom-0 after:left-1/2 hover:after:w-[120%] after:transform after:-translate-x-1/2 after:transition-all after:duration-300'>

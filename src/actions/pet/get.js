@@ -31,8 +31,19 @@ export async function getFromAllPageOfPets(page, perPage) {
 	return JSON.parse(JSON.stringify(pets))
 }
 
-export async function vectorSearch(embeddingSearch, perPage) {
+export async function getPetCount() {
+	await dbConnect()
+	const size = await PetModel.countDocuments()
+
+	return size
+}
+
+export async function vectorSearch(embeddingSearch, perPage, page) {
 	if (!perPage) perPage = 12
+	if (!page) page = 1
+
+	const skip = (page - 1) * perPage
+
 	await dbConnect()
 	const res = await PetModel.aggregate([
 		{
@@ -41,15 +52,19 @@ export async function vectorSearch(embeddingSearch, perPage) {
 				path: 'embedding', // indicate the field the vectors are stored
 				queryVector: embeddingSearch,
 				numCandidates: 100, // number of chunks to consider for the comparison
-				limit: perPage, // the number of returned results on score order from high to low
+				limit: perPage * page, // the number of returned results on score order from high to low
 			},
 		},
+		{ $skip: skip },
 		{
 			$project: {
 				_id: 1,
 				name: 1,
 				images: 1,
 				description: 1,
+				orgId: 1,
+				raceId: 1,
+				observation: 1,
 				score: {
 					$meta: 'vectorSearchScore',
 				},

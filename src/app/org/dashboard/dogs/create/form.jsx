@@ -133,10 +133,6 @@ const Form = () => {
 		})
 	}
 
-	useEffect(() => {
-		console.log(data)
-	}, [data])
-
 	return (
 		<form action={handleSubmit} className='w-full mb-4'>
 			<div className='w-[calc(100%-2rem)] p-4 rounded-xl shadow-inner shadow-black m-4'>
@@ -246,7 +242,7 @@ const Form = () => {
 												return {
 													...prev,
 													raceId: selectedRace._id,
-													embedding: raceEmbedding.embbeding,
+													embedding: raceEmbedding.embedding,
 												}
 											})
 										}}

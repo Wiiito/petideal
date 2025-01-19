@@ -1,0 +1,28 @@
+.checked {
+    @apply bg-darker shadow-inner shadow-brown;
+}
+
+.background {
+    @apply w-full min-h-screen text-center;
+    background: linear-gradient(168deg,theme('colors.white'), theme('colors.lightPastel'));
+
+    h3 {
+        @apply text-xl font-semibold uppercase;
+    }
+
+    .question {
+        @apply w-full mb-2 border-b border-primary pb-4 mt-4;
+
+        .text {
+            @apply font-semibold mb-2;
+        }
+
+        .answers {
+            @apply flex justify-center font-medium;
+
+            input {
+                @apply w-32 mx-2;
+            }
+        }
+    }
+}
