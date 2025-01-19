@@ -9,10 +9,13 @@ const Header = () => {
 	const menuOverlay = useRef(null)
 	const hambMenu = useRef(null)
 
+	const detailsDivPetideal = useRef(null)
+
 	function hambClick() {
 		menuOverlay.current.classList.toggle('-left-[100vw]')
 		menuOverlay.current.classList.toggle('left-0')
 		hambMenu.current.classList.toggle('hamburguerMenu')
+		document.querySelector('html').classList.toggle('overflow-hidden')
 	}
 
 	return (
@@ -28,11 +31,19 @@ const Header = () => {
 						</li>
 
 						<li>
-							<Link href='/'>Petideal</Link>
+							<Link href='/petideal'>Petideal</Link>
+							<ul className='text-xl'>
+								<li className='px-2 border-b border-black py-2'>
+									<Link href='/petideal'>O que é o petideal</Link>
+								</li>
+								<li className='px-2 border-b border-black py-2'>
+									<Link href='/equipe'>Conheça nossa equipe</Link>
+								</li>
+							</ul>
 						</li>
 
 						<li>
-							<Link href='/'>FAQ</Link>
+							<Link href='/faq'>FAQ</Link>
 						</li>
 					</ul>
 				</menu>
@@ -43,8 +54,9 @@ const Header = () => {
 						<Link href='/' className='hover:after:w-[120%]'>
 							<li>Início</li>
 						</Link>
-						<Link href='/' className='hover:after:w-[120%]'>
-							<li className='relative flex items-center after:content-[""] after:absolute after:w-0 after:h-1 after:rounded-full after:bg-reallyLight after:bottom-0 after:left-1/2 hover:after:w-[120%] after:transform after:-translate-x-1/2 after:transition-all after:duration-300'>
+
+						<div className='relative cursor-pointer'>
+							<li className='peer relative flex items-center after:content-[""] after:absolute after:w-0 after:h-1 after:rounded-full after:bg-reallyLight after:bottom-0 after:left-1/2 hover:after:w-[120%] after:transform after:-translate-x-1/2 after:transition-all after:duration-300'>
 								Petideal
 								<svg
 									width='10'
@@ -57,8 +69,21 @@ const Header = () => {
 									<path d='M5 5L0 0H10L5 5Z' fill='#1D1B20' />
 								</svg>
 							</li>
-						</Link>
-						<Link href='/' className='hover:after:w-[120%]'>
+							<ul className='hover:block peer-hover:block hidden absolute z-40 min-w-60 transform -translate-x-1/2 left-1/2 top-full bg-trueWhite text-center rounded-xl'>
+								<Link href='/petideal'>
+									<li className='px-4 py-2 shadow-sm text-lg'>
+										O que é o petideal
+									</li>
+								</Link>
+								<Link href='/equipe'>
+									<li className='px-4 py-2 shadow-sm text-lg'>
+										Conheça nossa equipe
+									</li>
+								</Link>
+							</ul>
+						</div>
+
+						<Link href='/faq' className='hover:after:w-[120%]'>
 							<li>FAQ</li>
 						</Link>
 					</ul>

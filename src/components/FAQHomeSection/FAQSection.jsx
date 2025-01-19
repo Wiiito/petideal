@@ -11,7 +11,7 @@ const FAQSection = () => {
 				conosco e ficaremos felizes em ajudar.
 			</p>
 			<div className='flex justify-center mb-36'>
-				<Link href='FAQ'>
+				<Link href='/faq'>
 					<div className='px-12 py-4 bg-lightPastel font-bold rounded-full box-shadow text-xl text-white'>
 						Perguntas frequentes
 					</div>
