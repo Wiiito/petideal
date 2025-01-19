@@ -43,7 +43,7 @@ const Header = () => {
 						</li>
 
 						<li>
-							<Link href='/'>FAQ</Link>
+							<Link href='/faq'>FAQ</Link>
 						</li>
 					</ul>
 				</menu>
@@ -83,7 +83,7 @@ const Header = () => {
 							</ul>
 						</div>
 
-						<Link href='/' className='hover:after:w-[120%]'>
+						<Link href='/faq' className='hover:after:w-[120%]'>
 							<li>FAQ</li>
 						</Link>
 					</ul>

@@ -1,9 +1,13 @@
 import SinglePage from '@/components/SinglePage'
+import HomeUserButtons from '@/components/HomeUserButtons'
 import Image from 'next/image'
 
 const PetidealPage = () => {
 	return (
 		<SinglePage>
+			<div className='absolute right-4 top-4 z-50'>
+				<HomeUserButtons />
+			</div>
 			<div className='relative h-screen w-screen flex justify-center items-center'>
 				<div className='px-8 md:px-[30vw] text-center'>
 					<h1 className='text-5xl lg:text-7xl text-primary uppercase font-bold'>
