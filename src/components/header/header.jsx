@@ -37,7 +37,7 @@ const Header = () => {
 					</ul>
 				</menu>
 			</div>
-			<header className='py-3 px-7 flex justify-between md:py-3 md:px-16 lg:px-24 items-center lg:float-right'>
+			<header className='py-3 flex justify-between md:px-16 lg:px-24 items-center lg:float-right'>
 				<nav className='hidden md:block lg:absolute lg:transform lg:-translate-x-1/2 lg:left-1/2'>
 					<ul className='list-none flex text-lg font-medium *:mr-6 *:relative *:after:content-[""] *:after:absolute *:after:w-0 *:after:h-1 *:after:rounded-full *:after:bg-reallyLight *:after:bottom-0 *:after:left-1/2 *:after:transform *:after:-translate-x-1/2 *:after:transition-all *:after:duration-300'>
 						<Link href='/' className='hover:after:w-[120%]'>

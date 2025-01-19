@@ -3,12 +3,13 @@
 import { updateEmbedding } from '@/actions/user/update'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import FormLayout from './formLayout'
 
 const Page = () => {
 	const { data: session, status } = useSession()
 	const router = useRouter()
+	const [adult, setAdult] = useState(false)
 
 	useEffect(() => {
 		if (status === 'unauthenticated') {
@@ -25,28 +26,65 @@ const Page = () => {
 			const changeValue = input.getAttribute('data-alter-value')
 			userEmbedding[changeValue] = input.value / 100
 		})
-		console.log(userEmbedding)
 
-		const user = await updateEmbedding(session.user._id, userEmbedding)
+		await updateEmbedding(session.user._id, userEmbedding)
 		router.push('/animals')
 
 		return false
 	}
 
+	const changeEighteen = () => {
+		if (document.getElementById('18sim').checked) {
+			document.getElementById('18LabelSim').classList.add('checked')
+			document.getElementById('18LabelNao').classList.remove('checked')
+			setAdult(true)
+		} else {
+			document.getElementById('18LabelSim').classList.remove('checked')
+			document.getElementById('18LabelNao').classList.add('checked')
+			setAdult(false)
+		}
+	}
+
 	return (
 		<>
 			<FormLayout>
+				<h3>Sobre você</h3>
 				<div className='question'>
 					<div className='text'>Você é maior de 18 anos?</div>
 					<div className='answers'>
-						<input type='radio' name='idade' id='18sim' value='sim' />
-						<label htmlFor='18sim'>Sim</label>
-						<input type='radio' name='idade' id='18nao' value='nao' />
-						<label htmlFor='18nao'>Não</label>
+						<input
+							type='radio'
+							name='idade'
+							id='18sim'
+							value='sim'
+							className='hidden'
+							onChange={changeEighteen}
+						/>
+						<label
+							id='18LabelSim'
+							htmlFor='18sim'
+							className='eighteenLabel bg-reallyLight text-white uppercase px-6 py-2 rounded-xl font-bold shadow-md'
+						>
+							Sim
+						</label>
+						<input
+							type='radio'
+							name='idade'
+							id='18nao'
+							value='nao'
+							className='hidden'
+							onChange={changeEighteen}
+						/>
+						<label
+							id='18LabelNao'
+							htmlFor='18nao'
+							className='eighteenLabel bg-reallyLight text-white uppercase px-6 py-2 rounded-xl font-bold shadow-md ml-8'
+						>
+							Não
+						</label>
 					</div>
 				</div>
 				<form method='post' onSubmit={handleSubmit}>
-					<h3>Sobre você</h3>
 					{/* energy-level */}
 					<div className='question'>
 						<div className='text'>

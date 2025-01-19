@@ -3,11 +3,11 @@
 import dbConnect from '@/lib/dbConnect'
 import RaceModel from '@/models/race'
 
-export default async function getRace(name) {
+export async function getRaceFromId(id) {
 	await dbConnect()
 
-	let race = await RaceModel.findOne({ name: name })
-	return race
+	let race = await RaceModel.findById(id)
+	return JSON.parse(JSON.stringify(race))
 }
 
 export async function getAllRacesNames() {

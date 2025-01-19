@@ -4,7 +4,7 @@ import { getOrgFromId } from '@/actions/org/get'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-const DogComponent = ({ dog, children }) => {
+const DogComponent = ({ dog }) => {
 	const [org, setOrg] = useState()
 	const [heartColors, setHeartColors] = useState([])
 
@@ -26,14 +26,9 @@ const DogComponent = ({ dog, children }) => {
 		updateHearts()
 	}, [dog])
 
-	const dogsDetails = () => {}
-
 	return (
-		<div
-			className='relative w-full h-60 flex cursor-pointer'
-			onClick={dogsDetails}
-		>
-			<div className='relative h-full w-60 bg-white rounded-xl rounded-br-3xl overflow-hidden'>
+		<div className='relative w-full h-40 md:h-60 flex cursor-pointer'>
+			<div className='relative h-full w-40 md:w-60 bg-white rounded-xl rounded-br-3xl overflow-hidden'>
 				{dog.images[0] && (
 					<Image
 						src={'https://petideal.s3.us-east-1.amazonaws.com/' + dog.images[0]}
@@ -43,9 +38,9 @@ const DogComponent = ({ dog, children }) => {
 					/>
 				)}
 			</div>
-			<div className='h-[calc(100%-3rem)] w-[calc(100%-15rem)] my-6 bg-ultraLightPastel rounded-r-xl p-4 pb-0 overflow-x-hidden'>
-				<div className='text-md font-bold text-gray mt-2'>{dog.name}</div>
-				<div className='flex mt-2'>
+			<div className='h-[calc(100%-1.75rem)] mt-2 md:h-[calc(100%-3rem)] w-[calc(100%-9rem)] md:w-[calc(100%-15rem)] md:my-6 bg-ultraLightPastel rounded-r-xl p-2 md:p-4 pb-0 md:pb-0 overflow-x-hidden'>
+				<div className='text-md font-bold text-gray md:mt-2'>{dog.name}</div>
+				<div className='flex md:mt-2'>
 					<div className='flex'>
 						<Image
 							src='/icons/location.svg'
@@ -58,14 +53,14 @@ const DogComponent = ({ dog, children }) => {
 						</span>
 					</div>
 				</div>
-				<div className='text-center font-bold uppercase mt-2 mb-2 text-md'>
+				<div className='text-center font-bold uppercase md:mt-2 md:mb-2 text-md'>
 					Compatibilidade
 				</div>
 				<div className='flex items-center justify-center'>
 					<div className='flex gap-1 mr-2'>
-						{heartColors.map((heartColor) => {
+						{heartColors.map((heartColor, i) => {
 							return (
-								<div className='h-5 w-5 *:w-full *:h-full'>
+								<div key={i} className='h-5 w-5 *:w-full *:h-full'>
 									<svg
 										width='15'
 										height='15'
@@ -86,8 +81,10 @@ const DogComponent = ({ dog, children }) => {
 						{Number(dog.score * 100).toFixed(0)}%
 					</span>
 				</div>
-				<div className='text-center mt-3'>
-					<span className='font-bold text-2xl border rounded-full px-8'>+</span>
+				<div className='text-center mt-1 md:mt-3'>
+					<span className='font-bold text-xl md:text-2xl border rounded-full px-8'>
+						+
+					</span>
 				</div>
 			</div>
 		</div>

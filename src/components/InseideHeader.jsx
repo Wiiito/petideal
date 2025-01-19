@@ -9,7 +9,7 @@ const Cursive = Leckerli_One({
 
 const InsideHeader = () => {
 	return (
-		<header className='relative flex justify-between items-center px-16 min-h-16 z-50'>
+		<header className='relative flex justify-between items-center px-8 md:px-16 min-h-16 z-50'>
 			<Header />
 		</header>
 	)

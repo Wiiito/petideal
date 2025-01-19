@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const FormLayout = ({ children }) => {
 	return (
-		<div className='background px-8 lg:px-24 pt-8'>
+		<div className='background px-8 lg:px-24 pt-8 pb-8'>
 			<div className='flex'>
 				<Link href='/'>
 					<Image

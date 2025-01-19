@@ -63,6 +63,8 @@ export async function vectorSearch(embeddingSearch, perPage, page) {
 				images: 1,
 				description: 1,
 				orgId: 1,
+				raceId: 1,
+				observation: 1,
 				score: {
 					$meta: 'vectorSearchScore',
 				},
