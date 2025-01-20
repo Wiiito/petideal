@@ -4,8 +4,8 @@ import Image from 'next/image'
 const Faq = () => {
 	return (
 		<>
-			<div className='fixed bottom-0 left-0'>
-				<Image src='/authPageBackground.svg' width={1366} height={741} />
+			<div className='fixed h-screen w-screen top-0 left-0'>
+				<Image src='/authPageBackground.svg' fill objectFit='cover' />
 			</div>
 			<div className='absolute right-4 top-4 z-50'>
 				<HomeUserButtons />

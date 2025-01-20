@@ -9,7 +9,7 @@ const HomeUserButtons = () => {
 		<div className='flex items-center text-center font-medium'>
 			{status === 'authenticated' ? (
 				<div className='w-32 h-9 content-center rounded-full bg-reallyLight text-white opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out'>
-					<Link href='/user/profile'>Meu Perfil</Link>
+					<Link href='/profile'>Meu Perfil</Link>
 				</div>
 			) : (
 				<>

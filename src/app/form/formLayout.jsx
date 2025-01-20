@@ -1,12 +1,14 @@
 import './formStyles.scss'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const FormLayout = ({ children }) => {
+	const router = useRouter()
+
 	return (
 		<div className='background px-8 lg:px-24 pt-8 pb-8'>
 			<div className='flex'>
-				<Link href='/'>
+				<button onClick={() => router.back()}>
 					<Image
 						src='./backArrow.svg'
 						height={45}
@@ -14,7 +16,7 @@ const FormLayout = ({ children }) => {
 						alt='backArrow'
 						priority
 					/>
-				</Link>
+				</button>
 			</div>
 			<div className='flex w-full'>
 				<div className='my-28 lg:my-56 lg:mx-30 w-2/3'>
