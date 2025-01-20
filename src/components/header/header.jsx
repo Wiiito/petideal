@@ -8,14 +8,20 @@ import './styles.scss'
 const Header = () => {
 	const menuOverlay = useRef(null)
 	const hambMenu = useRef(null)
-
-	const detailsDivPetideal = useRef(null)
+	let menu = false
 
 	function hambClick() {
-		menuOverlay.current.classList.toggle('-left-[100vw]')
-		menuOverlay.current.classList.toggle('left-0')
-		hambMenu.current.classList.toggle('hamburguerMenu')
-		document.querySelector('html').classList.toggle('overflow-hidden')
+		if (menu) {
+			menuOverlay.current.classList.add('left-0')
+			menuOverlay.current.classList.remove('-left-[100vw]')
+			hambMenu.current.classList.add('hamburguerMenu')
+			document.querySelector('html').classList.add('overflow-hidden')
+		} else {
+			menuOverlay.current.classList.remove('left-0')
+			menuOverlay.current.classList.add('-left-[100vw]')
+			hambMenu.current.classList.remove('hamburguerMenu')
+			document.querySelector('html').classList.remove('overflow-hidden')
+		}
 	}
 
 	return (
@@ -23,7 +29,10 @@ const Header = () => {
 			<div
 				className='fixed h-screen w-screen bg-gradient-to-br from-white to-reallyLight z-40 -left-[100vw] transition-all ease-in-out duration-300 top-0'
 				ref={menuOverlay}
-			>
+				onClick={() => {
+					menu = false
+					hambClick()
+				}}>
 				<menu className='py-16 px-7 h-full'>
 					<ul className='*:text-2xl *:mb-6 *:font-medium *:uppercase h-full flex flex-col justify-around'>
 						<li>
@@ -64,8 +73,7 @@ const Header = () => {
 									viewBox='0 0 10 5'
 									fill='none'
 									xmlns='http://www.w3.org/2000/svg'
-									className='ml-3'
-								>
+									className='ml-3'>
 									<path d='M5 5L0 0H10L5 5Z' fill='#1D1B20' />
 								</svg>
 							</li>
@@ -90,9 +98,11 @@ const Header = () => {
 				</nav>
 				<div
 					className='relative flex flex-col justify-around *:w-full *:h-1 *:bg-primary *:rounded-full *:transition-all *:duration-300 *:ease-in-out w-8 h-8 md:hidden z-50 cursor-pointer'
-					onClick={hambClick}
-					ref={hambMenu}
-				>
+					onClick={() => {
+						menu = !menu
+						hambClick()
+					}}
+					ref={hambMenu}>
 					<span></span>
 					<span></span>
 					<span></span>
