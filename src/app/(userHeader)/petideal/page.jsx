@@ -22,7 +22,7 @@ const PetidealPage = () => {
 					</p>
 				</div>
 				<div className='absolute hidden w-[30vw] h-screen md:block right-0'>
-					<div className='absolute transform -translate-y-1/2 top-1/2'>
+					<div className='absolute transform right-0 -translate-y-1/2 top-1/2'>
 						<Image
 							src='/petideal-cat.png'
 							width={465}
