@@ -21,12 +21,12 @@ const PetidealPage = () => {
 						PetIdeal, a adoção se torna uma experiência fácil e personalizada.
 					</p>
 				</div>
-				<div className='absolute hidden w-[30vw] h-[100vw] md:block transform -rotate-90'>
-					<div className='absolute bottom-0 h-[30vw]'>
+				<div className='absolute hidden w-[30vw] h-screen md:block right-0'>
+					<div className='absolute transform -translate-y-1/2 top-1/2'>
 						<Image
-							src='/homeCat.png'
-							width={438}
-							height={589}
+							src='/petideal-cat.png'
+							width={465}
+							height={400}
 							priority
 							className='h-full'
 						/>
