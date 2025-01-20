@@ -132,22 +132,21 @@ const Page = () => {
 							Você consegue prover atividades diferentes ao animal?
 						</div>
 						<div className='answers'>
-							<span>Inseguro</span>
+							<span>Não</span>
 							<input type='range' name='' data-alter-value='15' />
-							<span>Muito seguro</span>
+							<span>Sim</span>
 						</div>
 					</div>
 					{/* coat_length */}
 					<div className='question'>
 						<div className='text'>
-							Você se sentiria confortável dedicando tempo regularmente para
-							escovar e manter os pelos longos de um cachorro livres de nós e
-							sujeiras?
+							Estaria disposto a dedicar tempo diariamente para escovar e cuidar
+							dos pelos longos de um cachorro?
 						</div>
 						<div className='answers'>
-							<span>Pouco confortável</span>
+							<span>Pouco disposto</span>
 							<input type='range' name='' data-alter-value='7' />
-							<span>Muito confortável</span>
+							<span>Muito disposto</span>
 						</div>
 					</div>
 					{/* coat-grooming-frequency */}
@@ -180,9 +179,9 @@ const Page = () => {
 							Você esta dispostas a dedicar tempo para brincar com o animal?
 						</div>
 						<div className='answers'>
-							<span>Poucas visitas</span>
+							<span>Não</span>
 							<input type='range' name='' data-alter-value='9' />
-							<span>Muitas visitas</span>
+							<span>Sim</span>
 						</div>
 					</div>
 					{/* coat_care */}
@@ -226,7 +225,7 @@ const Page = () => {
 							<span>Alergia muito severa</span>
 						</div>
 					</div>
-					<h3>Residencia</h3>
+					<h3>Residência</h3>
 					{/* barking-level */}
 					<div className='question'>
 						<div className='text'>Onde você mora, barulho é um problema?</div>
@@ -254,7 +253,9 @@ const Page = () => {
 							<span>Muitas animais</span>
 						</div>
 					</div>
-					<button>Enviar</button>
+					<button className='my-4 py-2 px-20 bg-lightPastel shadow-md rounded-3xl text-2xl text-white font-bold'>
+						Enviar
+					</button>
 				</form>
 			</FormLayout>
 		</>

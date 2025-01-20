@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Hero = () => {
 	return (
 		<div className='relative overflow-hidden h-screen w-screen mt-[5vh] md:mt-40 lg:mt-28 z-20'>
-			<div className='w-[49.5vw] lg:ml-24 md:ml-16 ml-10'>
+			<div className='w-[45vw] lg:ml-24 md:ml-16 ml-10'>
 				<div className='lg:text-7xl lg:leading-[5.625rem] md:text-5xl md:leading-[4rem] text-4xl font-bold'>
 					Encontre o companheiro{' '}
 					<span className='uppercase text-darker'>ideal</span> para você!
@@ -21,8 +21,8 @@ const Hero = () => {
 					</button>
 				</Link>
 			</div>
-			<div className='absolute right-0 bottom-0 w-1/2 md:w-[calc(50vw-6rem)] h-full'>
-				<div className='absolute right-0 w-11/12 transform -translate-y-1/2 top-[calc(50%-4.5rem)] lg:top-1/2'>
+			<div className='absolute right-0 bottom-0 w-1/2 md:w-55vw h-full'>
+				<div className='absolute right-0 w-10/12 transform -translate-y-1/2 top-1/3 xl:top-[45%]'>
 					<svg
 						viewBox='0 0 580 671'
 						fill='none'
@@ -38,7 +38,7 @@ const Hero = () => {
 					</svg>
 				</div>
 				<div className='absolute right-0 top-0 w-full h-full'>
-					<div className='absolute transform top-[calc(50%-4.5rem)] -rotate-90 left-[10%] -translate-y-1/2 translate-x-[21%]'>
+					<div className='absolute transform top-1/3 lg:top-1/4 left-12 xl2:left-0 -rotate-90 w-[125%] -translate-y-1/2 translate-x-[21%]'>
 						<Image
 							src='/HeroDogDesktop.png'
 							height={1250}

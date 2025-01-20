@@ -7,22 +7,51 @@
     background: linear-gradient(168deg,theme('colors.white'), theme('colors.lightPastel'));
 
     h3 {
-        @apply text-xl font-semibold uppercase;
+        @apply text-xl uppercase mt-6 font-bold border-b pb-1;
     }
 
     .question {
-        @apply w-full mb-2 border-b border-primary pb-4 mt-4;
+        @apply w-full mb-2 border-b border-primary pb-4 mt-2;
 
         .text {
             @apply font-semibold mb-2;
         }
 
         .answers {
-            @apply flex justify-center font-medium;
+            @apply relative flex justify-around font-medium pt-12 sm:pt-0;
 
             input {
-                @apply w-32 mx-2;
+                @apply mx-2 w-full appearance-none bg-transparent cursor-pointer;
+
+                &::-webkit-slider-runnable-track {
+                    @apply bg-darker shadow-inner rounded-full h-2;
+                }
+
+                &::-moz-range-track {
+                    @apply bg-darker shadow-inner rounded-full h-2;
+                }
+                
+                &::-webkit-slider-thumb {
+                    @apply relative appearance-none w-4 h-4 bg-trueWhite transform -translate-y-1/4 rounded-full shadow-sm border border-solid border-lightPastel;
+                }
+
+                &::-moz-range-thumb {
+                    @apply relative appearance-none w-4 h-4 bg-trueWhite transform -translate-y-1/4 rounded-full shadow-sm border border-solid border-lightPastel;
+                }
+            }
+
+            span {
+                @apply absolute text-sm font-light w-1/2 top-3 sm:top-0 sm:relative;
+    
+                &:first-child {
+                    @apply text-left sm:text-center left-0;
+                }
+    
+                &:last-child {
+                    @apply text-right sm:text-center right-0;
+                }
             }
         }
+
     }
 }
