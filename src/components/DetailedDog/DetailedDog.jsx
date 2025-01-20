@@ -48,14 +48,14 @@ const DetailedDog = ({ dog, overlay }) => {
 
 	return (
 		<div className='fixed top-0 left-0 w-full h-full bg-transparent backdrop-blur-lg z-50 flex justify-center items-center'>
-			<div className='relative block lg:flex w-4/5 rounded-3xl overflow-hidden bg-ultraLightPastel min-h-96 max-h-[80vh] overflow-y-scroll'>
+			<div className='relative block md:flex w-4/5 rounded-3xl overflow-hidden bg-ultraLightPastel min-h-96 max-h-[80vh] overflow-y-scroll'>
 				<div
 					className='absolute z-40 top-4 left-4 cursor-pointer text-2xl font-bold text-black bg-ultraLightPastel w-12 h-12 rounded-full flex items-center justify-center'
 					onClick={() => overlay(false)}
 				>
 					{'<'}
 				</div>
-				<div className='w-full h-96 lg:h-auto bg-white lg:w-1/2 overflow-hidden'>
+				<div className='w-full h-96 lg:h-[50vh] bg-white md:w-1/2 overflow-hidden'>
 					<div className='flex h-full' ref={slider}>
 						{dog.images.map((image, i) => {
 							return (
@@ -63,6 +63,7 @@ const DetailedDog = ({ dog, overlay }) => {
 									<Image
 										src={'https://petideal.s3.us-east-1.amazonaws.com/' + image}
 										alt={'dogImage' + i}
+										style={{ objectFit: 'cover' }}
 										fill
 									/>
 								</div>
@@ -70,7 +71,7 @@ const DetailedDog = ({ dog, overlay }) => {
 						})}
 					</div>
 				</div>
-				<div className='py-4 px-8 lg:w-1/2 lg:h-full'>
+				<div className='py-4 px-8 lg:w-1/2 lg:h-full overflow-y-scroll'>
 					<h4 className='text-2xl font-medium lg:mt-2'>{dog.name}</h4>
 					<div className='flex gap-1 mr-2 lg:mt-2'>
 						{heartColors.map((heartColor, i) => {
@@ -140,6 +141,9 @@ const DetailedDog = ({ dog, overlay }) => {
 									</>
 								)}
 							</div>
+						</div>
+						<div className='mt-2 ml-2'>
+							<div></div>
 						</div>
 					</div>
 				</div>

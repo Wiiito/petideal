@@ -7,11 +7,15 @@
     background: linear-gradient(168deg,theme('colors.white'), theme('colors.lightPastel'));
 
     h3 {
-        @apply text-xl uppercase mt-6 font-bold border-b pb-1;
+        @apply text-xl uppercase mt-6 font-bold;
+    }
+
+    form h3 {
+        @apply border-t-2 border-dashed border-darker pt-4 mt-0;
     }
 
     .question {
-        @apply w-full mb-2 border-b border-primary pb-4 mt-2;
+        @apply w-full mb-2 border-b border-primary pb-4 mt-4 px-4;
 
         .text {
             @apply font-semibold mb-2;
@@ -21,22 +25,36 @@
             @apply relative flex justify-around font-medium pt-12 sm:pt-0;
 
             input {
-                @apply mx-2 w-full appearance-none bg-transparent cursor-pointer;
+                @apply relative mx-2 w-full appearance-none bg-transparent cursor-pointer;
 
                 &::-webkit-slider-runnable-track {
-                    @apply bg-darker shadow-inner rounded-full h-2;
+                    @apply bg-darker shadow-inner rounded-full h-0.5;
                 }
 
                 &::-moz-range-track {
-                    @apply bg-darker shadow-inner rounded-full h-2;
+                    @apply bg-darker shadow-inner rounded-full h-0.5;
                 }
                 
                 &::-webkit-slider-thumb {
-                    @apply relative appearance-none w-4 h-4 bg-trueWhite transform -translate-y-1/4 rounded-full shadow-sm border border-solid border-lightPastel;
+                    @apply relative appearance-none w-4 h-4 transform -translate-y-1/3 z-10;
+                    background-image: url('/icons/coracao.svg');
+                    background-size: cover;
                 }
 
                 &::-moz-range-thumb {
-                    @apply relative appearance-none w-4 h-4 bg-trueWhite transform -translate-y-1/4 rounded-full shadow-sm border border-solid border-lightPastel;
+                    @apply relative appearance-none w-4 h-4 transform -translate-y-1/3 z-10;
+                    background-image: url('/icons/coracao.svg');
+                    background-size: cover;
+                }
+
+                &::after {
+                    content: '';
+                    @apply absolute w-2 h-2 bg-darker rounded-full transform -translate-y-1/2 top-1/2;
+                }
+                
+                &::before {
+                    content: '';
+                    @apply absolute w-2 h-2 bg-darker rounded-full transform -translate-y-1/2 top-1/2 right-0;
                 }
             }
 
@@ -52,6 +70,9 @@
                 }
             }
         }
+    }
 
+    .questionWithoutBorder {
+        @apply border-b-transparent;
     }
 }
