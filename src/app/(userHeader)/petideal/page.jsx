@@ -29,6 +29,7 @@ const PetidealPage = () => {
 							height={400}
 							priority
 							className='h-full'
+							alt='catImage'
 						/>
 					</div>
 				</div>

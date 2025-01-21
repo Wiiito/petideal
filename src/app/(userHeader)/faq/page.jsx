@@ -5,7 +5,12 @@ const Faq = () => {
 	return (
 		<>
 			<div className='fixed h-screen w-screen top-0 left-0'>
-				<Image src='/authPageBackground.svg' fill objectFit='cover' />
+				<Image
+					src='/authPageBackground.svg'
+					fill
+					style={{ objectFit: 'cover' }}
+					alt='background'
+				/>
 			</div>
 			<div className='absolute right-4 top-4 z-50'>
 				<HomeUserButtons />

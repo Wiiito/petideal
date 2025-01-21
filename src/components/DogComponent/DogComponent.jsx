@@ -32,6 +32,7 @@ const DogComponent = ({ dog }) => {
 				{dog.images[0] && (
 					<Image
 						src={'https://petideal.s3.us-east-1.amazonaws.com/' + dog.images[0]}
+						sizes='33vw'
 						fill
 						style={{ objectFit: 'cover' }}
 						alt={'dogImage: ' + dog.name}

@@ -33,8 +33,9 @@ const Page = () => {
 				<Image
 					src='/authPageBackground.svg'
 					fill
-					objectFit='cover'
 					alt='background'
+					style={{ objectFit: 'cover' }}
+					priority
 				/>
 			</div>
 			<div className='flex-col flex items-center lg:mt-16'>

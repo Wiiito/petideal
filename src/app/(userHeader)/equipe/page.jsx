@@ -22,7 +22,13 @@ const Team = () => {
 						</p>
 					</div>
 					<div className='relative mx-16 md:py-8 flex justify-center h-[40vw] w-[calc(100vw-8rem)] md:w-1/2 md:h-[30vw]'>
-						<Image src='/us.png' fill />
+						<Image
+							src='/us.png'
+							fill
+							sizes='50vw'
+							alt='Erick,Flavio,MariaEduarda'
+							priority
+						/>
 					</div>
 				</div>
 			</div>
