@@ -1,3 +1,5 @@
+'use server'
+
 import dbConnect from '@/lib/dbConnect'
 import PetModel from '@/models/pet'
 

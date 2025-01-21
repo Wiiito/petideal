@@ -1,5 +1,5 @@
 .customCheckbox {
-    @apply appearance-none relative m-0 block w-6 h-6 border-2 border-black rounded-md focus:outline-none after:content-[''] after:absolute after:h-4 after:w-4 after:bg-darker
+    @apply appearance-none relative m-0 block w-6 h-6 border-2 border-gray rounded-md focus:outline-none after:content-[''] after:absolute after:h-4 after:w-4 after:bg-primary
     after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:top-1/2 after:left-1/2 after:scale-0 checked:after:scale-100 after:transition-all duration-100;
 
     &:after {
@@ -8,10 +8,10 @@
 }
 
 .dogsImagesSlider {
-    @apply h-48 w-full overflow-x-scroll;
+    @apply relative h-full w-full;
 
     #slider {
-        @apply h-full flex min-w-full gap-4;
+        @apply relative h-full block w-full gap-4;
     }
 
     &::-webkit-scrollbar {
@@ -19,6 +19,83 @@
     }
 
     .dogImageContainer {
-        @apply h-full *:h-full w-64 bg-white flex justify-center items-center;
+        @apply relative bg-white w-full h-60 mb-4;
+    }
+}
+
+.customScrollBar {
+    /* width */
+    &::-webkit-scrollbar {
+        @apply w-1;
+    }
+  
+  /* Track */
+    &::-webkit-scrollbar-track {
+        background: theme('colors.transparent');
+    }
+  
+  /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        @apply rounded-full;
+    }
+  
+  /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+.question {
+    .text {
+        @apply w-full px-2 font-medium text-left text-gray mb-2;
+    }
+}
+
+.answers {
+    @apply relative flex justify-around font-medium pt-0 h-4 mb-4;
+
+    input {
+        @apply relative mx-2 w-full appearance-none bg-transparent cursor-pointer;
+
+        &::-webkit-slider-runnable-track {
+            @apply bg-darker shadow-inner rounded-full h-0.5;
+        }
+
+        &::-moz-range-track {
+            @apply bg-darker shadow-inner rounded-full h-0.5;
+        }
+        
+        &::-webkit-slider-thumb {
+            @apply relative appearance-none w-4 h-4 transform -translate-y-1/3 z-10;
+            background-image: url('/icons/coracao.svg');
+            background-size: cover;
+        }
+
+        &::-moz-range-thumb {
+            @apply relative appearance-none w-4 h-4 transform -translate-y-1/3 z-10;
+            background-image: url('/icons/coracao.svg');
+            background-size: cover;
+        }
+
+        &::after {
+            content: '';
+            @apply absolute w-2 h-2 bg-darker rounded-full transform -translate-y-1/2 top-1/2;
+        }
+        
+        &::before {
+            content: '';
+            @apply absolute w-2 h-2 bg-darker rounded-full transform -translate-y-1/2 top-1/2 right-0;
+        }
+    }
+
+    &::after {
+        content: 'Não';
+        @apply absolute top-3 text-sm left-0 ml-2;
+    }
+    
+    &::before {
+        content: 'Sim';
+        @apply absolute top-3 text-sm right-0 mr-2;
     }
 }

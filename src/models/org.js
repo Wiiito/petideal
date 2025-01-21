@@ -12,7 +12,6 @@ const OrgSchema = mongoose.Schema({
 		type: String,
 		required: [true, 'Please, provide a name'],
 	},
-	images: [String],
 	addressZipCode: String,
 	address: String,
 	addressNumber: String,
@@ -32,7 +31,6 @@ OrgSchema.virtual('password').set(function (password) {
 
 OrgSchema.methods = {
 	authenticate: async function (password) {
-		console.log(password, this.hashPassword)
 		return await bcrypt.compareSync(password, this.hashPassword)
 	},
 }

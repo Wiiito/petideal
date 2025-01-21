@@ -9,6 +9,7 @@ const PetSchema = mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	images: [String],
 	description: String,
 	embedding: [Number], // Tabela caracteristicas do pet é substituida por um array
 	observation: [String],
