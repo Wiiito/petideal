@@ -7,7 +7,7 @@
     background: linear-gradient(168deg,theme('colors.white'), theme('colors.lightPastel'));
 
     h3 {
-        @apply text-xl uppercase mt-6 font-bold;
+        @apply text-xl uppercase mt-6 font-bold text-primary;
     }
 
     form h3 {

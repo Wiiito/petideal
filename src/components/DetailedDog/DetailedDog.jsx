@@ -8,6 +8,7 @@ const DetailedDog = ({ dog, overlay }) => {
 	const [org, setOrg] = useState({})
 	const [currentSlide, setCurrentSlide] = useState(1)
 	const [heartColors, setHeartColors] = useState([])
+	const [address, setAddress] = useState({})
 	const slider = useRef(null)
 
 	useEffect(() => {
@@ -35,6 +36,20 @@ const DetailedDog = ({ dog, overlay }) => {
 		getOrg()
 		getRace()
 	}, [])
+
+	useEffect(() => {
+		const getAddress = async () => {
+			if (org.addressZipCode) {
+				const res = await fetch(
+					'https://brasilapi.com.br/api/cep/v1/' + org.addressZipCode
+				)
+				const _address = await res.json()
+
+				setAddress(_address)
+			}
+		}
+		getAddress()
+	}, [org])
 
 	function formatNumber(number) {
 		let newNum = '('
@@ -142,8 +157,20 @@ const DetailedDog = ({ dog, overlay }) => {
 								)}
 							</div>
 						</div>
-						<div className='mt-2 ml-2'>
-							<div></div>
+						<div className='mt-2 ml-2 w-full text-brown font-semibold flex items-center'>
+							<div className='relative h-6 w-6'>
+								<Image src='/icons/location.svg' fill />
+							</div>
+							<span className='text-sm ml-1 w-full'>
+								{org.fantasyName ? org.fantasyName : 'Carregando ...'}
+							</span>
+						</div>
+						<div className='ml-2 w-full text-brown font-medium text-sm'>
+							{org.address ? org.address : 'Carregando ...'} -{' '}
+							{address.neighborhood ? address.neighborhood : 'Carregando ...'},{' '}
+							{address.city ? address.city : 'Carregando ...'} -{' '}
+							{address.state ? address.state : 'Carregando ...'},{' '}
+							{address.cep ? address.cep : 'Carregando ...'}
 						</div>
 					</div>
 				</div>

@@ -20,6 +20,12 @@ const Page = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		let userEmbedding = []
+
+		if (!adult) {
+			alert('Você deve ser maior de idade para adotar animais! 😥')
+			return
+		}
+
 		Array.from(
 			document.querySelector('form').querySelectorAll('input')
 		).forEach((input) => {
