@@ -9,6 +9,12 @@ export default async function getPet(name) {
 	return pet
 }
 
+export async function getAllPagesOfAOrg(orgId) {
+	await dbConnect()
+	let pets = await PetModel.find({ orgId }).sort({ name: 'asc' })
+	return JSON.parse(JSON.stringify(pets))
+}
+
 export async function getPageOfPets(orgId, page, perPage) {
 	if (!perPage) perPage = 12
 	await dbConnect()

@@ -9,7 +9,6 @@ const Form = () => {
 		cnpj: '',
 		name: '',
 		zipCode: '',
-		images: [''],
 		address: '',
 		addressNumber: '',
 		addressNeighborhood: '',
@@ -39,7 +38,6 @@ const Form = () => {
 				cnpj: result.error.cnpj,
 				name: result.error.name,
 				zipCode: result.error.zipCode,
-				images: result.error.images,
 				address: result.error.address,
 				addressNumber: result.error.addressNumber,
 				addressNeighborhood: result.error.addressNeighborhood,
@@ -81,9 +79,7 @@ const Form = () => {
 						contact: [data.ddd_telefone_1],
 					}
 				})
-			} catch (error) {
-				console.log(error)
-			}
+			} catch (error) {}
 		}
 
 		setOrg((prev) => {

@@ -5,7 +5,6 @@ export default async function createOrg(org) {
 	const {
 		cnpj,
 		name,
-		images,
 		zipCode,
 		address,
 		addressNumber,
@@ -20,7 +19,6 @@ export default async function createOrg(org) {
 	if (
 		!cnpj ||
 		!name ||
-		!images ||
 		!zipCode ||
 		!address ||
 		!addressNumber ||
@@ -39,7 +37,6 @@ export default async function createOrg(org) {
 	const _org = new OrgModel({
 		cnpj: cnpj,
 		fantasyName: name,
-		images: images,
 		addressZipCode: zipCode,
 		address: address,
 		addressNumber: addressNumber,
@@ -58,7 +55,6 @@ MODELO
     const org = await createOrg({
 		cnpj: '99999999999999',
 		name: 'Superintendência de Proteção Animal',
-		images: ['link1', 'link2'],
 		zipCode: '32604496',
 		address: 'Rua tal tal tal',
 		addressNumber: '1840',

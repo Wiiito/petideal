@@ -2,34 +2,243 @@
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
-import { getPageOfPets } from '@/actions/pet/get'
-import adoptPet from './action'
-import DogComponent from '@/components/DogComponent/DogComponent'
+import { getAllPagesOfAOrg } from '@/actions/pet/get'
+import { getOrgFromId } from '@/actions/org/get'
+import Image from 'next/image'
+import OrgDogComponent from '@/components/OrgDogComponent'
 
 const Page = () => {
 	const { data: session, status } = useSession()
 
 	const [dogs, setDogs] = useState({})
+	const [org, setOrg] = useState({})
+	const [changed, setChanged] = useState(false)
+	const [numbers, setNumbers] = useState([''])
 
 	useEffect(() => {
 		const requestDogs = async () => {
-			setDogs(await getPageOfPets(session.user._id, 1))
+			setDogs(await getAllPagesOfAOrg(session.user._id))
 		}
-		if (status === 'authenticated') requestDogs()
+
+		const requestOrgInfo = async () => {
+			setOrg(await getOrgFromId(session.user._id))
+		}
+
+		if (status === 'authenticated') {
+			requestDogs()
+			requestOrgInfo()
+		}
 	}, [status, session])
+
+	useEffect(() => {
+		setNumbers(org.contactNumbers)
+	}, [org])
+
+	useEffect(() => {}, [numbers])
+
+	const numbersChange = () => {
+		const numbers = Array.from(document.getElementsByName('number')).map(
+			(e) => e.value
+		)
+		const validNumbers = []
+		numbers.forEach((e) => {
+			if (e !== '') validNumbers.push(e)
+		})
+		setNumbers(validNumbers)
+	}
+
+	const handleSubmit = (e) => {
+		const form = document.getElementById('changedValues')
+		const formData = new FormData(form)
+		console.log(formData.get('fantasyName'))
+	}
 
 	return (
 		<>
-			<div className='flex'>
-				<h2>Dogs 🐶</h2>
-				<Link href='/org/dashboard/dogs/create'>
-					<div className='w-20 h-4'>Create dog</div>
-				</Link>
+			<div className='flex px-20 py-16 w-full items-center'>
+				<form
+					action={handleSubmit}
+					className='w-full relative'
+					id='changedValues'
+				>
+					<div className='flex items-center pr-48'>
+						<h2 className='text-5xl text-primary font-bold w-full'>
+							<input
+								type='text'
+								defaultValue={
+									org.fantasyName ? org.fantasyName : 'Carregando ...'
+								}
+								onChange={() => {
+									setChanged(true)
+								}}
+								className='w-full outline-none border-b-2 border-transparent focus:border-primary px-2'
+								id='fantasyName'
+								name='fantasyName'
+							/>
+						</h2>
+						<label
+							htmlFor='fantasyName'
+							className='w-12 h-12 relative cursor-pointer'
+						>
+							<Image src='/icons/pencil.svg' fill alt='Pencil' />
+						</label>
+					</div>
+					<div className='flex mt-2 ml-4'>
+						<span className='w-20'>CNPJ:</span>
+						<input
+							type='text'
+							defaultValue={org.cnpj ? org.cnpj : 'Carregando ...'}
+							onChange={() => {
+								setChanged(true)
+							}}
+							className='outline-none w-96 focus:border-black border-transparent border-b px-2 mx-2'
+							id='cnpj'
+							name='cnpj'
+							maxLength={14}
+						/>
+						<label htmlFor='cnpj' className='w-6 h-6 relative cursor-pointer'>
+							<Image src='/icons/pencil.svg' fill alt='Pencil' />
+						</label>
+					</div>
+					<div className='flex mt-2 ml-4'>
+						<span className='w-20'>CEP:</span>
+						<input
+							type='text'
+							defaultValue={
+								org.addressZipCode ? org.addressZipCode : 'Carregando ...'
+							}
+							onChange={() => {
+								setChanged(true)
+							}}
+							className='outline-none w-96 focus:border-black border-transparent border-b px-2 mx-2'
+							id='cep'
+							name='cep'
+							maxLength={8}
+						/>
+						<label htmlFor='cep' className='w-6 h-6 relative cursor-pointer'>
+							<Image src='/icons/pencil.svg' fill alt='Pencil' />
+						</label>
+					</div>
+					<div className='flex mt-2 ml-4'>
+						<span className='w-20'>Logadouro:</span>
+						<input
+							type='text'
+							defaultValue={org.address ? org.address : 'Carregando ...'}
+							onChange={() => {
+								setChanged(true)
+							}}
+							className='outline-none w-96 focus:border-black border-transparent border-b px-2 mx-2'
+							id='address'
+							name='address'
+							maxLength={8}
+						/>
+						<label
+							htmlFor='address'
+							className='w-6 h-6 relative cursor-pointer'
+						>
+							<Image src='/icons/pencil.svg' fill alt='Pencil' />
+						</label>
+					</div>
+					<div className='flex mt-2 ml-4'>
+						<span className='w-20'>Email:</span>
+						<input
+							type='text'
+							defaultValue={org.email ? org.email : 'Carregando ...'}
+							onChange={() => {
+								setChanged(true)
+							}}
+							className='outline-none w-96 focus:border-black border-transparent border-b px-2 mx-2'
+							id='email'
+							name='email'
+							maxLength={8}
+						/>
+						<label htmlFor='email' className='w-6 h-6 relative cursor-pointer'>
+							<Image src='/icons/pencil.svg' fill alt='Pencil' />
+						</label>
+					</div>
+					<div className='flex mt-2 ml-4'>
+						<span className='w-20'>Senha:</span>
+						<input
+							type='text'
+							placeholder='**********'
+							onChange={() => {
+								setChanged(true)
+							}}
+							className='outline-none w-96 focus:border-black border-transparent border-b px-2 mx-2'
+							id='password'
+							name='password'
+							maxLength={8}
+						/>
+						<label
+							htmlFor='password'
+							className='w-6 h-6 relative cursor-pointer'
+						>
+							<Image src='/icons/pencil.svg' fill alt='Pencil' />
+						</label>
+					</div>
+					<div className='block mt-2 ml-4'>
+						{numbers
+							? numbers.map((number, i) => {
+									return (
+										<div className='flex' key={i}>
+											<span className='w-20'>Número:</span>
+											<input
+												type='text'
+												defaultValue={number}
+												onChange={() => {
+													setChanged(true)
+													numbersChange()
+												}}
+												name='number'
+												className='outline-none w-96 focus:border-black border-transparent border-b px-2 mx-2'
+												id={'number' + i}
+											/>
+											<label
+												htmlFor={'number' + i}
+												className='w-6 h-6 relative cursor-pointer'
+											>
+												<Image src='/icons/pencil.svg' fill alt='Pencil' />
+											</label>
+										</div>
+									)
+							  })
+							: ''}
+						<button
+							className='w-[30.5rem] text-2xl border border-black rounded-full mt-2'
+							onClick={() => {
+								if (numbers[numbers.length - 1] !== '') {
+									setNumbers((prev) => [...prev, ''])
+								}
+							}}
+						>
+							+
+						</button>
+					</div>
+					{changed ? (
+						<button className='absolute right-0 top-0 bg-lightPastel font-semibold text-white py-2 px-4 rounded-full'>
+							Salvar Alterações
+						</button>
+					) : (
+						''
+					)}
+				</form>
 			</div>
-			<div className='w-full grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6'>
-				{Array.from(dogs).map((dog, index) => {
-					return <DogComponent dog={dog} key={index} />
-				})}
+			<div className='w-full p-6 pt-0'>
+				<h3 className='w-full text-primary font-semibold text-xl uppercase mb-2'>
+					Animais:{' '}
+				</h3>
+				<div className='flex flex-wrap gap-4 justify-around'>
+					<Link href='/org/dashboard/dogs/create'>
+						<div className='w-36 h-48 border-dashed border-darker border-2 rounded-xl flex justify-center items-center'>
+							<div className='bg-primary text-white px-2 py-2 text-center rounded-lg uppercase font-light text-sm'>
+								Novo Animal
+							</div>
+						</div>
+					</Link>
+					{Array.from(dogs).map((dog, index) => {
+						return <OrgDogComponent dog={dog} key={index} />
+					})}
+				</div>
 			</div>
 		</>
 	)
