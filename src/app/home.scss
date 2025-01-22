@@ -1,5 +1,6 @@
 .bodyBackground {
     background: linear-gradient(345.12deg, theme('colors.reallyLight') 2.39%, theme('colors.white') 99.58%);
+    @apply overflow-x-hidden;
 }
 
 .backgroundShadow {

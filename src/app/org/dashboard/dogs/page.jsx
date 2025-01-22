@@ -1,11 +1,12 @@
 'use client'
 import Link from 'next/link'
-import { useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 import { getAllPagesOfAOrg } from '@/actions/pet/get'
 import { getOrgFromId } from '@/actions/org/get'
 import Image from 'next/image'
 import OrgDogComponent from '@/components/OrgDogComponent'
+import updateOrganization from './action'
 
 const Page = () => {
 	const { data: session, status } = useSession()
@@ -48,6 +49,11 @@ const Page = () => {
 	const handleSubmit = (e) => {
 		const form = document.getElementById('changedValues')
 		const formData = new FormData(form)
+
+		updateOrganization(session.user._id, formData)
+		setChanged(false)
+
+		return false
 	}
 
 	return (
@@ -69,7 +75,7 @@ const Page = () => {
 					className='w-full relative'
 					id='changedValues'
 				>
-					<div className='flex items-center pr-48'>
+					<div className='flex items-center pr-56'>
 						<h2 className='text-5xl text-primary font-bold w-full'>
 							<input
 								type='text'
@@ -171,7 +177,6 @@ const Page = () => {
 							className='outline-none w-96 focus:border-black border-transparent border-b px-2 mx-2'
 							id='password'
 							name='password'
-							maxLength={8}
 						/>
 						<label
 							htmlFor='password'
@@ -218,13 +223,25 @@ const Page = () => {
 							+
 						</button>
 					</div>
-					{changed ? (
-						<button className='absolute right-0 top-0 bg-lightPastel font-semibold text-white py-2 px-4 rounded-full'>
-							Salvar Alterações
+					<div className='absolute right-0 top-0 flex flex-col gap-2'>
+						{changed ? (
+							<button
+								type='submit'
+								className='bg-lightPastel font-semibold text-white py-2 px-4 rounded-full w-48'
+							>
+								Salvar Alterações
+							</button>
+						) : (
+							''
+						)}
+						<button
+							type='button'
+							className='top-12 bg-lightPastel font-semibold text-white py-2 px-8 rounded-full w-48'
+							onClick={() => signOut()}
+						>
+							Sair
 						</button>
-					) : (
-						''
-					)}
+					</div>
 				</form>
 			</div>
 			<div className='w-full p-6 pt-0'>

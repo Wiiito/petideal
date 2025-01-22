@@ -27,9 +27,9 @@ const Form = () => {
 	const handleSubmit = async () => {
 		const result = await submitOrg(org)
 		if (result.success) {
-			redirect('/')
+			redirect('/org/dashboard/dogs')
 		} else {
-			console.log('Something went wrong')
+			console.log('Alguma coisa deu errado')
 		}
 
 		setFormError((prev) => {

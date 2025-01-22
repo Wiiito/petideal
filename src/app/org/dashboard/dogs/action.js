@@ -1,13 +1,27 @@
 'use server'
 
-import deletePet from '@/actions/pet/delete'
+import updateOrg from '@/actions/org/update'
 import { revalidatePath } from 'next/cache'
 
-export default async function adoptPet(id) {
+export default async function updateOrganization(id, org) {
 	try {
-		deletePet(id)
+		var jsonValues = {}
+		org.forEach(function (value, key) {
+			jsonValues[key] = value
+		})
+
+		const orgRes = await updateOrg(id, jsonValues)
 		revalidatePath('/org/dashboard/dogs')
+		if (orgRes.success) {
+			return {
+				success: true,
+				status: 200,
+			}
+		}
 	} catch (error) {
-		console.log(err)
+		return {
+			success: false,
+			status: 500,
+		}
 	}
 }

@@ -10,7 +10,7 @@ const Page = () => {
 			password: document.getElementsByName('password')[0].value,
 			type: 'org',
 			redirect: true,
-			callbackUrl: '/org/dashboard',
+			callbackUrl: '/org/dashboard/dogs',
 		})
 	}
 
