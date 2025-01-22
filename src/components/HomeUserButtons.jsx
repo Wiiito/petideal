@@ -8,9 +8,11 @@ const HomeUserButtons = () => {
 	return (
 		<div className='flex items-center text-center font-medium'>
 			{status === 'authenticated' && !session.user.cnpj ? (
-				<div className='w-32 h-9 content-center rounded-full bg-reallyLight text-white opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out'>
-					<Link href='/profile'>Meu Perfil</Link>
-				</div>
+				<Link href='/profile'>
+					<div className='w-32 h-9 content-center rounded-full bg-reallyLight text-white opacity-80 hover:opacity-100 transition-all duration-300 ease-in-out'>
+						Meu Perfil
+					</div>
+				</Link>
 			) : (
 				<>
 					<Link href='/auth/user/signin' className='mr-4'>
