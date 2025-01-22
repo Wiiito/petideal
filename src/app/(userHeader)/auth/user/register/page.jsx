@@ -23,7 +23,7 @@ const Page = () => {
 			</div>
 			<div className='form'>
 				<Link href='/auth/user/signin'>
-					<div className='absolute top-4 -right-8 z-50 w-32 h-9 content-center rounded-full font-semibold border border-black opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out'>
+					<div className='absolute top-4 right-0 sm:-right-8 z-50 w-32 h-9 content-center rounded-full font-semibold border border-black opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out'>
 						Logar
 					</div>
 				</Link>

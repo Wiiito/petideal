@@ -1,13 +1,14 @@
 import React from 'react'
+import '@/styles/orgForm.scss'
 
 const layout = ({ children }) => {
 	return (
-		<div className='form'>
-			<div className='formContent'>
-				<h3>Organização</h3>
+		<>
+			<div className='orgForm'>
+				<h3 className='mb-4'>Organização</h3>
 				{children}
 			</div>
-		</div>
+		</>
 	)
 }
 

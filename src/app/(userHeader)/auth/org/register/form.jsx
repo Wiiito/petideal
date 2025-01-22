@@ -100,120 +100,187 @@ const Form = () => {
 
 	return (
 		<form action={handleSubmit}>
-			<input
-				type='text'
-				placeholder='CNPJ'
-				name='cnpj'
-				onChange={handleChange}
-				value={org.cnpj}
-			/>
-			<span>{formError.cnpj ? formError.cnpj[0] : ''}</span>
-			<input
-				type='text'
-				placeholder='Nome fantasia'
-				name='name'
-				onChange={handleChange}
-				value={org.name}
-			/>
-			<span>{formError.name ? formError.name[0] : ''}</span>
+			<div className='line'>
+				<div>
+					<div className='text'>CNPJ: </div>
+					<input
+						type='text'
+						name='cnpj'
+						onChange={handleChange}
+						value={org.cnpj}
+					/>
+					<div className='errorMessage'>
+						<span>{formError.cnpj ? formError.cnpj[0] : ''}</span>
+					</div>
+				</div>
+				<div>
+					<div className='text'>Nome Fantasia: </div>
+					<input
+						type='text'
+						name='name'
+						onChange={handleChange}
+						value={org.name}
+					/>
+					<div className='errorMessage'>
+						<span>{formError.name ? formError.name[0] : ''}</span>
+					</div>
+				</div>
+			</div>
+			<div className='line'>
+				<div>
+					<div className='text'>CEP: </div>
+					<input
+						type='number'
+						name='zipCode'
+						onChange={handleChange}
+						value={org.zipCode}
+					/>
+					<div className='errorMessage'>
+						<span>{formError.zipCode ? formError.zipCode[0] : ''}</span>
+					</div>
+				</div>
+				<div>
+					<div className='text'>Logadouro: </div>
+					<input
+						type='text'
+						name='address'
+						onChange={handleChange}
+						value={org.address}
+					/>
+					<div className='errorMessage'>
+						<span>{formError.address ? formError.address[0] : ''}</span>
+					</div>
+				</div>
+				<div>
+					<div className='text'>Número: </div>
+					<input
+						type='number'
+						name='addressNumber'
+						onChange={handleChange}
+						value={org.addressNumber}
+					/>
+					<div className='errorMessage'>
+						<span>
+							{formError.addressNumber ? formError.addressNumber[0] : ''}
+						</span>
+					</div>
+				</div>
+			</div>
+			<div className='line'>
+				<div>
+					<div className='text'>Complemento: </div>
+					<input
+						type='text'
+						name='addressComplement'
+						onChange={handleChange}
+						value={org.addressComplement}
+					/>
+					<div className='errorMessage'>
+						<span>
+							{formError.addressComplement
+								? formError.addressComplement[0]
+								: ''}
+						</span>
+					</div>
+				</div>
+				<div>
+					<div className='text'>Bairro: </div>
+					<input
+						type='text'
+						name='addressNeighborhood'
+						onChange={handleChange}
+						value={org.addressNeighborhood}
+					/>
+					<div className='errorMessage'>
+						<span>
+							{formError.addressNeighborhood
+								? formError.addressNeighborhood[0]
+								: ''}
+						</span>
+					</div>
+				</div>
+				<div>
+					<div className='text'>Estado: </div>
+					<input
+						type='text'
+						name='addressState'
+						onChange={handleChange}
+						value={org.addressState}
+					/>
+					<div className='errorMessage'>
+						<span>
+							{formError.addressState ? formError.addressState[0] : ''}
+						</span>
+					</div>
+				</div>
+				<div>
+					<div className='text'>Cidade: </div>
+					<input
+						type='text'
+						name='addressCity'
+						onChange={handleChange}
+						value={org.addressCity}
+					/>
+					<div className='errorMessage'>
+						<span>{formError.addressCity ? formError.addressCity[0] : ''}</span>
+					</div>
+				</div>
+			</div>
+			<div className='numberContainer'>
+				<div>
+					<div className='text'>Contatos: </div>
+					{numbers.map((e, i) => (
+						<input
+							type='number'
+							name='number'
+							key={i}
+							onChange={handleChange}
+							value={org.contact[i]}
+						/>
+					))}
+					<button
+						type='button'
+						onClick={() => {
+							setNumbers((prev) => [...prev, ''])
+						}}
+					>
+						+
+					</button>
+					<div>
+						<span>{formError.contact ? formError.contact[0] : ''}</span>
+					</div>
+				</div>
+			</div>
+			<div className='line'>
+				<div>
+					<div className='text'>Email: </div>
+					<input
+						type='text'
+						name='email'
+						onChange={handleChange}
+						value={org.email}
+					/>
+					<div className='errorMessage'>
+						<span>{formError.email ? formError.email[0] : ''}</span>
+					</div>
+				</div>
+				<div>
+					<div className='text'>Senha: </div>
+					<input
+						type='password'
+						name='password'
+						onChange={handleChange}
+						value={org.password}
+					/>
+					<div className='errorMessage'>
+						<span>{formError.password ? formError.password[0] : ''}</span>
+					</div>
+				</div>
+			</div>
 
-			<input
-				type='number'
-				placeholder='CEP'
-				name='zipCode'
-				onChange={handleChange}
-				value={org.zipCode}
-			/>
-			<span>{formError.zipCode ? formError.zipCode[0] : ''}</span>
-			<input
-				type='text'
-				placeholder='Endereço'
-				name='address'
-				onChange={handleChange}
-				value={org.address}
-			/>
-			<span>{formError.address ? formError.address[0] : ''}</span>
-			<input
-				type='number'
-				placeholder='Número'
-				name='addressNumber'
-				onChange={handleChange}
-				value={org.addressNumber}
-			/>
-			<span>{formError.addressNumber ? formError.addressNumber[0] : ''}</span>
-			<input
-				type='text'
-				placeholder='Complemento'
-				name='addressComplement'
-				onChange={handleChange}
-				value={org.addressComplement}
-			/>
-			<span>
-				{formError.addressComplement ? formError.addressComplement[0] : ''}
-			</span>
-			<input
-				type='text'
-				placeholder='Bairro'
-				name='addressNeighborhood'
-				onChange={handleChange}
-				value={org.addressNeighborhood}
-			/>
-			<span>
-				{formError.addressNeighborhood ? formError.addressNeighborhood[0] : ''}
-			</span>
-			<input
-				type='text'
-				placeholder='Estado'
-				name='addressState'
-				onChange={handleChange}
-				value={org.addressState}
-			/>
-			<span>{formError.addressState ? formError.addressState[0] : ''}</span>
-			<input
-				type='text'
-				placeholder='Cidade'
-				name='addressCity'
-				onChange={handleChange}
-				value={org.addressCity}
-			/>
-			<span>{formError.addressCity ? formError.addressCity[0] : ''}</span>
-			{numbers.map((e, i) => (
-				<input
-					type='number'
-					placeholder='Telefone'
-					name='number'
-					key={i}
-					onChange={handleChange}
-					value={org.contact[i]}
-				/>
-			))}
-			<span>{formError.contact ? formError.contact[0] : ''}</span>
-			<input
-				type='text'
-				placeholder='Email'
-				name='email'
-				onChange={handleChange}
-				value={org.email}
-			/>
-			<span>{formError.email ? formError.email[0] : ''}</span>
-			<input
-				type='password'
-				placeholder='Senha'
-				name='password'
-				onChange={handleChange}
-				value={org.password}
-			/>
-			<span>{formError.password ? formError.password[0] : ''}</span>
-			<button
-				type='button'
-				onClick={() => {
-					setNumbers((prev) => [...prev, ''])
-				}}
-			>
-				Add Number
+			<button className='submitButton' type='submit'>
+				Registar-se
 			</button>
-
-			<button type='submit'>Enviar</button>
 		</form>
 	)
 }

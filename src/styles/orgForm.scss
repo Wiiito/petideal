@@ -1,0 +1,47 @@
+.orgForm {
+    @apply pt-24 min-h-screen w-full px-8 xl:px-24 bg-trueWhite bg-opacity-20 backdrop-blur-sm pb-24;
+
+    h3 {
+        @apply text-center text-primary text-3xl font-bold uppercase;
+    }
+
+    .subtitle {
+        @apply text-center mb-8;
+
+        h4 {
+            @apply text-xl text-darker font-semibold;
+        }
+
+        a {
+            @apply text-gray;
+        }
+    }
+
+    input {
+        @apply relative p-2 border-lightGray border outline-none text-lg rounded-sm bg-trueWhite bg-opacity-65 backdrop-blur-sm max-w-96 mr-4;
+    }
+
+    .line {
+        @apply flex mb-4 flex-wrap;
+
+    }
+    .text {
+        @apply uppercase text-gray text-lg font-semibold mx-4;
+    }
+
+    .numberContainer {
+        @apply mb-4 flex flex-col max-w-96;
+
+        input {
+            @apply mb-4;
+        }
+
+        button {
+            @apply text-lg font-bold h-11 w-11 border border-black rounded-md ml-4;
+        }
+    }
+
+    .submitButton {
+        @apply bg-primary px-8 py-2 text-white font-bold rounded-xl shadow-md text-xl max-w-96 w-full;
+    }
+}
