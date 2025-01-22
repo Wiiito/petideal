@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import './styles.scss'
 
-const Funcionamento = () => {
+const Funcionamento = ({ dados, pesquisa, par }) => {
 	return (
 		<section>
 			<h3 className='text-3xl md:text-5xl uppercase font-bold text-primary text-center mt-4'>
@@ -23,11 +23,7 @@ const Funcionamento = () => {
 						</div>
 						<h4>Coleta de dados</h4>
 					</div>
-					<div className='articleText'>
-						Iniciamos com uma série de perguntas estudadas para entender suas
-						preferências e estilo de vida. Esses dados são essenciais para
-						encontrar o pet ideal para você.
-					</div>
+					<div className='articleText'>{dados}</div>
 				</article>
 				<article className='article'>
 					<div className='articleHeader'>
@@ -43,12 +39,7 @@ const Funcionamento = () => {
 						</div>
 						<h4>Análise e pesquisa detalhada</h4>
 					</div>
-					<div className='articleText'>
-						Com as suas respostas em mãos (ou melhor, em patas), começamos a
-						investigar. Nossos detetives do bem (não os peludos, mas nossos
-						algoritmos) vão procurar os pets disponíveis na sua vizinhança que
-						combinam com você como queijo combina com goiabada - perfeitamente!
-					</div>
+					<div className='articleText'>{pesquisa}</div>
 				</article>
 				<article className='article'>
 					<div className='articleHeader'>
@@ -64,13 +55,7 @@ const Funcionamento = () => {
 						</div>
 						<h4>O par ideal</h4>
 					</div>
-					<div className='articleText'>
-						Finalmente, é hora do match perfeito! Você conhece seu novo amigo de
-						quatro patas, e eles encontram um lar para chamar de seu. Adotar um
-						pet através do PetIdeal não é só ganhar um companheiro fiel, é ser o
-						herói da história de um bichinho. Então, vamos lá, seu futuro
-						mascote está esperando para fazer uma entrada triunfal na sua vida!
-					</div>
+					<div className='articleText'>{par}</div>
 				</article>
 			</div>
 		</section>

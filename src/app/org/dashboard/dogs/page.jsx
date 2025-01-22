@@ -34,8 +34,6 @@ const Page = () => {
 		setNumbers(org.contactNumbers)
 	}, [org])
 
-	useEffect(() => {}, [numbers])
-
 	const numbersChange = () => {
 		const numbers = Array.from(document.getElementsByName('number')).map(
 			(e) => e.value
@@ -50,11 +48,20 @@ const Page = () => {
 	const handleSubmit = (e) => {
 		const form = document.getElementById('changedValues')
 		const formData = new FormData(form)
-		console.log(formData.get('fantasyName'))
 	}
 
 	return (
 		<>
+			<Link href='/org' className='absolute top-8 left-8 z-10'>
+				<div>
+					<Image
+						src='/backArrow.svg'
+						width={28.8}
+						height={20}
+						alt='BackArrow'
+					/>
+				</div>
+			</Link>
 			<div className='flex px-20 py-16 w-full items-center'>
 				<form
 					action={handleSubmit}
@@ -65,9 +72,7 @@ const Page = () => {
 						<h2 className='text-5xl text-primary font-bold w-full'>
 							<input
 								type='text'
-								defaultValue={
-									org.fantasyName ? org.fantasyName : 'Carregando ...'
-								}
+								defaultValue={org.fantasyName}
 								onChange={() => {
 									setChanged(true)
 								}}
@@ -87,7 +92,7 @@ const Page = () => {
 						<span className='w-20'>CNPJ:</span>
 						<input
 							type='text'
-							defaultValue={org.cnpj ? org.cnpj : 'Carregando ...'}
+							defaultValue={org.cnpj}
 							onChange={() => {
 								setChanged(true)
 							}}
@@ -104,9 +109,7 @@ const Page = () => {
 						<span className='w-20'>CEP:</span>
 						<input
 							type='text'
-							defaultValue={
-								org.addressZipCode ? org.addressZipCode : 'Carregando ...'
-							}
+							defaultValue={org.addressZipCode}
 							onChange={() => {
 								setChanged(true)
 							}}
@@ -123,7 +126,7 @@ const Page = () => {
 						<span className='w-20'>Logadouro:</span>
 						<input
 							type='text'
-							defaultValue={org.address ? org.address : 'Carregando ...'}
+							defaultValue={org.address}
 							onChange={() => {
 								setChanged(true)
 							}}
@@ -143,7 +146,7 @@ const Page = () => {
 						<span className='w-20'>Email:</span>
 						<input
 							type='text'
-							defaultValue={org.email ? org.email : 'Carregando ...'}
+							defaultValue={org.email}
 							onChange={() => {
 								setChanged(true)
 							}}

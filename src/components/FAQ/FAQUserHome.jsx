@@ -5,7 +5,7 @@ import Image from 'next/image'
 const FAQSection = () => {
 	return (
 		<div className='bg-reallyLight pt-40 text-center'>
-			<p className='font-bold px-10 md:px-40 lg:px-60 text-xl mb-12'>
+			<p className='font-bold px-10 md:px-40 lg:px-60 text-xl mb-12 text-white'>
 				Consulte nossa seção de Perguntas Frequentes para encontrar respostas às
 				dúvidas mais comuns. Se a sua pergunta não estiver lá, entre em contato
 				conosco e ficaremos felizes em ajudar.

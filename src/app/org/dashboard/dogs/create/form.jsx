@@ -8,7 +8,6 @@ import './customFormStyles.scss'
 import Image from 'next/image'
 import { getAllRacesNames, getRaceBaseEmbedding } from '@/actions/race/get'
 import { getOrgFromId } from '@/actions/org/get'
-import Link from 'next/link'
 
 const Form = () => {
 	const descriptionRef = useRef()
@@ -205,16 +204,6 @@ const Form = () => {
 
 	return (
 		<>
-			<Link href='/org/dashboard/dogs' className='absolute top-4 left-4 z-10'>
-				<div>
-					<Image
-						src='/backArrow.svg'
-						width={28.8}
-						height={20}
-						alt='BackArrow'
-					/>
-				</div>
-			</Link>
 			<form action={handleSubmit} className='w-full min-h-screen'>
 				<div className='relative w-full'>
 					<div className='relative'>

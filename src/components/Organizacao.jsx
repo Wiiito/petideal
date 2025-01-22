@@ -34,8 +34,8 @@ const Organizacao = () => {
 						para uma sociedade mais justa e compassiva.
 					</p>
 					<div className='w-full flex justify-center mb-8'>
-						<Link href='/auth/org/register'>
-							<div className='border border-white px-8 py-4 text-white mt-4 rounded-xl text-xl font-bold'>
+						<Link href='/org'>
+							<div className='border border-white px-8 py-2 text-white mt-8 rounded-xl text-xl font-bold'>
 								Relacionar-se
 							</div>
 						</Link>
