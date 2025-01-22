@@ -59,6 +59,7 @@ const Page = () => {
 						width={28.8}
 						height={20}
 						alt='BackArrow'
+						sizes='10vw'
 					/>
 				</div>
 			</Link>
@@ -239,7 +240,11 @@ const Page = () => {
 						</div>
 					</Link>
 					{Array.from(dogs).map((dog, index) => {
-						return <OrgDogComponent dog={dog} key={index} />
+						return (
+							<Link href={'/org/dashboard/dogs/' + dog._id} key={index}>
+								<OrgDogComponent dog={dog} />
+							</Link>
+						)
 					})}
 				</div>
 			</div>

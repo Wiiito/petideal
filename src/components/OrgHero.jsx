@@ -26,6 +26,7 @@ const OrgHero = () => {
 				<Image
 					src='/orgHeroDog.png'
 					fill
+					sizes='50vw'
 					alt='dog'
 					style={{ objectFit: 'contain', objectPosition: 'bottom' }}
 					priority

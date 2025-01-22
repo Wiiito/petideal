@@ -2,14 +2,22 @@
 
 import { useSession } from 'next-auth/react'
 import { useEffect, useRef, useState } from 'react'
-import submitDog from './action'
-import { redirect } from 'next/navigation'
+import getPet from '@/actions/pet/get'
+import updateDog from './action'
+import { useParams } from 'next/navigation'
 import '@/styles/customFormStyles.scss'
 import Image from 'next/image'
 import { getAllRacesNames, getRaceBaseEmbedding } from '@/actions/race/get'
 import { getOrgFromId } from '@/actions/org/get'
+import deletePet from '@/actions/pet/delete'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const Form = () => {
+	const router = useRouter()
+	const params = useParams()
+	const [dog, setDog] = useState({})
+
 	const descriptionRef = useRef()
 	const inputRaceSearchRef = useRef()
 
@@ -30,6 +38,7 @@ const Form = () => {
 
 	// All data state
 	const [data, setData] = useState({
+		_id: '',
 		name: '',
 		orgId: '',
 		images: [],
@@ -45,6 +54,7 @@ const Form = () => {
 	const handleSubmit = async () => {
 		// Se não utilizar a api FormData, é impossivel mandar imagem para rota do background
 		let formData = new FormData()
+		formData.append('_id', data._id)
 		formData.append('name', data.name)
 		formData.append('orgId', data.orgId)
 		formData.append('embedding', data.embedding)
@@ -63,10 +73,10 @@ const Form = () => {
 			formData.append('observation', obs)
 		})
 
-		const res = await submitDog(formData)
+		const res = await updateDog(formData)
 
 		if (res.success) {
-			redirect('/org/dashboard/dogs')
+			router.push('/org/dashboard/dogs')
 		}
 
 		return false
@@ -116,8 +126,41 @@ const Form = () => {
 	}, [org])
 
 	useEffect(() => {
+		const fetchRaces = async () => {
+			const races = await getAllRacesNames()
+			setRaces(races.races)
+			const racesNames = Array.from(races.races).map((race) => {
+				return race.name
+			})
+			setRacesName(racesNames)
+			setFilterRaces(racesNames)
+		}
+
+		const getDog = async () => {
+			const _dog = await getPet(params.id)
+			_dog.gender === 'female' ? setFemale(true) : setFemale(false)
+
+			setObservations(_dog.observation)
+
+			setData(_dog)
+			setDog(_dog)
+		}
+
 		fetchRaces()
+		getDog()
 	}, [])
+
+	useEffect(() => {
+		const selectedRace = races.filter((allRaces) => {
+			if (allRaces._id === dog.raceId) return true
+		})[0]
+
+		selectedRace
+			? (inputRaceSearchRef.current.value = selectedRace.name)
+			: 'Carregando ...'
+	}, [races])
+
+	useEffect(() => {}, [data])
 
 	useEffect(() => {
 		const getRaceEmbedding = async () => {
@@ -137,16 +180,6 @@ const Form = () => {
 
 		if (data.raceId) getRaceEmbedding()
 	}, [data.raceId])
-
-	const fetchRaces = async () => {
-		const races = await getAllRacesNames()
-		setRaces(races.races)
-		const racesNames = Array.from(races.races).map((race) => {
-			return race.name
-		})
-		setRacesName(racesNames)
-		setFilterRaces(racesNames)
-	}
 
 	// Updates description size
 	const handleDescriptionInput = () => {
@@ -168,15 +201,6 @@ const Form = () => {
 			return { ...prev, observation: observationFormValues }
 		})
 		setObservations(observationFormValues)
-	}
-
-	const handleImage = (e) => {
-		setData((prev) => {
-			return {
-				...prev,
-				images: [...data.images, ...e.target.files],
-			}
-		})
 	}
 
 	const formatNumber = (number) => {
@@ -204,14 +228,34 @@ const Form = () => {
 
 	return (
 		<>
+			<Link href='/org/dashboard/dogs' className='absolute top-4 left-4 z-10'>
+				<div>
+					<Image
+						src='/backArrow.svg'
+						width={28.8}
+						height={20}
+						alt='BackArrow'
+					/>
+				</div>
+			</Link>
 			<form action={handleSubmit} className='w-full min-h-screen'>
 				<div className='relative w-full'>
-					<div className='relative'>
+					<div className='absolute top-4 right-4'>
+						<button
+							type='button'
+							className='bg-darker font-normal text-white py-2 px-8 rounded-md mr-4'
+							onClick={async () => {
+								const res = await deletePet(data._id)
+								if (res.sucess) router.push('/org/dashboard/dogs')
+							}}
+						>
+							Excluir
+						</button>
 						<button
 							type='submit'
-							className='absolute top-4 right-4 bg-darker font-normal text-white py-2 px-8 rounded-md'
+							className='bg-darker font-normal text-white py-2 px-8 rounded-md'
 						>
-							Cadastrar
+							Salvar Alterações
 						</button>
 					</div>
 					<div className='flex h-screen'>
@@ -226,6 +270,7 @@ const Form = () => {
 											onChange={handleChange}
 											className='bg-transparent text-primary placeholder:text-primary font-bold placeholder:font-bold text-xl xl:text-2xl w-full outline-none border-b-2 border-transparent focus:border-primary px-2'
 											id='name'
+											defaultValue={data.name}
 										/>
 										<label htmlFor='name' className='cursor-pointer'>
 											<div className='relative w-8 h-8'>
@@ -241,8 +286,11 @@ const Form = () => {
 														return (
 															<div className='dogImageContainer' key={i}>
 																<Image
-																	src={URL.createObjectURL(img)}
-																	alt={img.name}
+																	src={
+																		'https://petideal.s3.us-east-1.amazonaws.com/' +
+																		img
+																	}
+																	alt={data.name + i}
 																	style={{ objectFit: 'cover' }}
 																	fill
 																/>
@@ -252,21 +300,7 @@ const Form = () => {
 												</div>
 											</div>
 										)}
-										<input
-											type='file'
-											name='images'
-											id='addImage'
-											multiple
-											className='hidden'
-											accept='image/*'
-											onChange={handleImage}
-										/>
 									</div>
-									<label htmlFor='addImage' className='cursor-pointer'>
-										<div className='w-full min-h-20 flex justify-center items-center outline-dotted outline-darker rounded-xl mb-4'>
-											Adicionar Imagem
-										</div>
-									</label>
 								</div>
 							</div>
 							<div className='w-full h-[20vh] bg-ultraLight overflow-y-scroll customScrollBar px-4'>
@@ -389,6 +423,7 @@ const Form = () => {
 											name='age'
 											id='age'
 											placeholder='Idade'
+											defaultValue={data.age}
 											onChange={handleChange}
 											className='outline-none relative w-full p-4 border-lightGray border'
 										/>
@@ -432,6 +467,7 @@ const Form = () => {
 											placeholder='Descrição do animal'
 											onChange={handleChange}
 											onInput={handleDescriptionInput}
+											defaultValue={data.description}
 											className='w-full resize-none focus:outline-none p-4 border border-lightGray rounded-md h-20 focus:outline-alternative customScrollBar'
 											ref={descriptionRef}
 										></textarea>
@@ -448,6 +484,7 @@ const Form = () => {
 												type='checkbox'
 												name='patronize'
 												id='patronize'
+												defaultValue={data.patronize}
 												onChange={handleChange}
 												className='customCheckbox'
 											/>
@@ -473,6 +510,7 @@ const Form = () => {
 													name='observation'
 													placeholder='Observação'
 													onChange={handleObservation}
+													defaultValue={observations[i]}
 													key={i}
 													className='relative w-full p-4 border-lightGray border pr-16 outline-none mb-4'
 												/>

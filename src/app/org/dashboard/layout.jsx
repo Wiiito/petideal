@@ -2,7 +2,6 @@
 
 import { useSession } from 'next-auth/react'
 import { redirect } from 'next/navigation'
-import Link from 'next/link'
 
 const Page = ({ children }) => {
 	const { data: session, status } = useSession({

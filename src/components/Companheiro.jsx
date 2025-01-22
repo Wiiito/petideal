@@ -8,7 +8,7 @@ const Companheiro = () => {
 				<Image
 					src='/patterns/solid paws.png'
 					fill
-					alt='disnara'
+					alt='pattern paws'
 					style={{
 						objectFit: 'cover',
 						objectPosition: '50% 50%',
@@ -18,7 +18,9 @@ const Companheiro = () => {
 					<Image
 						src='/orgPageCat.png'
 						fill
+						sizes='50vw'
 						style={{ objectFit: 'contain', objectPosition: 'left' }}
+						alt='cat'
 					/>
 				</div>
 				<div className='w-full md:w-2/3 py-8 z-20 flex flex-col justify-center'>

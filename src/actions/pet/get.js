@@ -3,10 +3,10 @@
 import dbConnect from '@/lib/dbConnect'
 import PetModel from '@/models/pet'
 
-export default async function getPet(name) {
+export default async function getPet(id) {
 	await dbConnect()
-	let pet = await PetModel.findOne({ name: name })
-	return pet
+	let pet = await PetModel.findById(id)
+	return JSON.parse(JSON.stringify(pet))
 }
 
 export async function getAllPagesOfAOrg(orgId) {

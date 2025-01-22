@@ -23,6 +23,7 @@ const FAQOrgHome = () => {
 					width={1366}
 					height={185}
 					className='w-full'
+					alt='footer'
 				/>
 			</footer>
 		</div>

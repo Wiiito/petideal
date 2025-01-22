@@ -8,7 +8,9 @@ const OrgDogComponent = ({ dog }) => {
 					src={'https://petideal.s3.us-east-1.amazonaws.com/' + dog.images[0]}
 					style={{ objectFit: 'cover' }}
 					fill
+					sizes='25vw'
 					alt={dog.name}
+					priority
 				/>
 			</div>
 			<div className='w-full h-12 flex items-center justify-left px-4 text-gray'>
