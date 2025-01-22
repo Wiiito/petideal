@@ -1,16 +1,22 @@
 'use client'
 
 import { signIn } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 const Page = () => {
+	const router = useRouter()
 	const credentialsLogin = async () => {
 		await signIn('credentials', {
 			email: document.getElementsByName('email')[0].value,
 			password: document.getElementsByName('password')[0].value,
 			type: 'org',
-			redirect: true,
-			callbackUrl: '/org/dashboard/dogs',
+			redirect: false,
+		}).then(({ ok }) => {
+			if (ok) {
+				router.push('/org/dashboard/dogs')
+				return
+			}
 		})
 	}
 
