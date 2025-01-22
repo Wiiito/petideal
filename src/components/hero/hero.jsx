@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Hero = () => {
 	return (
-		<div className='relative h-screen w-screen mt-[5vh] md:mt-40 lg:mt-28 z-20'>
+		<div className='relative overflow-hidden h-screen w-screen mt-[5vh] md:mt-40 lg:mt-28 z-20'>
 			<div className='w-[45vw] lg:ml-24 md:ml-16 ml-10'>
 				<div className='lg:text-7xl lg:leading-[5.625rem] md:text-5xl md:leading-[4rem] text-4xl font-bold'>
 					Encontre o companheiro{' '}
