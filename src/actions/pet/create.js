@@ -5,8 +5,10 @@ import PetModel from '@/models/pet'
 
 export default async function createPet(pet) {
 	const {
+		age,
 		name,
 		orgId,
+		gender,
 		images,
 		embedding,
 		patronize,
@@ -14,7 +16,7 @@ export default async function createPet(pet) {
 		observation,
 		raceId,
 	} = pet
-	if (!name || !orgId || !images || !embedding || !raceId)
+	if (!age || !gender || !name || !orgId || !images || !embedding || !raceId)
 		return {
 			success: false,
 		}
@@ -22,9 +24,11 @@ export default async function createPet(pet) {
 	await dbConnect()
 
 	const _pet = new PetModel({
+		age: age,
 		name: name,
 		orgId: orgId,
 		images: images,
+		gender: gender,
 		embedding: embedding,
 		observation: observation,
 		description: description,

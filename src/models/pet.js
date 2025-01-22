@@ -11,6 +11,8 @@ const PetSchema = mongoose.Schema({
 	},
 	images: [String],
 	description: String,
+	age: String,
+	gender: String,
 	embedding: [Number], // Tabela caracteristicas do pet é substituida por um array
 	observation: [String],
 	patronize: Boolean,

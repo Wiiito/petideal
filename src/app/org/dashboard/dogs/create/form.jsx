@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from 'react'
 import submitDog from './action'
 import { redirect } from 'next/navigation'
 import './customFormStyles.scss'
-import { getAllRacesNames, getRaceBaseEmbedding } from '@/actions/race/get'
 import Image from 'next/image'
+import { getAllRacesNames, getRaceBaseEmbedding } from '@/actions/race/get'
 import { getOrgFromId } from '@/actions/org/get'
 import Link from 'next/link'
 
@@ -53,6 +53,8 @@ const Form = () => {
 		formData.append('description', data.description)
 		formData.append('raceId', data.raceId)
 		formData.append('age', data.age)
+
+		formData.append('gender', female ? 'female' : 'male')
 
 		data.images.forEach((image) => {
 			formData.append('images', image)
@@ -191,7 +193,7 @@ const Form = () => {
 	const handleEmbeddingChanging = () => {
 		const ranges = document.getElementsByName('embedding')
 		const embeddingValues = Array.from(ranges).map((e) => {
-			return e.value
+			return e.value / 100
 		})
 		setData((prev) => {
 			return {
