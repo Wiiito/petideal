@@ -40,6 +40,23 @@ const DogComponent = ({ dog }) => {
 				)}
 			</div>
 			<div className='h-[calc(100%-1.75rem)] mt-2 md:h-[calc(100%-3rem)] w-[calc(100%-9rem)] md:w-[calc(100%-15rem)] md:my-6 bg-ultraLightPastel rounded-r-xl p-2 md:p-4 pb-0 md:pb-0 overflow-x-hidden'>
+				<div className='absolute right-4 w-10 h-10 p-2 bg-pastel bg-opacity-20 rounded-full'>
+					<div className='relative w-full h-full'>
+						{dog.gender === 'female' ? (
+							<Image
+								src='/icons/femea.svg'
+								fill
+								style={{ objectFit: 'contain', objectPosition: 'center' }}
+							/>
+						) : (
+							<Image
+								src='/icons/macho.svg'
+								fill
+								style={{ objectFit: 'contain', objectPosition: 'center' }}
+							/>
+						)}
+					</div>
+				</div>
 				<div className='text-md font-bold text-gray md:mt-2'>{dog.name}</div>
 				<div className='flex md:mt-2'>
 					<div className='flex'>

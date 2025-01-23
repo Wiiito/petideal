@@ -27,7 +27,7 @@ const FormLayout = ({ children }) => {
 					</h2>
 				</div>
 				<div className='w-1/3 relative'>
-					<div className='absolute -bottom-[4vw] -right-[4vw] w-[150%]'>
+					<div className='absolute -bottom-[4vw] -right-[4vw] w-[150%] z-10'>
 						<Image
 							src='/gatoFormulario.png'
 							height={658}
@@ -38,7 +38,16 @@ const FormLayout = ({ children }) => {
 					</div>
 				</div>
 			</div>
-			<div className='bg-white rounded-3xl pt-12 lg:pt-24 px-8 lg:px-16'>
+			<div className='relative bg-white rounded-3xl pt-12 lg:pt-24 px-8 lg:px-16'>
+				<div className='absolute transform w-32 h-32 -translate-x-1/2 -translate-y-1/2 bg-light rounded-full left-1/2 -top-2 p-6'>
+					<div className='relative w-full h-full'>
+						<Image
+							src='/icons/file.svg'
+							fill
+							style={{ objectFit: 'contain', objectPosition: 'center' }}
+						/>
+					</div>
+				</div>
 				{children}
 			</div>
 		</div>

@@ -2,6 +2,7 @@ import { getOrgFromId } from '@/actions/org/get'
 import { getRaceFromId } from '@/actions/race/get'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
+import '@/styles/hidScrollBar.scss'
 
 const DetailedDog = ({ dog, overlay }) => {
 	const [race, setRace] = useState({})
@@ -31,6 +32,8 @@ const DetailedDog = ({ dog, overlay }) => {
 			const _race = await getRaceFromId(dog.raceId)
 			setRace(_race)
 		}
+
+		console.log(dog.gender)
 
 		updateHearts()
 		getOrg()
@@ -63,7 +66,7 @@ const DetailedDog = ({ dog, overlay }) => {
 
 	return (
 		<div className='fixed top-0 left-0 w-full h-full bg-transparent backdrop-blur-lg z-50 flex justify-center items-center'>
-			<div className='relative block md:flex w-4/5 rounded-3xl overflow-hidden bg-ultraLightPastel min-h-96 max-h-[80vh] overflow-y-scroll'>
+			<div className='relative block md:flex w-4/5 rounded-3xl bg-ultraLightPastel min-h-96 max-h-[80vh] overflow-y-scroll hidScrollBar'>
 				<div
 					className='absolute z-40 top-4 left-4 cursor-pointer text-2xl font-bold text-black bg-ultraLightPastel w-12 h-12 rounded-full flex items-center justify-center'
 					onClick={() => overlay(false)}
@@ -86,8 +89,27 @@ const DetailedDog = ({ dog, overlay }) => {
 						})}
 					</div>
 				</div>
-				<div className='py-4 px-8 lg:w-1/2 lg:h-full overflow-y-scroll'>
-					<h4 className='text-2xl font-medium lg:mt-2'>{dog.name}</h4>
+				<div className='py-4 px-8 lg:w-1/2 lg:h-full overflow-y-scroll hidScrollBar'>
+					<h4 className='relative text-2xl font-medium lg:mt-2'>
+						{dog.name}
+						<div className='absolute right-0 w-10 h-10 p-2 bg-pastel bg-opacity-20 rounded-full transform -translate-y-1/2 top-1/2'>
+							<div className='relative w-full h-full'>
+								{dog.gender === 'female' ? (
+									<Image
+										src='/icons/femea.svg'
+										fill
+										style={{ objectFit: 'contain', objectPosition: 'center' }}
+									/>
+								) : (
+									<Image
+										src='/icons/macho.svg'
+										fill
+										style={{ objectFit: 'contain', objectPosition: 'center' }}
+									/>
+								)}
+							</div>
+						</div>
+					</h4>
 					<div className='flex gap-1 mr-2 lg:mt-2'>
 						{heartColors.map((heartColor, i) => {
 							return (
@@ -114,6 +136,10 @@ const DetailedDog = ({ dog, overlay }) => {
 					<div className='lg:mt-2'>
 						<span className='font-semibold text-gray'>Raça: </span>
 						<span className='font-normal text-brown'>{race.name}</span>
+					</div>
+					<div className='lg:mt-2'>
+						<span className='font-semibold text-gray'>Idade: </span>
+						<span className='font-normal text-brown'>{dog.age}</span>
 					</div>
 					{dog.description && (
 						<div className='lg:mt-2'>
