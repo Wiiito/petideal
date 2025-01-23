@@ -39,12 +39,13 @@ const FormLayout = ({ children }) => {
 				</div>
 			</div>
 			<div className='relative bg-white rounded-3xl pt-12 lg:pt-24 px-8 lg:px-16'>
-				<div className='absolute transform w-32 h-32 -translate-x-1/2 -translate-y-1/2 bg-light rounded-full left-1/2 -top-2 p-6'>
+				<div className='absolute transform w-16 h-16 lg:w-32 lg:h-32 -translate-x-1/2 -translate-y-1/2 bg-light rounded-full left-1/2 -top-2 p-6'>
 					<div className='relative w-full h-full'>
 						<Image
 							src='/icons/file.svg'
 							fill
 							style={{ objectFit: 'contain', objectPosition: 'center' }}
+							alt='file'
 						/>
 					</div>
 				</div>
